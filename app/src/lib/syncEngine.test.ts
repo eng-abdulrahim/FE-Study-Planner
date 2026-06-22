@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { NOT_CONFIGURED_MESSAGE, createSyncEngine } from "./syncEngine";
+import { NOT_CONFIGURED_MESSAGE, SAVE_FAILED_MESSAGE, createSyncEngine } from "./syncEngine";
 import { GitHubSyncError } from "./githubSync";
 import type { RemoteFile, RepoTarget } from "./githubSync";
 import { buildInitialState } from "../data/defaults";
@@ -44,6 +44,7 @@ function makeEngine(opts: Opts = {}) {
   let cloud: RemoteFile | null = opts.cloud ?? null;
   const statuses: { status: string; message: string }[] = [];
   const applied: PlannerState[] = [];
+  let authErrors = 0;
 
   const getFile = vi.fn(async (_t: RepoTarget, _token: string) => cloud);
   let putCount = 0;
@@ -77,6 +78,9 @@ function makeEngine(opts: Opts = {}) {
     getFile,
     putFile,
     onStatus: (status, message) => statuses.push({ status, message }),
+    onAuthError: () => {
+      authErrors++;
+    },
     now: () => "NOW",
   });
 
@@ -90,6 +94,7 @@ function makeEngine(opts: Opts = {}) {
     putFile,
     getCloud: () => cloud,
     last: () => statuses[statuses.length - 1],
+    authErrors: () => authErrors,
   };
 }
 
@@ -171,7 +176,7 @@ describe("auto-save (onLocalChange + debounce)", () => {
     h.engine.onLocalChange();
     await vi.advanceTimersByTimeAsync(DEBOUNCE);
     await flush();
-    expect(h.last()).toEqual({ status: "error", message: "Sync failed" });
+    expect(h.last()).toEqual({ status: "error", message: SAVE_FAILED_MESSAGE });
 
     // Still dirty, engine not broken: the next change saves successfully.
     h.engine.onLocalChange();
@@ -440,5 +445,70 @@ describe("auto-load (background, no user action)", () => {
 
     expect(h.getFile).not.toHaveBeenCalled();
     expect(h.statuses).toHaveLength(0);
+  });
+});
+
+describe("invalid / expired key handling", () => {
+  it("a 401 on auto-save fires onAuthError and never touches local data", async () => {
+    vi.useFakeTimers();
+    const h = makeEngine({
+      localUpdatedAt: "T2",
+      lastSyncedLocalUpdatedAt: "T1",
+      lastKnownSha: "S",
+      cloud: { sha: "S", contentJson: "{}" },
+      putFile: vi.fn(async () => {
+        throw new GitHubSyncError("auth", "unauthorized", 401);
+      }),
+    });
+
+    const before = h.state.lastUpdatedAt;
+    h.engine.onLocalChange();
+    await vi.advanceTimersByTimeAsync(DEBOUNCE);
+    await flush();
+
+    expect(h.authErrors()).toBe(1);
+    expect(h.last()).toEqual({ status: "error", message: SAVE_FAILED_MESSAGE });
+    expect(h.state.lastUpdatedAt).toBe(before);
+  });
+
+  it("a 403 on manual sync fires onAuthError with a provider-free message", async () => {
+    const h = makeEngine({
+      localUpdatedAt: "T2",
+      lastSyncedLocalUpdatedAt: "T1",
+      lastKnownSha: "S",
+      cloud: { sha: "S", contentJson: "{}" },
+      putFile: vi.fn(async () => {
+        throw new GitHubSyncError("auth", "forbidden", 403);
+      }),
+    });
+
+    await h.engine.syncNow();
+
+    expect(h.authErrors()).toBe(1);
+    const msg = h.last().message.toLowerCase();
+    expect(msg).not.toContain("github");
+    expect(msg).not.toContain("token");
+    expect(msg).not.toContain("repo");
+  });
+
+  it("a network failure does NOT clear the key and keeps local data", async () => {
+    vi.useFakeTimers();
+    const h = makeEngine({
+      localUpdatedAt: "T2",
+      lastSyncedLocalUpdatedAt: "T1",
+      lastKnownSha: "S",
+      cloud: { sha: "S", contentJson: "{}" },
+      putFile: vi.fn(async () => {
+        throw new GitHubSyncError("retryable", "offline");
+      }),
+    });
+
+    const before = h.state.lastUpdatedAt;
+    h.engine.onLocalChange();
+    await vi.advanceTimersByTimeAsync(DEBOUNCE);
+    await flush();
+
+    expect(h.authErrors()).toBe(0);
+    expect(h.state.lastUpdatedAt).toBe(before);
   });
 });

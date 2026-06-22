@@ -312,6 +312,13 @@ export interface StudyPlanInput {
   today?: string;
   /** Number of days to build from `today`. Defaults to the days left to exam. */
   horizonDays?: number;
+  /**
+   * Adaptive ramp: when set, today's budget may grow toward this many minutes
+   * (the recommended target from adaptivePlan). It only ever RAISES today's
+   * budget above the configured availability - day-mode caps, light day, skip
+   * and rest still apply - so a gentle soft-start day is left untouched.
+   */
+  todayBudgetMinutes?: number;
 }
 
 export interface StudyPlanResult {
@@ -404,6 +411,11 @@ export function buildStudyPlan(input: StudyPlanInput): StudyPlanResult {
 
     // Budget.
     let budget = isRest ? 0 : Math.max(0, Math.round(avail.minutes));
+    // Adaptive ramp (today only): grow toward the recommended target. Never
+    // lowers the day; the caps below (day mode / light / skip) still win.
+    if (isToday && !isRest && !isSkipped && input.todayBudgetMinutes != null) {
+      budget = Math.max(budget, Math.max(0, Math.round(input.todayBudgetMinutes)));
+    }
     if (dayMode !== "normal") budget = Math.min(budget, DAY_MODE_PLAN[dayMode].cap);
     if (override?.plannedMinutes != null) {
       budget = clamp(Math.round(override.plannedMinutes), 0, Math.max(0, Math.round(avail.minutes)));

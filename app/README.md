@@ -195,7 +195,7 @@ both happen automatically.
 
 ### Configuration
 
-All sync settings live in **`src/config/syncConfig.ts`**:
+The **repo target** (non-secret, safe to ship) lives in **`src/config/syncConfig.ts`**:
 
 ```ts
 export const SYNC_CONFIG = {
@@ -203,30 +203,34 @@ export const SYNC_CONFIG = {
   repo: "private-data-store",
   branch: "main",
   path: "apps/fe-study-planner/planner-state.json",
-  token: "PASTE_GITHUB_TOKEN_HERE",
 } as const;
 ```
 
-Replace `PASTE_GITHUB_TOKEN_HERE` with a **fine-grained personal access token** that is:
+The **token is entered in the app, not in code.** Click **Connect** in the header and paste a
+**fine-grained personal access token** that is:
 
 - **Repository-scoped** to `eng-abdulrahim/private-data-store` only,
 - **Contents: Read and write**,
 - **Metadata: Read-only**.
 
-Until a real token is pasted, sync stays off and the button reports that the token is missing.
+The token is stored **only in your browser's `localStorage`** (`src/lib/syncToken.ts`) — never in the
+source, the env files, or the built bundle. That keeps it off GitHub, so GitHub's secret scanning can't
+auto-revoke it (which is what happened to earlier in-bundle tokens). Until a token is connected, sync stays
+off (local-only) and the header shows a **Connect** button.
 
 ### Security tradeoff (read this)
 
-> **The token is embedded in the frontend bundle.** Anyone who can open the built site or read its
-> JavaScript can extract it. This is **intentionally accepted for personal/private use only** and is
-> **not** safe for a shared or public deployment.
+> **The token lives only in your browser's LocalStorage** (entered via **Connect**), never in the source
+> or the built bundle. This is what keeps it off GitHub: a GitHub PAT pushed inside the deployed bundle
+> gets detected by secret scanning and **auto-revoked** — that is exactly why the earlier in-bundle tokens
+> kept dying. Anyone with access to *your browser/device* can still read the stored token, so this is
+> **intentionally for personal use only**, not a shared kiosk.
 >
 > Keep the token **fine-grained and scoped to the single private data repo** so the worst case stays
-> contained. **If the token is ever exposed publicly or no longer needed, revoke it on GitHub and
-> generate a new one.** Do not commit a real token to a public repository.
+> contained. **If it is ever exposed or no longer needed, revoke it on GitHub** and reconnect with a new one.
 
-The token is only ever sent in the `Authorization` header. It is never stored in LocalStorage, never
-written into the synced JSON file, never logged, and never put in commit or error messages.
+The token is read only from LocalStorage at call time and sent only in the `Authorization` header. It is
+never written into the synced JSON file, never logged, and never put in commit or error messages.
 
 ---
 
@@ -345,10 +349,10 @@ app/
 │  │  ├─ dashboard/          # DashboardPage, TodayCard, TaskRow, SummaryCards, WeeklyPlanPreview, WeeklyDaySummary, TopTopics, ChartsSection
 │  │  ├─ charts/             # Donut, BarList, WeeklyBars (dependency-free SVG/CSS)
 │  │  ├─ topics/             # TopicsPage, TopicTableFilters, TopicsTable, TopicRow, TopicPagination, TopicEditDrawer
-│  │  ├─ sync/               # SyncButton (single header button + animation)
+│  │  ├─ sync/               # SyncButton (Connect / Sync + token popover)
 │  │  └─ common/             # Button, Badge, EmptyState, icons (inline SVG)
 │  ├─ config/
-│  │  └─ syncConfig.ts       # fixed repo target + embedded token (see Cloud sync)
+│  │  └─ syncConfig.ts       # fixed repo target only - NO token (see Cloud sync)
 │  ├─ data/
 │  │  ├─ topics.ts           # 85 topics auto-extracted from the workbook
 │  │  ├─ topicOptions.ts     # single source of truth: status/confidence options, labels, migration
@@ -368,6 +372,7 @@ app/
 │  │  ├─ dateUtils.ts        # exam-date helpers (parse/format/days/weeks remaining)
 │  │  ├─ githubSync.ts       # thin GitHub Contents API client (token passed in, never stored)
 │  │  ├─ syncEngine.ts      # framework-agnostic sync orchestration (auto-save/load, newest-wins)
+│  │  ├─ syncToken.ts        # runtime GitHub token store (browser localStorage ONLY)
 │  │  ├─ syncMeta.ts  syncEnvelope.ts  syncStatus.ts  autoPush.ts   # sync bookkeeping + helpers
 │  │  ├─ storage.ts  validation.ts  labels.ts  util.ts
 │  │  └─ *.test.ts           # Vitest logic tests
@@ -396,6 +401,6 @@ Tiers and action thresholds were recreated from the hidden `_Lists` / `_Calc` en
 values were invented.
 
 **Frontend-only confirmation:** the app has no backend of its own. Its only network calls are the
-**optional** GitHub Contents API requests used by auto-save / auto-load (and the manual Sync button). When you add a token, it is
-embedded in the bundle for personal/private use (see [Cloud sync](#cloud-sync-optional)); with the default
-placeholder, the app makes no network calls and all state lives in the browser (LocalStorage).
+**optional** GitHub Contents API requests used by auto-save / auto-load (and the manual Sync button). The
+token is entered at runtime and kept only in the browser (see [Cloud sync](#cloud-sync-optional)); until you
+connect one, the app makes no GitHub calls and all state lives in the browser (LocalStorage).

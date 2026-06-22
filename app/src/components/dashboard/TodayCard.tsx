@@ -3,7 +3,7 @@ import { Badge } from "../common/Badge";
 import { Button } from "../common/Button";
 import { Popover } from "../common/Popover";
 import { TaskRow } from "./TaskRow";
-import { DAY_MODE_TONE, getDayModeLabel } from "../../lib/labels";
+import { ADAPTIVE_MODE_TONE, DAY_MODE_TONE, getDayModeLabel } from "../../lib/labels";
 import { DAY_MODE_OPTIONS } from "../../data/dayModes";
 import { formatMinutes } from "../../lib/util";
 
@@ -21,6 +21,7 @@ export function TodayCard() {
   const { model, actions, today } = usePlanner();
   const plan = model.todayStudyPlan;
   const coverage = model.coverage;
+  const adaptive = model.adaptive;
 
   if (!plan) {
     return (
@@ -40,10 +41,31 @@ export function TodayCard() {
     <section className="panel today-card">
       <div className="today-head">
         <span className="eyebrow">Today&rsquo;s focus</span>
+        <Badge tone={ADAPTIVE_MODE_TONE[adaptive.mode]}>{adaptive.headline}</Badge>
         {plan.phase === "final-review" && <Badge tone="primary">Final review</Badge>}
       </div>
 
       <p className="today-focus">{plan.focusMessage}</p>
+
+      {hasTasks && (
+        <div className="today-targets" role="group" aria-label="Today's targets">
+          <div className="target">
+            <span className="target-value">{formatMinutes(adaptive.minimumMinutes)}</span>
+            <span className="target-label">Minimum</span>
+            <span className="target-sub">keeps the plan alive</span>
+          </div>
+          <div className="target is-primary">
+            <span className="target-value">{formatMinutes(adaptive.recommendedMinutes)}</span>
+            <span className="target-label">Recommended</span>
+            <span className="target-sub">today&rsquo;s goal</span>
+          </div>
+          <div className="target">
+            <span className="target-value">{formatMinutes(adaptive.recoveryMinutes)}</span>
+            <span className="target-label">Recovery</span>
+            <span className="target-sub">protects the date</span>
+          </div>
+        </div>
+      )}
 
       {hasTasks ? (
         <>

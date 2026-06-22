@@ -285,12 +285,14 @@ The orchestration lives in a framework-agnostic engine (`createSyncEngine`, `src
 and renders status. Keeping the engine pure is what makes the debounce, queue, loop-guard, newest-wins
 resolution, and 409 retry behaviors unit-testable (`src/lib/syncEngine.test.ts`).
 
-### Fixed configuration
+### Fixed target, runtime token
 
-`SYNC_CONFIG` (owner / repo / branch / path / token) is hardcoded in `src/config/syncConfig.ts`. The token
-is **embedded in the bundle** (accepted personal/private-use tradeoff) and must be a fine-grained PAT scoped
-to `eng-abdulrahim/private-data-store` with *Contents: Read and write* + *Metadata: Read-only*. Until the
-`PASTE_GITHUB_TOKEN_HERE` placeholder is replaced, `isSyncConfigured()` is `false` and sync is inert.
+`SYNC_CONFIG` (owner / repo / branch / path) is hardcoded in `src/config/syncConfig.ts` and is **non-secret**.
+The **token is not in the config or the bundle**: it is entered in-app (header → **Connect**) and stored only
+in this browser's `localStorage` (`src/lib/syncToken.ts`). It must be a fine-grained PAT scoped to
+`eng-abdulrahim/private-data-store` with *Contents: Read and write* + *Metadata: Read-only*. Until a token is
+connected, `getToken()` returns `null` and sync is inert (local-only). Keeping the secret out of the published
+build is what stops GitHub's secret scanning from auto-revoking it.
 
 ### Envelope (`syncEnvelope.ts`)
 
@@ -357,12 +359,12 @@ The status button label and tone are computed by the pure `describeSyncButton` (
 - **409 retry:** if the PUT returns **409/422** (the cloud moved between our GET and PUT), the engine
   re-fetches the current `sha` and resolves once more (push/pull by newest-wins). One retry handles the
   race; a repeated 409 surfaces a normal error (and only for manual/auto-save, never a background load).
-- **Local-only fallback:** if the token is the placeholder/missing, `onLocalChange`, `autoLoad`, and
-  `syncNow` do no network work (only a manual click reports that the token is missing); the app keeps
-  working normally.
+- **Local-only fallback:** if no token is connected (`getToken()` returns `null`), `onLocalChange`,
+  `autoLoad`, and `syncNow` do no network work (only a manual click reports that sync needs connecting); the
+  app keeps working normally.
 
 ### Token hygiene
 
-The token is read from `SYNC_CONFIG` only at call time and sent solely in the `Authorization: Bearer`
-header. It is never stored in LocalStorage, never written into the synced JSON, never logged, and never
-placed in a commit message or a user-facing error.
+The token is read from `localStorage` (via `syncToken.ts`) only at call time and sent solely in the
+`Authorization: Bearer` header. It is never embedded in the bundle, never written into the synced JSON,
+never logged, and never placed in a commit message or a user-facing error.

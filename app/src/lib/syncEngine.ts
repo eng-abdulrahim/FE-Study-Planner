@@ -16,6 +16,7 @@ import { decideSync } from "./syncMeta";
 import type { SyncMeta } from "./syncMeta";
 import type { SyncStatus } from "./syncStatus";
 import { createDebouncer, isDirty } from "./autoPush";
+import { ACTIVATION_COPY } from "./activationCopy";
 
 export type SyncTrigger = "manual" | "save" | "load";
 
@@ -42,6 +43,12 @@ export interface SyncEngineDeps {
     message?: string,
   ) => Promise<{ sha: string }>;
   onStatus: (status: SyncStatus, message: string) => void;
+  /**
+   * Called when a cloud call fails authentication/authorization (the key is
+   * invalid/expired or lacks access). The host clears the stored key and
+   * re-prompts. Local data is always preserved.
+   */
+  onAuthError?: () => void;
   now?: () => string;
 }
 
@@ -55,31 +62,38 @@ export interface SyncEngine {
   dispose: () => void;
 }
 
-export const NOT_CONFIGURED_MESSAGE =
-  "Add your GitHub token in src/config/syncConfig.ts to enable sync.";
+export const NOT_CONFIGURED_MESSAGE = ACTIVATION_COPY.errMissing;
+
+/** Shown when an auto-save push fails (non-blocking; local data is kept). */
+export const SAVE_FAILED_MESSAGE = ACTIVATION_COPY.errSaveFailed;
 
 // How many times to (re-fetch the live sha and) try a write before giving up.
 // A 409 means the cloud moved between our GET and PUT; each retry reads the
 // fresh sha (getFile uses cache: "no-store") and resolves again (newest-wins).
 const MAX_ATTEMPTS = 3;
 
-/** Friendly, token-free message for a failure. */
+/** True for an authentication/authorization failure (invalid/expired key). */
+export function isAuthError(e: unknown): boolean {
+  return e instanceof GitHubSyncError && e.kind === "auth";
+}
+
+/** Generic, provider-agnostic message for a failure (no provider wording). */
 export function friendlyMessage(e: unknown): string {
   if (e instanceof GitHubSyncError) {
     switch (e.kind) {
       case "auth":
-        return "Access key is missing or lacks permission.";
+        return e.status === 403 ? ACTIVATION_COPY.errNoAccess : ACTIVATION_COPY.errNoLongerValid;
       case "not-found":
-        return "Could not find the data repository or file.";
+        return ACTIVATION_COPY.errLoadFailed;
       case "conflict":
-        return "GitHub changed during the save. Try again.";
+        return ACTIVATION_COPY.errConflict;
       case "retryable":
-        return "Could not reach GitHub. Check your internet.";
+        return ACTIVATION_COPY.errNetwork;
       default:
-        return "Unexpected response from GitHub.";
+        return ACTIVATION_COPY.errGeneric;
     }
   }
-  return "Something went wrong while syncing.";
+  return ACTIVATION_COPY.errGeneric;
 }
 
 function isConflictError(e: unknown): boolean {
@@ -102,7 +116,7 @@ export function createSyncEngine(deps: SyncEngineDeps): SyncEngine {
   let hydrating = false; // next local-change event is a cloud import, not a user edit
 
   function successMessage(trigger: SyncTrigger): string {
-    return trigger === "save" ? "Saved" : "Synced";
+    return trigger === "save" ? ACTIVATION_COPY.saved : ACTIVATION_COPY.synced;
   }
 
   async function core(trigger: SyncTrigger): Promise<void> {
@@ -120,7 +134,7 @@ export function createSyncEngine(deps: SyncEngineDeps): SyncEngine {
     }
 
     isSaving = true;
-    if (trigger === "save") deps.onStatus("syncing", "Saving...");
+    if (trigger === "save") deps.onStatus("syncing", ACTIVATION_COPY.saving);
     else if (trigger === "manual") deps.onStatus("syncing", "");
     // "load" stays quiet (no spinner) so background polls do not flicker.
 
@@ -204,8 +218,8 @@ export function createSyncEngine(deps: SyncEngineDeps): SyncEngine {
         if (decision === "pull") {
           const parsed = deps.parseRemote(remote.contentJson);
           if (!parsed) {
-            if (trigger === "manual") deps.onStatus("error", "The saved file on GitHub is not a valid backup.");
-            else if (trigger === "save") deps.onStatus("error", "Sync failed");
+            if (trigger === "manual") deps.onStatus("error", ACTIVATION_COPY.errBadCloudCopy);
+            else if (trigger === "save") deps.onStatus("error", SAVE_FAILED_MESSAGE);
             return;
           }
           // Guard the auto-save loop: importState below fires a local-change
@@ -219,7 +233,7 @@ export function createSyncEngine(deps: SyncEngineDeps): SyncEngine {
             lastSyncedAt: now(),
             lastSyncedLocalUpdatedAt: parsed.lastUpdatedAt ?? null,
           });
-          deps.onStatus("success", "Synced");
+          deps.onStatus("success", ACTIVATION_COPY.synced);
           return;
         }
 
@@ -231,11 +245,14 @@ export function createSyncEngine(deps: SyncEngineDeps): SyncEngine {
       }
 
       // Exhausted attempts (repeated 409): report, but never for a background load.
-      if (trigger === "manual") deps.onStatus("error", "GitHub changed during the save. Try again.");
-      else if (trigger === "save") deps.onStatus("error", "Sync failed");
+      if (trigger === "manual") deps.onStatus("error", ACTIVATION_COPY.errConflict);
+      else if (trigger === "save") deps.onStatus("error", SAVE_FAILED_MESSAGE);
     } catch (e) {
+      // An invalid/expired/forbidden key: hand off so the host can clear the key
+      // and re-prompt. Local data is never touched here.
+      if (isAuthError(e)) deps.onAuthError?.();
       if (trigger === "manual") deps.onStatus("error", friendlyMessage(e));
-      else if (trigger === "save") deps.onStatus("error", "Sync failed");
+      else if (trigger === "save") deps.onStatus("error", SAVE_FAILED_MESSAGE);
       // background load errors stay quiet to avoid noise
     } finally {
       isSaving = false;

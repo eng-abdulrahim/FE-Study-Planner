@@ -4,6 +4,7 @@ import { Sidebar } from "./Sidebar";
 import type { PageId } from "./Sidebar";
 import { DashboardPage } from "../dashboard/DashboardPage";
 import { TopicsPage } from "../topics/TopicsPage";
+import { ActivationModal } from "../sync/ActivationModal";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 const COLLAPSE_KEY = "latifah-fe-sidebar-collapsed";
@@ -74,6 +75,7 @@ export function AppShell() {
           </div>
         </main>
       </div>
+      <ActivationModal />
     </div>
   );
 }

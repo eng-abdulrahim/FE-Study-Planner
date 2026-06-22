@@ -2,6 +2,7 @@
 // Status/confidence labels come from the single source of truth in
 // data/topicOptions.ts; only presentational tone mapping lives here.
 import type { DayMode, IncludeValue, StudyMode, StudyTaskType, Tier, TopicStatus } from "../types/planner";
+import type { AdaptiveMode } from "./adaptivePlan";
 import type { BadgeTone } from "../components/common/Badge";
 
 export {
@@ -65,6 +66,16 @@ export const TASK_TYPE_TONE: Record<StudyTaskType, BadgeTone> = {
   "formula-review": "neutral",
   "mixed-practice": "success",
   "light-review": "neutral",
+};
+
+// Adaptive mode -> badge tone. Tones stay deliberately calm (no "danger" red):
+// the adaptive copy carries honesty in words, not in alarming colors.
+export const ADAPTIVE_MODE_TONE: Record<AdaptiveMode, BadgeTone> = {
+  "soft-start": "neutral",
+  "ramp-up": "primary",
+  "catch-up": "warning",
+  emergency: "warning",
+  done: "success",
 };
 
 export function prepLevel(readiness: number): { label: string; tone: BadgeTone } {

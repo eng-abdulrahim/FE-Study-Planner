@@ -12,7 +12,9 @@ export function GentleReminderCard() {
   return (
     <section className="panel reminder-card" aria-label="Gentle reminder">
       <span className="reminder-label">Gentle reminder</span>
-      <p className="reminder-text">{motivation}</p>
+      <div className="reminder-content">
+        <p className="reminder-text">{motivation}</p>
+      </div>
       <span className="reminder-sub">Today&rsquo;s study note</span>
     </section>
   );

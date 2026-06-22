@@ -73,3 +73,22 @@ export function IconClose(props: SVGProps<SVGSVGElement>) {
     </Base>
   );
 }
+
+export function IconKey(props: SVGProps<SVGSVGElement>) {
+  return (
+    <Base {...props}>
+      <circle cx="7.5" cy="15.5" r="4.5" />
+      <path d="m10.7 12.3 8.3-8.3" />
+      <path d="m16 5 3 3" />
+      <path d="m19 3 2 2" />
+    </Base>
+  );
+}
+
+export function IconChevronDown(props: SVGProps<SVGSVGElement>) {
+  return (
+    <Base {...props}>
+      <path d="m6 9 6 6 6-6" />
+    </Base>
+  );
+}

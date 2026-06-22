@@ -277,12 +277,18 @@
    card in the upper grid. Not a metric - a short supportive sentence in readable
    body text, tinted with the lavender accent so it feels like a gentle aside. It
    grows to fill the right column so the upper area stays balanced. */
+/* Header / centered message / footer in a clean 3-row grid. `flex: 1` keeps the
+   card filling the right column (no empty gap under it), while the `1fr` middle
+   row holds the message in the exact visual center at any size. min-height keeps
+   it polished when the column is not stretched (e.g. the mobile single-column
+   stack), and it never grows taller than the content needs. */
 .reminder-card {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 16px 18px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 10px;
+  min-height: clamp(170px, 24vh, 300px);
+  padding: 18px 22px;
   background:
     linear-gradient(
       135deg,
@@ -297,15 +303,21 @@
   letter-spacing: 0;
   color: var(--color-accent-strong);
 }
-.reminder-text {
-  flex: 1;
+.reminder-content {
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 0;
+  padding: 12px 8px;
+}
+.reminder-text {
   margin: 0;
-  font-size: 14.5px;
+  font-size: clamp(15px, 1.8vw, 22px);
   font-weight: 600;
   line-height: 1.5;
   color: var(--color-text);
+  max-width: 460px;
   overflow-wrap: anywhere;
 }
 .reminder-sub {
@@ -1081,6 +1093,62 @@
   margin: 12px 0 0;
   font-size: 12.5px;
   color: var(--color-text-muted);
+}
+
+/* Adaptive targets strip (Minimum / Recommended / Recovery) */
+.today-targets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 0 0 12px;
+}
+.target {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-input);
+  text-align: center;
+}
+.target.is-primary {
+  border-color: color-mix(in srgb, var(--color-primary) 45%, var(--color-border));
+  background: color-mix(in srgb, var(--color-primary) 8%, var(--color-surface));
+}
+.target-value {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+.target.is-primary .target-value {
+  color: var(--color-primary);
+}
+.target-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+.target-sub {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+/* Phones: keep the three targets readable, stack labels tightly */
+@media (max-width: 420px) {
+  .today-targets {
+    gap: 6px;
+  }
+  .target {
+    padding: 8px 6px;
+  }
+  .target-value {
+    font-size: 16px;
+  }
+  .target-sub {
+    display: none;
+  }
 }
 
 /* Task block list (shared by Today and expanded weekly days) */

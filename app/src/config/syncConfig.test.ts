@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { SYNC_CONFIG, TOKEN_PLACEHOLDER, isSyncConfigured } from "./syncConfig";
+import { SYNC_CONFIG } from "./syncConfig";
 import { serializeEnvelope } from "../lib/syncEnvelope";
 import { buildInitialState } from "../data/defaults";
 
@@ -11,24 +11,16 @@ describe("SYNC_CONFIG", () => {
     expect(SYNC_CONFIG.path).toBe("apps/fe-study-planner/planner-state.json");
   });
 
-  it("has a token field as a string", () => {
-    expect(typeof SYNC_CONFIG.token).toBe("string");
-    expect(SYNC_CONFIG.token.length).toBeGreaterThan(0);
+  it("carries NO token - the secret never lives in code or the bundle", () => {
+    expect("token" in SYNC_CONFIG).toBe(false);
+    expect(JSON.stringify(SYNC_CONFIG)).not.toMatch(/github_pat_|ghp_/);
   });
 
-  it("treats the placeholder as not-configured and a real token as configured", () => {
-    // Widen to string: SYNC_CONFIG is `as const`, so the token is a literal type
-    // and a direct === against the placeholder would be a no-overlap type error.
-    const token: string = SYNC_CONFIG.token;
-    expect(isSyncConfigured()).toBe(token !== TOKEN_PLACEHOLDER && token.length > 0);
-  });
-
-  it("never writes the token into the synced JSON envelope", () => {
+  it("never writes a token into the synced JSON envelope", () => {
     const json = serializeEnvelope(buildInitialState(), "device-1", "2026-06-22T00:00:00.000Z");
-    expect(json).not.toContain(SYNC_CONFIG.token);
     expect(json.toLowerCase()).not.toContain("token");
-    expect(json).not.toContain("ghp_");
     expect(json).not.toContain("github_pat_");
+    expect(json).not.toContain("ghp_");
   });
 
   it("builds an envelope with the expected metadata shape", () => {

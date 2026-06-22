@@ -16,9 +16,11 @@ import { computePriority, nextAction, remainingHours } from "./priority";
 import { overallReadiness, readinessContribution, topicProgress } from "./readiness";
 import { computePacing } from "./pacing";
 import { buildWeeklyPlan, collectMissedTopicIds, findToday } from "./scheduler";
-import { buildStudyPlan } from "./dailyPlan";
+import { buildStudyPlan, computeCoverage } from "./dailyPlan";
+import { computeAdaptivePlan } from "./adaptivePlan";
+import type { AdaptivePlan } from "./adaptivePlan";
 import { prepLevel } from "./labels";
-import { clamp, todayISO } from "./util";
+import { addDays, clamp, daysBetween, parseISODate, toISODate, todayISO } from "./util";
 
 export function computeTopics(state: PlannerState): ComputedTopic[] {
   return TOPICS.map((seed) => {
@@ -71,6 +73,8 @@ export interface PlannerModel {
   /** Canonical summary feeding the top cards (see PlannerSummary). */
   summary: PlannerSummary;
   pacing: PacingInfo;
+  /** Adaptive "honest but gentle" target + mode for today (see lib/adaptivePlan). */
+  adaptive: AdaptivePlan;
   weeklyPlan: DayPlan[];
   todayPlan: DayPlan | undefined;
   /** Multi-task daily plan (today first) + the rolling visible week. */
@@ -104,8 +108,77 @@ export function buildModel(state: PlannerState, today = todayISO()): PlannerMode
 
   const weeklyPlan = buildWeeklyPlan({ state, computed, today });
 
-  // Multi-task engine: builds the full remaining horizon (today first).
-  const { days: studyPlan, coverage } = buildStudyPlan({ state, computed, today });
+  // ---- Adaptive target ----------------------------------------------------
+  // Compute behaviour signals from the SAME state, derive the gentle/honest
+  // target, then let it (only) raise today's budget so the plan ramps with real
+  // momentum instead of sitting at the soft-start minutes forever.
+  const rawDaysRemaining = daysBetween(today, state.examDate);
+  const examPassed = rawDaysRemaining < 0;
+  const adaptiveDaysRemaining = Math.max(rawDaysRemaining, 0);
+
+  const coverageSignals = computeCoverage(computed);
+
+  // Recent study consistency + stalls (study log is the source of truth).
+  const windowStart = toISODate(addDays(parseISODate(today), -6)); // inclusive 7-day window
+  const studyDates = new Set<string>();
+  let lastStudyDate: string | null = null;
+  for (const e of state.studyLog) {
+    if (e.date > today) continue;
+    studyDates.add(e.date);
+    if (!lastStudyDate || e.date > lastStudyDate) lastStudyDate = e.date;
+  }
+  let recentActiveDays = 0;
+  for (const d of studyDates) if (d >= windowStart && d <= today) recentActiveDays += 1;
+  const daysSinceLastStudy = lastStudyDate ? daysBetween(lastStudyDate, today) : null;
+
+  let recentSkips = 0;
+  for (const [date, ov] of Object.entries(state.dayOverrides)) {
+    if (ov.status === "skipped" && date >= windowStart && date <= today) recentSkips += 1;
+  }
+
+  // High-yield (Tier 1) coverage gap.
+  let totalTier1 = 0;
+  let untouchedTier1 = 0;
+  for (const t of included) {
+    if (t.seed.tier !== 1) continue;
+    totalTier1 += 1;
+    const touched =
+      t.state.completedHours > 0 ||
+      (t.state.status !== "not-started" && t.state.status !== "skipped");
+    if (!touched) untouchedTier1 += 1;
+  }
+
+  const todayWeekday = parseISODate(today).getDay();
+  const todayAvail = state.dailyAvailability[todayWeekday];
+  const todayAvailabilityMinutes =
+    todayAvail.mode === "Rest" ? 0 : Math.max(0, Math.round(todayAvail.minutes));
+
+  const adaptive = computeAdaptivePlan({
+    examPassed,
+    daysRemaining: adaptiveDaysRemaining,
+    remainingHours: remaining,
+    completedHours,
+    plannedTotalHours,
+    todayAvailabilityMinutes,
+    completedStudyDays: studyDates.size,
+    recentActiveDays,
+    daysSinceLastStudy,
+    recentSkips,
+    untouchedTier1,
+    totalTier1,
+    weakRemaining: coverageSignals.weakRemaining,
+    remainingTopics: coverageSignals.remainingTopics,
+    totalTopics: coverageSignals.totalTopics,
+  });
+
+  // Multi-task engine: builds the full remaining horizon (today first). The
+  // adaptive recommended target gently raises today's budget (never lowers it).
+  const { days: studyPlan, coverage } = buildStudyPlan({
+    state,
+    computed,
+    today,
+    todayBudgetMinutes: adaptive.recommendedMinutes,
+  });
   const weekStudyPlans = studyPlan.slice(0, 7);
   const plannedWeeklyHours =
     weekStudyPlans.reduce((s, d) => s + d.totalPlannedMinutes, 0) / 60;
@@ -179,6 +252,7 @@ export function buildModel(state: PlannerState, today = todayISO()): PlannerMode
     progressPct,
     summary,
     pacing,
+    adaptive,
     weeklyPlan,
     todayPlan: findToday(weeklyPlan),
     studyPlan,
