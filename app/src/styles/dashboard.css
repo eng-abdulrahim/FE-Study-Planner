@@ -119,6 +119,47 @@
   letter-spacing: 0;
 }
 
+/* Mobile: keep the exam-date control fully inside the card.
+   The native input[type="date"] (its value text + calendar picker indicator)
+   carries an intrinsic width that, on narrow phones, can poke past the card's
+   rounded edge. We let the flex chain shrink (min-width: 0), pin the field to
+   the card's inner width (width: 100% + border-box), and clip the card itself
+   as a final safety net so nothing can ever cross the border. The label/input
+   already stack vertically (.exam-edit is a column), so no row can be forced
+   wider than the card. */
+@media (max-width: 640px) {
+  .exam-card {
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .exam-body,
+  .exam-display,
+  .exam-edit {
+    min-width: 0;
+  }
+  /* Long date text wraps instead of forcing the card wider. */
+  .exam-date-text,
+  .exam-status {
+    overflow-wrap: anywhere;
+  }
+  /* Pin the date field to the card's inner width; never let it grow past it. */
+  .exam-edit .input,
+  .exam-edit input[type="date"] {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  /* Keep the native calendar picker pinned right without adding intrinsic
+     width to the field. */
+  .exam-edit input[type="date"]::-webkit-calendar-picker-indicator {
+    margin-inline-start: auto;
+    flex-shrink: 0;
+  }
+}
+
 /* Today card - the calm, inviting centre of the dashboard. A soft blush wash
    sets it apart from the cooler info cards without shouting. */
 .today-card {
