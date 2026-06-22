@@ -1,0 +1,14 @@
+node_modules
+dist
+dist-ssr
+*.local
+*.tsbuildinfo
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+
+# Local env files hold the real (public-in-bundle) Telegram values. Keep the raw
+# secrets out of source control; only the placeholder example is committed.
+.env
+.env.*
+!.env.example

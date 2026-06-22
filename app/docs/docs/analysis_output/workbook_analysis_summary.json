@@ -1,0 +1,184 @@
+{
+  "analysis_meta": {
+    "analyzed_files": [
+      {
+        "name": "Latifah_FE_Auto_Generated_Study_Planner.xlsx",
+        "type": "Excel workbook (.xlsx)",
+        "size_bytes": 53769
+      },
+      {
+        "name": "Latifah_FE_Auto_Planner_Guide.pdf",
+        "type": "PDF guide",
+        "size_bytes": 208664,
+        "pages": 6
+      }
+    ],
+    "tooling": "Python openpyxl 3.1.5 (xlsx), pypdf 6.13 / pdfplumber (pdf)"
+  },
+  "workbook_properties": {
+    "creator": "openpyxl",
+    "lastModifiedBy": "Abdul Rahim Abu Riyala",
+    "created": "2026-05-18 15:45:25",
+    "modified": "2026-05-18 15:51:04",
+    "title": null
+  },
+  "workbook_origin_path_hint": "E:\\FE\\Roadmap\\",
+  "subject": "FE (Fundamentals of Engineering) Electrical & Computer exam study planner",
+  "protection": {
+    "workbook_structure_locked": false,
+    "any_sheet_protected": false,
+    "passwords": "none"
+  },
+  "automation": {
+    "vba_macros": false,
+    "office_scripts": false,
+    "power_query": false,
+    "external_links": false,
+    "pivot_tables": false,
+    "form_controls": false,
+    "charts": 4,
+    "tables_listobjects": 0,
+    "autofilter": "Topic Planner!A1:R86"
+  },
+  "totals": {
+    "sheets": 6,
+    "visible_sheets": 3,
+    "hidden_sheets": 3,
+    "very_hidden_sheets": 0,
+    "total_formulas": 856,
+    "defined_names": 58,
+    "defined_names_used": 32,
+    "defined_names_unused": 26,
+    "data_validation_ranges": 8,
+    "conditional_format_rules": 34,
+    "error_cells": 0,
+    "topics": 85,
+    "plan_horizon_days": 7
+  },
+  "volatile_functions": {
+    "TODAY": 7
+  },
+  "sheets": [
+    {
+      "sheet": "Dashboard",
+      "state": "visible",
+      "dimensions": "A1:R65",
+      "max_row": 65,
+      "max_col": 18,
+      "formulas": 54,
+      "data_validations": 3,
+      "conditional_formats": 16,
+      "merged_cells": 100,
+      "error_cells": 0,
+      "protected": false
+    },
+    {
+      "sheet": "Topic Planner",
+      "state": "visible",
+      "dimensions": "A1:V86",
+      "max_row": 86,
+      "max_col": 22,
+      "formulas": 595,
+      "data_validations": 4,
+      "conditional_formats": 10,
+      "merged_cells": 0,
+      "error_cells": 0,
+      "protected": false
+    },
+    {
+      "sheet": "Weekly Plan",
+      "state": "visible",
+      "dimensions": "A1:J23",
+      "max_row": 23,
+      "max_col": 10,
+      "formulas": 56,
+      "data_validations": 1,
+      "conditional_formats": 8,
+      "merged_cells": 21,
+      "error_cells": 0,
+      "protected": false
+    },
+    {
+      "sheet": "_Lists",
+      "state": "hidden",
+      "dimensions": "A1:J8",
+      "max_row": 8,
+      "max_col": 10,
+      "formulas": 0,
+      "data_validations": 0,
+      "conditional_formats": 0,
+      "merged_cells": 0,
+      "error_cells": 0,
+      "protected": false
+    },
+    {
+      "sheet": "_Calc",
+      "state": "hidden",
+      "dimensions": "A1:D39",
+      "max_row": 39,
+      "max_col": 4,
+      "formulas": 39,
+      "data_validations": 0,
+      "conditional_formats": 0,
+      "merged_cells": 0,
+      "error_cells": 0,
+      "protected": false
+    },
+    {
+      "sheet": "_PlanEngine",
+      "state": "hidden",
+      "dimensions": "A1:Q8",
+      "max_row": 8,
+      "max_col": 17,
+      "formulas": 112,
+      "data_validations": 0,
+      "conditional_formats": 0,
+      "merged_cells": 0,
+      "error_cells": 0,
+      "protected": false
+    }
+  ],
+  "unused_named_ranges": [
+    "DeferKey",
+    "FamilyTaskTemplates",
+    "OverallDone",
+    "OverallRem",
+    "PlanAutoTask",
+    "PlanAvailMins",
+    "PlanDate",
+    "PlanDay",
+    "PlanEnergy",
+    "PlanMode",
+    "PlanSuggestMins",
+    "PlanTopicIdx",
+    "PlanTopicName",
+    "PlanTopicSection",
+    "PlanTopicTier",
+    "PlannedHrs",
+    "StatusList",
+    "TiredKey",
+    "TopicAction",
+    "TopicBoredom",
+    "TopicDepth",
+    "TopicDiff",
+    "TopicProgress",
+    "TotalIncluded",
+    "WeeklyPlanActual",
+    "WeeklyPlanDate"
+  ],
+  "dead_inputs": [
+    "Dashboard!C20 Student Name",
+    "Dashboard!C22 Start Date",
+    "Dashboard!C23 Study Style",
+    "Dashboard!C24 Min Weekly Hours",
+    "Dashboard!C25 Max Weekly Hours"
+  ],
+  "key_findings": [
+    "Readiness Score (_Calc!B28) is non-monotonic and severely understates progress (11% readiness at 45% of hours).",
+    "5 inputs (name, start date, study style, min/max weekly hours) are referenced by no formula (dead inputs).",
+    "No workbook/sheet protection; the 3 engine sheets are only 'hidden' and easily breakable.",
+    "26 of 58 named ranges are defined but never used by name.",
+    "Plan is a rolling single 7-day week anchored on TODAY(); no full schedule to exam date, no reschedule of missed days."
+  ],
+  "consistency_verdict": "Largely consistent and same-version; main mismatches: dead 'Essential Inputs' and the claim that Exam Date drives 'all readiness math'."
+}

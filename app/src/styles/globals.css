@@ -1,0 +1,358 @@
+@import "./theme.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--color-bg);
+  /* Very subtle warm glow: blush from the top-right, lavender from the
+     bottom-left. Kept low-opacity so it reads as calm warmth, not decoration. */
+  background-image:
+    radial-gradient(
+      1100px 560px at 100% -8%,
+      color-mix(in srgb, var(--color-primary-soft) 70%, transparent),
+      transparent 62%
+    ),
+    radial-gradient(
+      820px 460px at -6% 108%,
+      color-mix(in srgb, var(--color-accent-soft) 65%, transparent),
+      transparent 58%
+    );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--color-text);
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: 650;
+  letter-spacing: -0.005em;
+  line-height: 1.3;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--color-primary-strong);
+}
+
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* ---- Buttons ------------------------------------------------------------ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-surface);
+  color: var(--color-text);
+  padding: 9px 14px;
+  border-radius: var(--radius-input);
+  font-weight: 620;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s ease, border-color 0.15s ease, opacity 0.15s ease,
+    transform 0.08s ease, box-shadow 0.15s ease;
+}
+.btn:hover {
+  background: var(--color-surface-muted);
+}
+.btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.btn-primary {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-on-primary);
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--color-primary) 26%, transparent);
+}
+.btn-primary:hover {
+  background: var(--color-primary-strong);
+  border-color: var(--color-primary-strong);
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px color-mix(in srgb, var(--color-primary) 32%, transparent);
+  }
+}
+.btn-success {
+  background: var(--color-success);
+  border-color: var(--color-success);
+  color: #fff;
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--color-success) 24%, transparent);
+}
+.btn-ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--color-primary-strong);
+}
+.btn-ghost:hover {
+  background: var(--color-primary-soft);
+}
+.btn-danger {
+  color: var(--color-danger);
+  border-color: color-mix(in srgb, var(--color-danger) 40%, transparent);
+  background: transparent;
+}
+.btn-danger:hover {
+  background: var(--color-danger-soft);
+}
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 13px;
+  border-radius: 8px;
+  gap: 5px;
+}
+.btn-block {
+  width: 100%;
+}
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ---- Badges ------------------------------------------------------------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 650;
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-muted);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+.badge.primary {
+  background: var(--color-primary-soft);
+  color: var(--color-primary-strong);
+}
+.badge.success {
+  background: var(--color-success-soft);
+  color: var(--color-success);
+}
+.badge.warning {
+  background: var(--color-warning-soft);
+  color: var(--color-warning);
+}
+.badge.danger {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+.badge.rest {
+  background: var(--color-rest-soft);
+  color: var(--color-rest);
+}
+
+/* ---- Inputs ------------------------------------------------------------- */
+.input,
+.select {
+  width: 100%;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--color-text);
+  background: var(--color-input-bg);
+  border: 1px solid var(--color-input-border);
+  border-radius: var(--radius-input);
+  padding: 8px 11px;
+  min-height: 38px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.input:focus,
+.select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-soft);
+}
+.input.invalid {
+  border-color: var(--color-danger);
+  box-shadow: 0 0 0 3px var(--color-danger-soft);
+}
+.input:disabled,
+.select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.field-label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 620;
+  color: var(--color-text-muted);
+  margin-bottom: 5px;
+}
+.help-text {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}
+.help-text.error {
+  color: var(--color-danger);
+}
+
+/* Segmented control (used for the theme toggle) */
+.segmented {
+  display: inline-flex;
+  background: var(--color-surface-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-input);
+  padding: 3px;
+  gap: 2px;
+}
+.segmented button {
+  border: none;
+  background: transparent;
+  color: var(--color-text-muted);
+  padding: 6px 12px;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+.segmented button.active {
+  background: var(--color-card);
+  color: var(--color-primary-strong);
+  box-shadow: var(--shadow-soft);
+}
+
+/* ---- Panel -------------------------------------------------------------- */
+.panel {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+/* ---- Empty state -------------------------------------------------------- */
+.empty-state {
+  text-align: center;
+  padding: 40px 18px;
+  color: var(--color-text-muted);
+}
+.empty-state h4 {
+  color: var(--color-text);
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+/* ---- Utilities ---------------------------------------------------------- */
+.muted {
+  color: var(--color-text-muted);
+}
+.row-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.saved-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-success);
+  background: var(--color-success-soft);
+  padding: 5px 11px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+.saved-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-success);
+}
+
+/* ---- Micro-interactions ------------------------------------------------- */
+/* Page change: gentle fade + rise. Keyed on the active page in AppShell. */
+.page-fade {
+  animation: page-fade-in 0.26s ease both;
+}
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Subtle lift for cards on hover-capable (non-touch) pointers only. */
+@media (hover: hover) and (pointer: fine) {
+  .panel {
+    transition: box-shadow 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
+  }
+}
+
+/* ---- Touch tap targets -------------------------------------------------- */
+/* Coarse pointers (touch): enforce comfortable ~44px hit areas. */
+@media (pointer: coarse) {
+  .btn,
+  .input,
+  .select,
+  .link-btn,
+  .segmented button {
+    min-height: 42px;
+  }
+  .btn-sm {
+    min-height: 38px;
+  }
+  .link-btn {
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* ---- Reduced motion ----------------------------------------------------- */
+/* Honor the OS setting: cut animation/transition without changing layout. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,4733 @@
+{
+  "properties": {
+    "creator": "openpyxl",
+    "lastModifiedBy": "Abdul Rahim Abu Riyala",
+    "created": "2026-05-18 15:45:25",
+    "modified": "2026-05-18 15:51:04",
+    "title": null
+  },
+  "security": {
+    "lockStructure": null,
+    "lockWindows": null,
+    "workbookPassword": null
+  },
+  "calc_properties": {
+    "calcMode": null,
+    "fullCalcOnLoad": true
+  },
+  "defined_names": {
+    "CompletedHrs": {
+      "value": "_Calc!$B$25",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "DailyEnergy": {
+      "value": "Dashboard!$H$20:$H$26",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "DailyMins": {
+      "value": "Dashboard!$G$20:$G$26",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "DailyMode": {
+      "value": "Dashboard!$I$20:$I$26",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "DayNames": {
+      "value": "_Lists!$G$2:$G$8",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "DeferKey": {
+      "value": "'Topic Planner'!$U$2:$U$86",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "FamilyKey": {
+      "value": "'Topic Planner'!$V$2:$V$86",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "FamilyTaskTemplates": {
+      "value": "_Lists!$D$2:$D$4",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "HighPriRem": {
+      "value": "_Calc!$B$23",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "LowEnergyTasks": {
+      "value": "_Lists!$B$2:$B$7",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "NormalTaskTemplates": {
+      "value": "_Lists!$C$2:$C$4",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "OverallDone": {
+      "value": "_Calc!$B$2",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "OverallRem": {
+      "value": "_Calc!$B$3",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "PlanAutoTask": {
+      "value": "_PlanEngine!$O$2:$O$8",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "PlanAvailMins": {
+      "value": "_PlanEngine!$E$2:$E$8",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "PlanDate": {
+      "value": "_PlanEngine!$B$2:$B$8",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "PlanDay": {
+      "value": "_PlanEngine!$C$2:$C$8",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "PlanEnergy": {
+      "value": "_PlanEngine!$F$2:$F$8",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "PlanMode": {
+      "value": "_PlanEngine!$D$2:$D$8",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "PlannedHrs": {
+      "value": "_Calc!$B$24",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "PlanSuggestMins": {
+      "value": "_PlanEngine!$N$2:$N$8",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "PlanTopicIdx": {
+      "value": "_PlanEngine!$J$2:$J$8",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "PlanTopicName": {
+      "value": "_PlanEngine!$K$2:$K$8",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "PlanTopicSection": {
+      "value": "_PlanEngine!$L$2:$L$8",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "PlanTopicTier": {
+      "value": "_PlanEngine!$M$2:$M$8",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "PriorityKey": {
+      "value": "'Topic Planner'!$S$2:$S$86",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "ProgressPct": {
+      "value": "_Calc!$B$27",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "ReadinessPct": {
+      "value": "_Calc!$B$28",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "RemainingHrs": {
+      "value": "_Calc!$B$26",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "StatusList": {
+      "value": "_Lists!$I$2:$I$8",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "TiredKey": {
+      "value": "'Topic Planner'!$T$2:$T$86",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "TopicAction": {
+      "value": "'Topic Planner'!$Q$2:$Q$86",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "TopicBoredom": {
+      "value": "'Topic Planner'!$I$2:$I$86",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "TopicCompleted": {
+      "value": "'Topic Planner'!$N$2:$N$86",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "TopicConf": {
+      "value": "'Topic Planner'!$G$2:$G$86",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "TopicDepth": {
+      "value": "'Topic Planner'!$L$2:$L$86",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "TopicDiff": {
+      "value": "'Topic Planner'!$H$2:$H$86",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "TopicHours": {
+      "value": "'Topic Planner'!$M$2:$M$86",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "TopicInclude": {
+      "value": "'Topic Planner'!$A$2:$A$86",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "TopicName": {
+      "value": "'Topic Planner'!$C$2:$C$86",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "TopicPriority": {
+      "value": "'Topic Planner'!$K$2:$K$86",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "TopicProgress": {
+      "value": "'Topic Planner'!$O$2:$O$86",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "TopicQuickWin": {
+      "value": "'Topic Planner'!$J$2:$J$86",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "TopicSection": {
+      "value": "'Topic Planner'!$B$2:$B$86",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "TopicStatus": {
+      "value": "'Topic Planner'!$P$2:$P$86",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "TopicTier": {
+      "value": "'Topic Planner'!$F$2:$F$86",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "TopicWeight": {
+      "value": "'Topic Planner'!$E$2:$E$86",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "TotalIncluded": {
+      "value": "_Calc!$B$22",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "WeeklyAvail": {
+      "value": "_Calc!$B$38",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "WeeklyPlanActual": {
+      "value": "'Weekly Plan'!$I$6:$I$12",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "WeeklyPlanDate": {
+      "value": "'Weekly Plan'!$A$6:$A$12",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "WeeklyPlanDay": {
+      "value": "'Weekly Plan'!$B$6:$B$12",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "WeeklyPlanDone": {
+      "value": "'Weekly Plan'!$H$6:$H$12",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "WeeklyPlanMins": {
+      "value": "'Weekly Plan'!$G$6:$G$12",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "WeeklyPlanMode": {
+      "value": "'Weekly Plan'!$C$6:$C$12",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "WeeklyPlanned": {
+      "value": "_Calc!$B$39",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "WeeklyPlanTask": {
+      "value": "'Weekly Plan'!$F$6:$F$12",
+      "hidden": null,
+      "localSheetId": null
+    },
+    "WeeklyPlanTopic": {
+      "value": "'Weekly Plan'!$E$6:$E$12",
+      "hidden": null,
+      "localSheetId": null
+    }
+  },
+  "defined_names_count": 58,
+  "sheets": [
+    {
+      "title": "Dashboard",
+      "state": "visible",
+      "dimensions": "A1:R65",
+      "max_row": 65,
+      "max_col": 18,
+      "freeze_panes": "A4",
+      "protection": {
+        "sheet": false,
+        "password_hash": null,
+        "selectLockedCells": false,
+        "selectUnlockedCells": false,
+        "formatCells": true,
+        "insertRows": true,
+        "deleteRows": true
+      },
+      "merged_cells": [
+        "E12:R12",
+        "E23:F23",
+        "A13:D13",
+        "E14:R14",
+        "I24:K24",
+        "A2:R2",
+        "A15:D15",
+        "A64:D64",
+        "O26:P26",
+        "M25:N25",
+        "O25:P25",
+        "P5:R5",
+        "A28:R28",
+        "A16:D16",
+        "P4:R4",
+        "A22:B22",
+        "M5:O5",
+        "E16:R16",
+        "E22:F22",
+        "M19:N19",
+        "A61:R61",
+        "I22:K22",
+        "A62:D62",
+        "I21:K21",
+        "J7:L7",
+        "A5:C5",
+        "E18:K18",
+        "I23:K23",
+        "E63:L63",
+        "G4:I4",
+        "A11:D11",
+        "A4:C4",
+        "E13:R13",
+        "E65:L65",
+        "M62:R62",
+        "M21:N21",
+        "D5:F5",
+        "O21:P21",
+        "A10:R10",
+        "M4:O4",
+        "E15:R15",
+        "E26:F26",
+        "L18:R18",
+        "J5:L5",
+        "M24:N24",
+        "E25:F25",
+        "G8:I8",
+        "A1:R1",
+        "M64:R64",
+        "A7:C7",
+        "I25:K25",
+        "P8:R8",
+        "O19:P19",
+        "E62:L62",
+        "J4:L4",
+        "A63:D63",
+        "D7:F7",
+        "M65:R65",
+        "P7:R7",
+        "C20:D20",
+        "E20:F20",
+        "E64:L64",
+        "G5:I5",
+        "O20:P20",
+        "C22:D22",
+        "I20:K20",
+        "D8:F8",
+        "O22:P22",
+        "A21:B21",
+        "C21:D21",
+        "M63:R63",
+        "A65:D65",
+        "J8:L8",
+        "A23:B23",
+        "E11:R11",
+        "C23:D23",
+        "M26:N26",
+        "A12:D12",
+        "M23:N23",
+        "O23:P23",
+        "I26:K26",
+        "G7:I7",
+        "A14:D14",
+        "A24:B24",
+        "C24:D24",
+        "E24:F24",
+        "O24:P24",
+        "M7:O7",
+        "A25:B25",
+        "M20:N20",
+        "C25:D25",
+        "A8:C8",
+        "D4:F4",
+        "E19:F19",
+        "M8:O8",
+        "M22:N22",
+        "I19:K19",
+        "A20:B20",
+        "A18:D18",
+        "E21:F21"
+      ],
+      "hidden_columns": [],
+      "hidden_rows": [],
+      "column_widths": {
+        "A": 11.0
+      },
+      "data_validations": [
+        {
+          "type": "list",
+          "operator": null,
+          "formula1": "\"Flexible,Daily,Non-Daily\"",
+          "formula2": null,
+          "allow_blank": false,
+          "showErrorMessage": false,
+          "errorTitle": null,
+          "error": null,
+          "showInputMessage": false,
+          "promptTitle": null,
+          "prompt": null,
+          "sqref": "C23"
+        },
+        {
+          "type": "list",
+          "operator": null,
+          "formula1": "\"1,2,3,4,5\"",
+          "formula2": null,
+          "allow_blank": false,
+          "showErrorMessage": false,
+          "errorTitle": null,
+          "error": null,
+          "showInputMessage": false,
+          "promptTitle": null,
+          "prompt": null,
+          "sqref": "H20:H26"
+        },
+        {
+          "type": "list",
+          "operator": null,
+          "formula1": "\"Normal,Low Energy,Family,Rest\"",
+          "formula2": null,
+          "allow_blank": false,
+          "showErrorMessage": false,
+          "errorTitle": null,
+          "error": null,
+          "showInputMessage": false,
+          "promptTitle": null,
+          "prompt": null,
+          "sqref": "I20:I26"
+        }
+      ],
+      "conditional_formatting": [
+        {
+          "range": "D5:F5",
+          "type": "cellIs",
+          "operator": "lessThan",
+          "formula": [
+            "14"
+          ],
+          "priority": 1,
+          "dxfId": 29,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "D5:F5",
+          "type": "cellIs",
+          "operator": "lessThan",
+          "formula": [
+            "30"
+          ],
+          "priority": 2,
+          "dxfId": 28,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "D5:F5",
+          "type": "cellIs",
+          "operator": "greaterThanOrEqual",
+          "formula": [
+            "30"
+          ],
+          "priority": 3,
+          "dxfId": 27,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "J5:L5",
+          "type": "cellIs",
+          "operator": "lessThan",
+          "formula": [
+            "0.3"
+          ],
+          "priority": 4,
+          "dxfId": 26,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "J5:L5",
+          "type": "cellIs",
+          "operator": "lessThan",
+          "formula": [
+            "0.6"
+          ],
+          "priority": 5,
+          "dxfId": 25,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "M5:O5",
+          "type": "cellIs",
+          "operator": "lessThan",
+          "formula": [
+            "0.3"
+          ],
+          "priority": 6,
+          "dxfId": 24,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "M5:O5",
+          "type": "cellIs",
+          "operator": "lessThan",
+          "formula": [
+            "0.6"
+          ],
+          "priority": 7,
+          "dxfId": 23,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "M8:O8",
+          "type": "cellIs",
+          "operator": "greaterThan",
+          "formula": [
+            "10"
+          ],
+          "priority": 8,
+          "dxfId": 22,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "M8:O8",
+          "type": "cellIs",
+          "operator": "greaterThan",
+          "formula": [
+            "5"
+          ],
+          "priority": 9,
+          "dxfId": 21,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "M8:O8",
+          "type": "cellIs",
+          "operator": "lessThanOrEqual",
+          "formula": [
+            "5"
+          ],
+          "priority": 10,
+          "dxfId": 20,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "H20:H26",
+          "type": "colorScale",
+          "operator": null,
+          "formula": [],
+          "priority": 11,
+          "dxfId": null,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": "<openpyxl.formatting.rule.ColorScale object>\nParameters:\ncfvo=[<openpyxl.formatting.rule.FormatObject object>\nParameters:\ntype='num', val=1.0, gte=None, <openpyxl.formatting.rule.FormatObject object>\nParameters:\ntype='num', val=3.0, gte=None, <openpyxl.formatting.rule.FormatObject object>\nParameters:\ntype='num', val=5.0, gte=None], color=[<openpyxl.styles.colors.Color object>\nParameters:\nrgb='FFF8CBAD', indexed=None, auto=None, theme=None, tint=0.0, type='rgb', <openpyxl.styles.colors.Color object>\nParameters:\nrgb='FFFFE699', indexed=None, auto=None, theme=None, tint=0.0, type='rgb', <openpyxl.styles.colors.Color object>\nParameters:\nrgb='FFC6E0B4', indexed=None, auto=None, theme=None, tint=0.0, type='rgb']",
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "I20:I26",
+          "type": "expression",
+          "operator": null,
+          "formula": [
+            "$I20=\"Rest\""
+          ],
+          "priority": 12,
+          "dxfId": 19,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "I20:I26",
+          "type": "expression",
+          "operator": null,
+          "formula": [
+            "$I20=\"Family\""
+          ],
+          "priority": 13,
+          "dxfId": 18,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "I20:I26",
+          "type": "expression",
+          "operator": null,
+          "formula": [
+            "$I20=\"Low Energy\""
+          ],
+          "priority": 14,
+          "dxfId": 17,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "R20:R26",
+          "type": "expression",
+          "operator": null,
+          "formula": [
+            "$R20=\"Yes\""
+          ],
+          "priority": 15,
+          "dxfId": 16,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "R20:R26",
+          "type": "expression",
+          "operator": null,
+          "formula": [
+            "$R20=\"Skipped\""
+          ],
+          "priority": 16,
+          "dxfId": 15,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        }
+      ],
+      "formula_count": 54,
+      "formulas": [
+        {
+          "coord": "A5",
+          "formula": "=C21"
+        },
+        {
+          "coord": "D5",
+          "formula": "=C21-TODAY()"
+        },
+        {
+          "coord": "G5",
+          "formula": "=ROUND((C21-TODAY())/7,1)"
+        },
+        {
+          "coord": "J5",
+          "formula": "=ProgressPct"
+        },
+        {
+          "coord": "M5",
+          "formula": "=ReadinessPct"
+        },
+        {
+          "coord": "P5",
+          "formula": "=_Calc!B15"
+        },
+        {
+          "coord": "A8",
+          "formula": "=CompletedHrs"
+        },
+        {
+          "coord": "D8",
+          "formula": "=RemainingHrs"
+        },
+        {
+          "coord": "G8",
+          "formula": "=WeeklyAvail"
+        },
+        {
+          "coord": "J8",
+          "formula": "=WeeklyPlanned"
+        },
+        {
+          "coord": "M8",
+          "formula": "=HighPriRem"
+        },
+        {
+          "coord": "P8",
+          "formula": "=COUNTIF(WeeklyPlanDone,\"Yes\")&\" / 7 done\""
+        },
+        {
+          "coord": "A10",
+          "formula": "=\"What Should I Study Next?  -  Today is \"&TEXT(TODAY(),\"dddd, mmm d\")"
+        },
+        {
+          "coord": "E11",
+          "formula": "=IF(INDEX(WeeklyPlanTopic,WEEKDAY(TODAY(),1))=\"\",\"Rest day. No specific topic.\",INDEX(WeeklyPlanTopic,WEEKDAY(TODAY(),1)))"
+        },
+        {
+          "coord": "E12",
+          "formula": "=INDEX(WeeklyPlanTask,WEEKDAY(TODAY(),1))"
+        },
+        {
+          "coord": "E13",
+          "formula": "=INDEX(WeeklyPlanMode,WEEKDAY(TODAY(),1))&\"  -  \"&INDEX(WeeklyPlanMins,WEEKDAY(TODAY(),1))&\" minutes\""
+        },
+        {
+          "coord": "E14",
+          "formula": "=_Calc!B15&\"  (\"&_Calc!D15&\", priority \"&TEXT(_Calc!C15,\"0.00\")&\")\""
+        },
+        {
+          "coord": "E15",
+          "formula": "=IF(INDEX(TopicWeight,MATCH(LARGE(PriorityKey,1),PriorityKey,0))>=10,\"High exam weight - core scoring chapter\",IF(INDEX(TopicConf,MATCH(LARGE(PriorityKey,1),PriorityKey,0))<=2,\"Low confidence + high value - high gain\",IF(INDEX(TopicQuickWin,MATCH(LARGE(PriorityKey,1),PriorityKey,0))>=4,\"Quick win - low effort, high return\",IF(INDEX(TopicTier,MATCH(LARGE(PriorityKey,1),PriorityKey,0))=1,\"Tier 1 must-cover topic\",\"Strong supporting topic\"))))"
+        },
+        {
+          "coord": "E16",
+          "formula": "=\"Try: \"&INDEX(LowEnergyTasks,1)"
+        },
+        {
+          "coord": "L20",
+          "formula": "=INDEX(WeeklyPlanDay,1)"
+        },
+        {
+          "coord": "M20",
+          "formula": "=INDEX(WeeklyPlanTopic,1)"
+        },
+        {
+          "coord": "O20",
+          "formula": "=INDEX(WeeklyPlanTask,1)"
+        },
+        {
+          "coord": "Q20",
+          "formula": "=INDEX(WeeklyPlanMins,1)"
+        },
+        {
+          "coord": "R20",
+          "formula": "=INDEX(WeeklyPlanDone,1)"
+        },
+        {
+          "coord": "L21",
+          "formula": "=INDEX(WeeklyPlanDay,2)"
+        },
+        {
+          "coord": "M21",
+          "formula": "=INDEX(WeeklyPlanTopic,2)"
+        },
+        {
+          "coord": "O21",
+          "formula": "=INDEX(WeeklyPlanTask,2)"
+        },
+        {
+          "coord": "Q21",
+          "formula": "=INDEX(WeeklyPlanMins,2)"
+        },
+        {
+          "coord": "R21",
+          "formula": "=INDEX(WeeklyPlanDone,2)"
+        },
+        {
+          "coord": "L22",
+          "formula": "=INDEX(WeeklyPlanDay,3)"
+        },
+        {
+          "coord": "M22",
+          "formula": "=INDEX(WeeklyPlanTopic,3)"
+        },
+        {
+          "coord": "O22",
+          "formula": "=INDEX(WeeklyPlanTask,3)"
+        },
+        {
+          "coord": "Q22",
+          "formula": "=INDEX(WeeklyPlanMins,3)"
+        },
+        {
+          "coord": "R22",
+          "formula": "=INDEX(WeeklyPlanDone,3)"
+        },
+        {
+          "coord": "L23",
+          "formula": "=INDEX(WeeklyPlanDay,4)"
+        },
+        {
+          "coord": "M23",
+          "formula": "=INDEX(WeeklyPlanTopic,4)"
+        },
+        {
+          "coord": "O23",
+          "formula": "=INDEX(WeeklyPlanTask,4)"
+        },
+        {
+          "coord": "Q23",
+          "formula": "=INDEX(WeeklyPlanMins,4)"
+        },
+        {
+          "coord": "R23",
+          "formula": "=INDEX(WeeklyPlanDone,4)"
+        },
+        {
+          "coord": "L24",
+          "formula": "=INDEX(WeeklyPlanDay,5)"
+        },
+        {
+          "coord": "M24",
+          "formula": "=INDEX(WeeklyPlanTopic,5)"
+        },
+        {
+          "coord": "O24",
+          "formula": "=INDEX(WeeklyPlanTask,5)"
+        },
+        {
+          "coord": "Q24",
+          "formula": "=INDEX(WeeklyPlanMins,5)"
+        },
+        {
+          "coord": "R24",
+          "formula": "=INDEX(WeeklyPlanDone,5)"
+        },
+        {
+          "coord": "L25",
+          "formula": "=INDEX(WeeklyPlanDay,6)"
+        },
+        {
+          "coord": "M25",
+          "formula": "=INDEX(WeeklyPlanTopic,6)"
+        },
+        {
+          "coord": "O25",
+          "formula": "=INDEX(WeeklyPlanTask,6)"
+        },
+        {
+          "coord": "Q25",
+          "formula": "=INDEX(WeeklyPlanMins,6)"
+        },
+        {
+          "coord": "R25",
+          "formula": "=INDEX(WeeklyPlanDone,6)"
+        },
+        {
+          "coord": "L26",
+          "formula": "=INDEX(WeeklyPlanDay,7)"
+        },
+        {
+          "coord": "M26",
+          "formula": "=INDEX(WeeklyPlanTopic,7)"
+        },
+        {
+          "coord": "O26",
+          "formula": "=INDEX(WeeklyPlanTask,7)"
+        },
+        {
+          "coord": "Q26",
+          "formula": "=INDEX(WeeklyPlanMins,7)"
+        },
+        {
+          "coord": "R26",
+          "formula": "=INDEX(WeeklyPlanDone,7)"
+        }
+      ],
+      "error_cells": []
+    },
+    {
+      "title": "Topic Planner",
+      "state": "visible",
+      "dimensions": "A1:V86",
+      "max_row": 86,
+      "max_col": 22,
+      "freeze_panes": "H2",
+      "protection": {
+        "sheet": false,
+        "password_hash": null,
+        "selectLockedCells": false,
+        "selectUnlockedCells": false,
+        "formatCells": true,
+        "insertRows": true,
+        "deleteRows": true
+      },
+      "merged_cells": [],
+      "hidden_columns": [
+        "S"
+      ],
+      "hidden_rows": [],
+      "column_widths": {
+        "A": 5.0,
+        "B": 26.0,
+        "C": 34.0,
+        "D": 10.0,
+        "E": 8.0,
+        "F": 6.0,
+        "G": 11.0,
+        "H": 10.0,
+        "K": 12.0,
+        "L": 18.0,
+        "M": 11.0,
+        "P": 14.0,
+        "Q": 16.0,
+        "R": 30.0,
+        "S": 12.0
+      },
+      "data_validations": [
+        {
+          "type": "list",
+          "operator": null,
+          "formula1": "\"Yes,No,Later\"",
+          "formula2": null,
+          "allow_blank": false,
+          "showErrorMessage": false,
+          "errorTitle": null,
+          "error": null,
+          "showInputMessage": false,
+          "promptTitle": null,
+          "prompt": null,
+          "sqref": "A2:A86"
+        },
+        {
+          "type": "list",
+          "operator": null,
+          "formula1": "\"1,2,3,4,5\"",
+          "formula2": null,
+          "allow_blank": false,
+          "showErrorMessage": false,
+          "errorTitle": null,
+          "error": null,
+          "showInputMessage": false,
+          "promptTitle": null,
+          "prompt": null,
+          "sqref": "G2:J86"
+        },
+        {
+          "type": "list",
+          "operator": null,
+          "formula1": "\"Deep Study,Standard Study,Fast Review,Light Review,Skip Unless Time\"",
+          "formula2": null,
+          "allow_blank": false,
+          "showErrorMessage": false,
+          "errorTitle": null,
+          "error": null,
+          "showInputMessage": false,
+          "promptTitle": null,
+          "prompt": null,
+          "sqref": "L2:L86"
+        },
+        {
+          "type": "list",
+          "operator": null,
+          "formula1": "\"Not Started,Learning,Practicing,Improving,Strong,Exam Ready,Skipped\"",
+          "formula2": null,
+          "allow_blank": false,
+          "showErrorMessage": false,
+          "errorTitle": null,
+          "error": null,
+          "showInputMessage": false,
+          "promptTitle": null,
+          "prompt": null,
+          "sqref": "P2:P86"
+        }
+      ],
+      "conditional_formatting": [
+        {
+          "range": "K2:K86",
+          "type": "colorScale",
+          "operator": null,
+          "formula": [],
+          "priority": 1,
+          "dxfId": null,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": "<openpyxl.formatting.rule.ColorScale object>\nParameters:\ncfvo=[<openpyxl.formatting.rule.FormatObject object>\nParameters:\ntype='num', val=0.0, gte=None, <openpyxl.formatting.rule.FormatObject object>\nParameters:\ntype='num', val=4.0, gte=None, <openpyxl.formatting.rule.FormatObject object>\nParameters:\ntype='num', val=7.0, gte=None], color=[<openpyxl.styles.colors.Color object>\nParameters:\nrgb='FFF8CBAD', indexed=None, auto=None, theme=None, tint=0.0, type='rgb', <openpyxl.styles.colors.Color object>\nParameters:\nrgb='FFFFE699', indexed=None, auto=None, theme=None, tint=0.0, type='rgb', <openpyxl.styles.colors.Color object>\nParameters:\nrgb='FFC6E0B4', indexed=None, auto=None, theme=None, tint=0.0, type='rgb']",
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "G2:G86",
+          "type": "colorScale",
+          "operator": null,
+          "formula": [],
+          "priority": 2,
+          "dxfId": null,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": "<openpyxl.formatting.rule.ColorScale object>\nParameters:\ncfvo=[<openpyxl.formatting.rule.FormatObject object>\nParameters:\ntype='num', val=1.0, gte=None, <openpyxl.formatting.rule.FormatObject object>\nParameters:\ntype='num', val=3.0, gte=None, <openpyxl.formatting.rule.FormatObject object>\nParameters:\ntype='num', val=5.0, gte=None], color=[<openpyxl.styles.colors.Color object>\nParameters:\nrgb='FFF8CBAD', indexed=None, auto=None, theme=None, tint=0.0, type='rgb', <openpyxl.styles.colors.Color object>\nParameters:\nrgb='FFFFE699', indexed=None, auto=None, theme=None, tint=0.0, type='rgb', <openpyxl.styles.colors.Color object>\nParameters:\nrgb='FFC6E0B4', indexed=None, auto=None, theme=None, tint=0.0, type='rgb']",
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "O2:O86",
+          "type": "colorScale",
+          "operator": null,
+          "formula": [],
+          "priority": 3,
+          "dxfId": null,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": "<openpyxl.formatting.rule.ColorScale object>\nParameters:\ncfvo=[<openpyxl.formatting.rule.FormatObject object>\nParameters:\ntype='num', val=0.0, gte=None, <openpyxl.formatting.rule.FormatObject object>\nParameters:\ntype='num', val=0.5, gte=None, <openpyxl.formatting.rule.FormatObject object>\nParameters:\ntype='num', val=1.0, gte=None], color=[<openpyxl.styles.colors.Color object>\nParameters:\nrgb='FFF8CBAD', indexed=None, auto=None, theme=None, tint=0.0, type='rgb', <openpyxl.styles.colors.Color object>\nParameters:\nrgb='FFFFE699', indexed=None, auto=None, theme=None, tint=0.0, type='rgb', <openpyxl.styles.colors.Color object>\nParameters:\nrgb='FFC6E0B4', indexed=None, auto=None, theme=None, tint=0.0, type='rgb']",
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "P2:P86",
+          "type": "expression",
+          "operator": null,
+          "formula": [
+            "$P2=\"Exam Ready\""
+          ],
+          "priority": 4,
+          "dxfId": 14,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "P2:P86",
+          "type": "expression",
+          "operator": null,
+          "formula": [
+            "$P2=\"Strong\""
+          ],
+          "priority": 5,
+          "dxfId": 13,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "P2:P86",
+          "type": "expression",
+          "operator": null,
+          "formula": [
+            "$P2=\"Improving\""
+          ],
+          "priority": 6,
+          "dxfId": 12,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "P2:P86",
+          "type": "expression",
+          "operator": null,
+          "formula": [
+            "$P2=\"Practicing\""
+          ],
+          "priority": 7,
+          "dxfId": 11,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "P2:P86",
+          "type": "expression",
+          "operator": null,
+          "formula": [
+            "$P2=\"Skipped\""
+          ],
+          "priority": 8,
+          "dxfId": 10,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "A2:R86",
+          "type": "expression",
+          "operator": null,
+          "formula": [
+            "$A2=\"No\""
+          ],
+          "priority": 9,
+          "dxfId": 9,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "A2:R86",
+          "type": "expression",
+          "operator": null,
+          "formula": [
+            "AND($K2>=5,$G2<=2,$A2=\"Yes\")"
+          ],
+          "priority": 10,
+          "dxfId": 8,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        }
+      ],
+      "formula_count": 595,
+      "formulas": [
+        {
+          "coord": "K2",
+          "formula": "=IF(A2=\"No\",0,IF(P2=\"Skipped\",0,ROUND((E2*0.35+(6-G2)*0.25+J2*0.2+IF(F2=1,5,IF(F2=2,3,1))*0.15-I2*0.05)*IF(A2=\"Later\",0.5,1)*IF(OR(IFERROR(N2/M2,0)>=1,P2=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O2",
+          "formula": "=IFERROR(MIN(N2/M2,1),0)"
+        },
+        {
+          "coord": "Q2",
+          "formula": "=IF(A2=\"No\",\"Skip for Now\",IF(A2=\"Later\",\"Defer\",IF(OR(O2>=1,P2=\"Exam Ready\"),\"Keep Warm\",IF(P2=\"Skipped\",\"Skip for Now\",IF(K2>=6,\"Study Next\",IF(K2>=4.5,\"Study This Week\",IF(K2>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S2",
+          "formula": "=K2+ROW()/100000"
+        },
+        {
+          "coord": "T2",
+          "formula": "=IF(A2=\"No\",0,IF(P2=\"Skipped\",0,(J2*2-H2-I2+5)*IF(O2>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U2",
+          "formula": "=IF(A2=\"Yes\",10-K2,0)+ROW()/100000"
+        },
+        {
+          "coord": "V2",
+          "formula": "=IF(A2=\"No\",0,IF(P2=\"Skipped\",0,IF(F2=1,0,IF(O2>=1,0,(J2*2-H2-I2+5)*0.5+(6-G2)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K3",
+          "formula": "=IF(A3=\"No\",0,IF(P3=\"Skipped\",0,ROUND((E3*0.35+(6-G3)*0.25+J3*0.2+IF(F3=1,5,IF(F3=2,3,1))*0.15-I3*0.05)*IF(A3=\"Later\",0.5,1)*IF(OR(IFERROR(N3/M3,0)>=1,P3=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O3",
+          "formula": "=IFERROR(MIN(N3/M3,1),0)"
+        },
+        {
+          "coord": "Q3",
+          "formula": "=IF(A3=\"No\",\"Skip for Now\",IF(A3=\"Later\",\"Defer\",IF(OR(O3>=1,P3=\"Exam Ready\"),\"Keep Warm\",IF(P3=\"Skipped\",\"Skip for Now\",IF(K3>=6,\"Study Next\",IF(K3>=4.5,\"Study This Week\",IF(K3>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S3",
+          "formula": "=K3+ROW()/100000"
+        },
+        {
+          "coord": "T3",
+          "formula": "=IF(A3=\"No\",0,IF(P3=\"Skipped\",0,(J3*2-H3-I3+5)*IF(O3>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U3",
+          "formula": "=IF(A3=\"Yes\",10-K3,0)+ROW()/100000"
+        },
+        {
+          "coord": "V3",
+          "formula": "=IF(A3=\"No\",0,IF(P3=\"Skipped\",0,IF(F3=1,0,IF(O3>=1,0,(J3*2-H3-I3+5)*0.5+(6-G3)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K4",
+          "formula": "=IF(A4=\"No\",0,IF(P4=\"Skipped\",0,ROUND((E4*0.35+(6-G4)*0.25+J4*0.2+IF(F4=1,5,IF(F4=2,3,1))*0.15-I4*0.05)*IF(A4=\"Later\",0.5,1)*IF(OR(IFERROR(N4/M4,0)>=1,P4=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O4",
+          "formula": "=IFERROR(MIN(N4/M4,1),0)"
+        },
+        {
+          "coord": "Q4",
+          "formula": "=IF(A4=\"No\",\"Skip for Now\",IF(A4=\"Later\",\"Defer\",IF(OR(O4>=1,P4=\"Exam Ready\"),\"Keep Warm\",IF(P4=\"Skipped\",\"Skip for Now\",IF(K4>=6,\"Study Next\",IF(K4>=4.5,\"Study This Week\",IF(K4>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S4",
+          "formula": "=K4+ROW()/100000"
+        },
+        {
+          "coord": "T4",
+          "formula": "=IF(A4=\"No\",0,IF(P4=\"Skipped\",0,(J4*2-H4-I4+5)*IF(O4>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U4",
+          "formula": "=IF(A4=\"Yes\",10-K4,0)+ROW()/100000"
+        },
+        {
+          "coord": "V4",
+          "formula": "=IF(A4=\"No\",0,IF(P4=\"Skipped\",0,IF(F4=1,0,IF(O4>=1,0,(J4*2-H4-I4+5)*0.5+(6-G4)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K5",
+          "formula": "=IF(A5=\"No\",0,IF(P5=\"Skipped\",0,ROUND((E5*0.35+(6-G5)*0.25+J5*0.2+IF(F5=1,5,IF(F5=2,3,1))*0.15-I5*0.05)*IF(A5=\"Later\",0.5,1)*IF(OR(IFERROR(N5/M5,0)>=1,P5=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O5",
+          "formula": "=IFERROR(MIN(N5/M5,1),0)"
+        },
+        {
+          "coord": "Q5",
+          "formula": "=IF(A5=\"No\",\"Skip for Now\",IF(A5=\"Later\",\"Defer\",IF(OR(O5>=1,P5=\"Exam Ready\"),\"Keep Warm\",IF(P5=\"Skipped\",\"Skip for Now\",IF(K5>=6,\"Study Next\",IF(K5>=4.5,\"Study This Week\",IF(K5>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S5",
+          "formula": "=K5+ROW()/100000"
+        },
+        {
+          "coord": "T5",
+          "formula": "=IF(A5=\"No\",0,IF(P5=\"Skipped\",0,(J5*2-H5-I5+5)*IF(O5>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U5",
+          "formula": "=IF(A5=\"Yes\",10-K5,0)+ROW()/100000"
+        },
+        {
+          "coord": "V5",
+          "formula": "=IF(A5=\"No\",0,IF(P5=\"Skipped\",0,IF(F5=1,0,IF(O5>=1,0,(J5*2-H5-I5+5)*0.5+(6-G5)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K6",
+          "formula": "=IF(A6=\"No\",0,IF(P6=\"Skipped\",0,ROUND((E6*0.35+(6-G6)*0.25+J6*0.2+IF(F6=1,5,IF(F6=2,3,1))*0.15-I6*0.05)*IF(A6=\"Later\",0.5,1)*IF(OR(IFERROR(N6/M6,0)>=1,P6=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O6",
+          "formula": "=IFERROR(MIN(N6/M6,1),0)"
+        },
+        {
+          "coord": "Q6",
+          "formula": "=IF(A6=\"No\",\"Skip for Now\",IF(A6=\"Later\",\"Defer\",IF(OR(O6>=1,P6=\"Exam Ready\"),\"Keep Warm\",IF(P6=\"Skipped\",\"Skip for Now\",IF(K6>=6,\"Study Next\",IF(K6>=4.5,\"Study This Week\",IF(K6>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S6",
+          "formula": "=K6+ROW()/100000"
+        },
+        {
+          "coord": "T6",
+          "formula": "=IF(A6=\"No\",0,IF(P6=\"Skipped\",0,(J6*2-H6-I6+5)*IF(O6>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U6",
+          "formula": "=IF(A6=\"Yes\",10-K6,0)+ROW()/100000"
+        },
+        {
+          "coord": "V6",
+          "formula": "=IF(A6=\"No\",0,IF(P6=\"Skipped\",0,IF(F6=1,0,IF(O6>=1,0,(J6*2-H6-I6+5)*0.5+(6-G6)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K7",
+          "formula": "=IF(A7=\"No\",0,IF(P7=\"Skipped\",0,ROUND((E7*0.35+(6-G7)*0.25+J7*0.2+IF(F7=1,5,IF(F7=2,3,1))*0.15-I7*0.05)*IF(A7=\"Later\",0.5,1)*IF(OR(IFERROR(N7/M7,0)>=1,P7=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O7",
+          "formula": "=IFERROR(MIN(N7/M7,1),0)"
+        },
+        {
+          "coord": "Q7",
+          "formula": "=IF(A7=\"No\",\"Skip for Now\",IF(A7=\"Later\",\"Defer\",IF(OR(O7>=1,P7=\"Exam Ready\"),\"Keep Warm\",IF(P7=\"Skipped\",\"Skip for Now\",IF(K7>=6,\"Study Next\",IF(K7>=4.5,\"Study This Week\",IF(K7>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S7",
+          "formula": "=K7+ROW()/100000"
+        },
+        {
+          "coord": "T7",
+          "formula": "=IF(A7=\"No\",0,IF(P7=\"Skipped\",0,(J7*2-H7-I7+5)*IF(O7>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U7",
+          "formula": "=IF(A7=\"Yes\",10-K7,0)+ROW()/100000"
+        },
+        {
+          "coord": "V7",
+          "formula": "=IF(A7=\"No\",0,IF(P7=\"Skipped\",0,IF(F7=1,0,IF(O7>=1,0,(J7*2-H7-I7+5)*0.5+(6-G7)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K8",
+          "formula": "=IF(A8=\"No\",0,IF(P8=\"Skipped\",0,ROUND((E8*0.35+(6-G8)*0.25+J8*0.2+IF(F8=1,5,IF(F8=2,3,1))*0.15-I8*0.05)*IF(A8=\"Later\",0.5,1)*IF(OR(IFERROR(N8/M8,0)>=1,P8=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O8",
+          "formula": "=IFERROR(MIN(N8/M8,1),0)"
+        },
+        {
+          "coord": "Q8",
+          "formula": "=IF(A8=\"No\",\"Skip for Now\",IF(A8=\"Later\",\"Defer\",IF(OR(O8>=1,P8=\"Exam Ready\"),\"Keep Warm\",IF(P8=\"Skipped\",\"Skip for Now\",IF(K8>=6,\"Study Next\",IF(K8>=4.5,\"Study This Week\",IF(K8>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S8",
+          "formula": "=K8+ROW()/100000"
+        },
+        {
+          "coord": "T8",
+          "formula": "=IF(A8=\"No\",0,IF(P8=\"Skipped\",0,(J8*2-H8-I8+5)*IF(O8>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U8",
+          "formula": "=IF(A8=\"Yes\",10-K8,0)+ROW()/100000"
+        },
+        {
+          "coord": "V8",
+          "formula": "=IF(A8=\"No\",0,IF(P8=\"Skipped\",0,IF(F8=1,0,IF(O8>=1,0,(J8*2-H8-I8+5)*0.5+(6-G8)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K9",
+          "formula": "=IF(A9=\"No\",0,IF(P9=\"Skipped\",0,ROUND((E9*0.35+(6-G9)*0.25+J9*0.2+IF(F9=1,5,IF(F9=2,3,1))*0.15-I9*0.05)*IF(A9=\"Later\",0.5,1)*IF(OR(IFERROR(N9/M9,0)>=1,P9=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O9",
+          "formula": "=IFERROR(MIN(N9/M9,1),0)"
+        },
+        {
+          "coord": "Q9",
+          "formula": "=IF(A9=\"No\",\"Skip for Now\",IF(A9=\"Later\",\"Defer\",IF(OR(O9>=1,P9=\"Exam Ready\"),\"Keep Warm\",IF(P9=\"Skipped\",\"Skip for Now\",IF(K9>=6,\"Study Next\",IF(K9>=4.5,\"Study This Week\",IF(K9>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S9",
+          "formula": "=K9+ROW()/100000"
+        },
+        {
+          "coord": "T9",
+          "formula": "=IF(A9=\"No\",0,IF(P9=\"Skipped\",0,(J9*2-H9-I9+5)*IF(O9>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U9",
+          "formula": "=IF(A9=\"Yes\",10-K9,0)+ROW()/100000"
+        },
+        {
+          "coord": "V9",
+          "formula": "=IF(A9=\"No\",0,IF(P9=\"Skipped\",0,IF(F9=1,0,IF(O9>=1,0,(J9*2-H9-I9+5)*0.5+(6-G9)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K10",
+          "formula": "=IF(A10=\"No\",0,IF(P10=\"Skipped\",0,ROUND((E10*0.35+(6-G10)*0.25+J10*0.2+IF(F10=1,5,IF(F10=2,3,1))*0.15-I10*0.05)*IF(A10=\"Later\",0.5,1)*IF(OR(IFERROR(N10/M10,0)>=1,P10=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O10",
+          "formula": "=IFERROR(MIN(N10/M10,1),0)"
+        },
+        {
+          "coord": "Q10",
+          "formula": "=IF(A10=\"No\",\"Skip for Now\",IF(A10=\"Later\",\"Defer\",IF(OR(O10>=1,P10=\"Exam Ready\"),\"Keep Warm\",IF(P10=\"Skipped\",\"Skip for Now\",IF(K10>=6,\"Study Next\",IF(K10>=4.5,\"Study This Week\",IF(K10>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S10",
+          "formula": "=K10+ROW()/100000"
+        },
+        {
+          "coord": "T10",
+          "formula": "=IF(A10=\"No\",0,IF(P10=\"Skipped\",0,(J10*2-H10-I10+5)*IF(O10>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U10",
+          "formula": "=IF(A10=\"Yes\",10-K10,0)+ROW()/100000"
+        },
+        {
+          "coord": "V10",
+          "formula": "=IF(A10=\"No\",0,IF(P10=\"Skipped\",0,IF(F10=1,0,IF(O10>=1,0,(J10*2-H10-I10+5)*0.5+(6-G10)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K11",
+          "formula": "=IF(A11=\"No\",0,IF(P11=\"Skipped\",0,ROUND((E11*0.35+(6-G11)*0.25+J11*0.2+IF(F11=1,5,IF(F11=2,3,1))*0.15-I11*0.05)*IF(A11=\"Later\",0.5,1)*IF(OR(IFERROR(N11/M11,0)>=1,P11=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O11",
+          "formula": "=IFERROR(MIN(N11/M11,1),0)"
+        },
+        {
+          "coord": "Q11",
+          "formula": "=IF(A11=\"No\",\"Skip for Now\",IF(A11=\"Later\",\"Defer\",IF(OR(O11>=1,P11=\"Exam Ready\"),\"Keep Warm\",IF(P11=\"Skipped\",\"Skip for Now\",IF(K11>=6,\"Study Next\",IF(K11>=4.5,\"Study This Week\",IF(K11>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S11",
+          "formula": "=K11+ROW()/100000"
+        },
+        {
+          "coord": "T11",
+          "formula": "=IF(A11=\"No\",0,IF(P11=\"Skipped\",0,(J11*2-H11-I11+5)*IF(O11>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U11",
+          "formula": "=IF(A11=\"Yes\",10-K11,0)+ROW()/100000"
+        },
+        {
+          "coord": "V11",
+          "formula": "=IF(A11=\"No\",0,IF(P11=\"Skipped\",0,IF(F11=1,0,IF(O11>=1,0,(J11*2-H11-I11+5)*0.5+(6-G11)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K12",
+          "formula": "=IF(A12=\"No\",0,IF(P12=\"Skipped\",0,ROUND((E12*0.35+(6-G12)*0.25+J12*0.2+IF(F12=1,5,IF(F12=2,3,1))*0.15-I12*0.05)*IF(A12=\"Later\",0.5,1)*IF(OR(IFERROR(N12/M12,0)>=1,P12=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O12",
+          "formula": "=IFERROR(MIN(N12/M12,1),0)"
+        },
+        {
+          "coord": "Q12",
+          "formula": "=IF(A12=\"No\",\"Skip for Now\",IF(A12=\"Later\",\"Defer\",IF(OR(O12>=1,P12=\"Exam Ready\"),\"Keep Warm\",IF(P12=\"Skipped\",\"Skip for Now\",IF(K12>=6,\"Study Next\",IF(K12>=4.5,\"Study This Week\",IF(K12>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S12",
+          "formula": "=K12+ROW()/100000"
+        },
+        {
+          "coord": "T12",
+          "formula": "=IF(A12=\"No\",0,IF(P12=\"Skipped\",0,(J12*2-H12-I12+5)*IF(O12>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U12",
+          "formula": "=IF(A12=\"Yes\",10-K12,0)+ROW()/100000"
+        },
+        {
+          "coord": "V12",
+          "formula": "=IF(A12=\"No\",0,IF(P12=\"Skipped\",0,IF(F12=1,0,IF(O12>=1,0,(J12*2-H12-I12+5)*0.5+(6-G12)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K13",
+          "formula": "=IF(A13=\"No\",0,IF(P13=\"Skipped\",0,ROUND((E13*0.35+(6-G13)*0.25+J13*0.2+IF(F13=1,5,IF(F13=2,3,1))*0.15-I13*0.05)*IF(A13=\"Later\",0.5,1)*IF(OR(IFERROR(N13/M13,0)>=1,P13=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O13",
+          "formula": "=IFERROR(MIN(N13/M13,1),0)"
+        },
+        {
+          "coord": "Q13",
+          "formula": "=IF(A13=\"No\",\"Skip for Now\",IF(A13=\"Later\",\"Defer\",IF(OR(O13>=1,P13=\"Exam Ready\"),\"Keep Warm\",IF(P13=\"Skipped\",\"Skip for Now\",IF(K13>=6,\"Study Next\",IF(K13>=4.5,\"Study This Week\",IF(K13>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S13",
+          "formula": "=K13+ROW()/100000"
+        },
+        {
+          "coord": "T13",
+          "formula": "=IF(A13=\"No\",0,IF(P13=\"Skipped\",0,(J13*2-H13-I13+5)*IF(O13>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U13",
+          "formula": "=IF(A13=\"Yes\",10-K13,0)+ROW()/100000"
+        },
+        {
+          "coord": "V13",
+          "formula": "=IF(A13=\"No\",0,IF(P13=\"Skipped\",0,IF(F13=1,0,IF(O13>=1,0,(J13*2-H13-I13+5)*0.5+(6-G13)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K14",
+          "formula": "=IF(A14=\"No\",0,IF(P14=\"Skipped\",0,ROUND((E14*0.35+(6-G14)*0.25+J14*0.2+IF(F14=1,5,IF(F14=2,3,1))*0.15-I14*0.05)*IF(A14=\"Later\",0.5,1)*IF(OR(IFERROR(N14/M14,0)>=1,P14=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O14",
+          "formula": "=IFERROR(MIN(N14/M14,1),0)"
+        },
+        {
+          "coord": "Q14",
+          "formula": "=IF(A14=\"No\",\"Skip for Now\",IF(A14=\"Later\",\"Defer\",IF(OR(O14>=1,P14=\"Exam Ready\"),\"Keep Warm\",IF(P14=\"Skipped\",\"Skip for Now\",IF(K14>=6,\"Study Next\",IF(K14>=4.5,\"Study This Week\",IF(K14>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S14",
+          "formula": "=K14+ROW()/100000"
+        },
+        {
+          "coord": "T14",
+          "formula": "=IF(A14=\"No\",0,IF(P14=\"Skipped\",0,(J14*2-H14-I14+5)*IF(O14>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U14",
+          "formula": "=IF(A14=\"Yes\",10-K14,0)+ROW()/100000"
+        },
+        {
+          "coord": "V14",
+          "formula": "=IF(A14=\"No\",0,IF(P14=\"Skipped\",0,IF(F14=1,0,IF(O14>=1,0,(J14*2-H14-I14+5)*0.5+(6-G14)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K15",
+          "formula": "=IF(A15=\"No\",0,IF(P15=\"Skipped\",0,ROUND((E15*0.35+(6-G15)*0.25+J15*0.2+IF(F15=1,5,IF(F15=2,3,1))*0.15-I15*0.05)*IF(A15=\"Later\",0.5,1)*IF(OR(IFERROR(N15/M15,0)>=1,P15=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O15",
+          "formula": "=IFERROR(MIN(N15/M15,1),0)"
+        },
+        {
+          "coord": "Q15",
+          "formula": "=IF(A15=\"No\",\"Skip for Now\",IF(A15=\"Later\",\"Defer\",IF(OR(O15>=1,P15=\"Exam Ready\"),\"Keep Warm\",IF(P15=\"Skipped\",\"Skip for Now\",IF(K15>=6,\"Study Next\",IF(K15>=4.5,\"Study This Week\",IF(K15>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S15",
+          "formula": "=K15+ROW()/100000"
+        },
+        {
+          "coord": "T15",
+          "formula": "=IF(A15=\"No\",0,IF(P15=\"Skipped\",0,(J15*2-H15-I15+5)*IF(O15>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U15",
+          "formula": "=IF(A15=\"Yes\",10-K15,0)+ROW()/100000"
+        },
+        {
+          "coord": "V15",
+          "formula": "=IF(A15=\"No\",0,IF(P15=\"Skipped\",0,IF(F15=1,0,IF(O15>=1,0,(J15*2-H15-I15+5)*0.5+(6-G15)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K16",
+          "formula": "=IF(A16=\"No\",0,IF(P16=\"Skipped\",0,ROUND((E16*0.35+(6-G16)*0.25+J16*0.2+IF(F16=1,5,IF(F16=2,3,1))*0.15-I16*0.05)*IF(A16=\"Later\",0.5,1)*IF(OR(IFERROR(N16/M16,0)>=1,P16=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O16",
+          "formula": "=IFERROR(MIN(N16/M16,1),0)"
+        },
+        {
+          "coord": "Q16",
+          "formula": "=IF(A16=\"No\",\"Skip for Now\",IF(A16=\"Later\",\"Defer\",IF(OR(O16>=1,P16=\"Exam Ready\"),\"Keep Warm\",IF(P16=\"Skipped\",\"Skip for Now\",IF(K16>=6,\"Study Next\",IF(K16>=4.5,\"Study This Week\",IF(K16>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S16",
+          "formula": "=K16+ROW()/100000"
+        },
+        {
+          "coord": "T16",
+          "formula": "=IF(A16=\"No\",0,IF(P16=\"Skipped\",0,(J16*2-H16-I16+5)*IF(O16>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U16",
+          "formula": "=IF(A16=\"Yes\",10-K16,0)+ROW()/100000"
+        },
+        {
+          "coord": "V16",
+          "formula": "=IF(A16=\"No\",0,IF(P16=\"Skipped\",0,IF(F16=1,0,IF(O16>=1,0,(J16*2-H16-I16+5)*0.5+(6-G16)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K17",
+          "formula": "=IF(A17=\"No\",0,IF(P17=\"Skipped\",0,ROUND((E17*0.35+(6-G17)*0.25+J17*0.2+IF(F17=1,5,IF(F17=2,3,1))*0.15-I17*0.05)*IF(A17=\"Later\",0.5,1)*IF(OR(IFERROR(N17/M17,0)>=1,P17=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O17",
+          "formula": "=IFERROR(MIN(N17/M17,1),0)"
+        },
+        {
+          "coord": "Q17",
+          "formula": "=IF(A17=\"No\",\"Skip for Now\",IF(A17=\"Later\",\"Defer\",IF(OR(O17>=1,P17=\"Exam Ready\"),\"Keep Warm\",IF(P17=\"Skipped\",\"Skip for Now\",IF(K17>=6,\"Study Next\",IF(K17>=4.5,\"Study This Week\",IF(K17>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S17",
+          "formula": "=K17+ROW()/100000"
+        },
+        {
+          "coord": "T17",
+          "formula": "=IF(A17=\"No\",0,IF(P17=\"Skipped\",0,(J17*2-H17-I17+5)*IF(O17>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U17",
+          "formula": "=IF(A17=\"Yes\",10-K17,0)+ROW()/100000"
+        },
+        {
+          "coord": "V17",
+          "formula": "=IF(A17=\"No\",0,IF(P17=\"Skipped\",0,IF(F17=1,0,IF(O17>=1,0,(J17*2-H17-I17+5)*0.5+(6-G17)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K18",
+          "formula": "=IF(A18=\"No\",0,IF(P18=\"Skipped\",0,ROUND((E18*0.35+(6-G18)*0.25+J18*0.2+IF(F18=1,5,IF(F18=2,3,1))*0.15-I18*0.05)*IF(A18=\"Later\",0.5,1)*IF(OR(IFERROR(N18/M18,0)>=1,P18=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O18",
+          "formula": "=IFERROR(MIN(N18/M18,1),0)"
+        },
+        {
+          "coord": "Q18",
+          "formula": "=IF(A18=\"No\",\"Skip for Now\",IF(A18=\"Later\",\"Defer\",IF(OR(O18>=1,P18=\"Exam Ready\"),\"Keep Warm\",IF(P18=\"Skipped\",\"Skip for Now\",IF(K18>=6,\"Study Next\",IF(K18>=4.5,\"Study This Week\",IF(K18>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S18",
+          "formula": "=K18+ROW()/100000"
+        },
+        {
+          "coord": "T18",
+          "formula": "=IF(A18=\"No\",0,IF(P18=\"Skipped\",0,(J18*2-H18-I18+5)*IF(O18>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U18",
+          "formula": "=IF(A18=\"Yes\",10-K18,0)+ROW()/100000"
+        },
+        {
+          "coord": "V18",
+          "formula": "=IF(A18=\"No\",0,IF(P18=\"Skipped\",0,IF(F18=1,0,IF(O18>=1,0,(J18*2-H18-I18+5)*0.5+(6-G18)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K19",
+          "formula": "=IF(A19=\"No\",0,IF(P19=\"Skipped\",0,ROUND((E19*0.35+(6-G19)*0.25+J19*0.2+IF(F19=1,5,IF(F19=2,3,1))*0.15-I19*0.05)*IF(A19=\"Later\",0.5,1)*IF(OR(IFERROR(N19/M19,0)>=1,P19=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O19",
+          "formula": "=IFERROR(MIN(N19/M19,1),0)"
+        },
+        {
+          "coord": "Q19",
+          "formula": "=IF(A19=\"No\",\"Skip for Now\",IF(A19=\"Later\",\"Defer\",IF(OR(O19>=1,P19=\"Exam Ready\"),\"Keep Warm\",IF(P19=\"Skipped\",\"Skip for Now\",IF(K19>=6,\"Study Next\",IF(K19>=4.5,\"Study This Week\",IF(K19>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S19",
+          "formula": "=K19+ROW()/100000"
+        },
+        {
+          "coord": "T19",
+          "formula": "=IF(A19=\"No\",0,IF(P19=\"Skipped\",0,(J19*2-H19-I19+5)*IF(O19>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U19",
+          "formula": "=IF(A19=\"Yes\",10-K19,0)+ROW()/100000"
+        },
+        {
+          "coord": "V19",
+          "formula": "=IF(A19=\"No\",0,IF(P19=\"Skipped\",0,IF(F19=1,0,IF(O19>=1,0,(J19*2-H19-I19+5)*0.5+(6-G19)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K20",
+          "formula": "=IF(A20=\"No\",0,IF(P20=\"Skipped\",0,ROUND((E20*0.35+(6-G20)*0.25+J20*0.2+IF(F20=1,5,IF(F20=2,3,1))*0.15-I20*0.05)*IF(A20=\"Later\",0.5,1)*IF(OR(IFERROR(N20/M20,0)>=1,P20=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O20",
+          "formula": "=IFERROR(MIN(N20/M20,1),0)"
+        },
+        {
+          "coord": "Q20",
+          "formula": "=IF(A20=\"No\",\"Skip for Now\",IF(A20=\"Later\",\"Defer\",IF(OR(O20>=1,P20=\"Exam Ready\"),\"Keep Warm\",IF(P20=\"Skipped\",\"Skip for Now\",IF(K20>=6,\"Study Next\",IF(K20>=4.5,\"Study This Week\",IF(K20>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S20",
+          "formula": "=K20+ROW()/100000"
+        },
+        {
+          "coord": "T20",
+          "formula": "=IF(A20=\"No\",0,IF(P20=\"Skipped\",0,(J20*2-H20-I20+5)*IF(O20>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U20",
+          "formula": "=IF(A20=\"Yes\",10-K20,0)+ROW()/100000"
+        },
+        {
+          "coord": "V20",
+          "formula": "=IF(A20=\"No\",0,IF(P20=\"Skipped\",0,IF(F20=1,0,IF(O20>=1,0,(J20*2-H20-I20+5)*0.5+(6-G20)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K21",
+          "formula": "=IF(A21=\"No\",0,IF(P21=\"Skipped\",0,ROUND((E21*0.35+(6-G21)*0.25+J21*0.2+IF(F21=1,5,IF(F21=2,3,1))*0.15-I21*0.05)*IF(A21=\"Later\",0.5,1)*IF(OR(IFERROR(N21/M21,0)>=1,P21=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O21",
+          "formula": "=IFERROR(MIN(N21/M21,1),0)"
+        },
+        {
+          "coord": "Q21",
+          "formula": "=IF(A21=\"No\",\"Skip for Now\",IF(A21=\"Later\",\"Defer\",IF(OR(O21>=1,P21=\"Exam Ready\"),\"Keep Warm\",IF(P21=\"Skipped\",\"Skip for Now\",IF(K21>=6,\"Study Next\",IF(K21>=4.5,\"Study This Week\",IF(K21>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S21",
+          "formula": "=K21+ROW()/100000"
+        },
+        {
+          "coord": "T21",
+          "formula": "=IF(A21=\"No\",0,IF(P21=\"Skipped\",0,(J21*2-H21-I21+5)*IF(O21>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U21",
+          "formula": "=IF(A21=\"Yes\",10-K21,0)+ROW()/100000"
+        },
+        {
+          "coord": "V21",
+          "formula": "=IF(A21=\"No\",0,IF(P21=\"Skipped\",0,IF(F21=1,0,IF(O21>=1,0,(J21*2-H21-I21+5)*0.5+(6-G21)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K22",
+          "formula": "=IF(A22=\"No\",0,IF(P22=\"Skipped\",0,ROUND((E22*0.35+(6-G22)*0.25+J22*0.2+IF(F22=1,5,IF(F22=2,3,1))*0.15-I22*0.05)*IF(A22=\"Later\",0.5,1)*IF(OR(IFERROR(N22/M22,0)>=1,P22=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O22",
+          "formula": "=IFERROR(MIN(N22/M22,1),0)"
+        },
+        {
+          "coord": "Q22",
+          "formula": "=IF(A22=\"No\",\"Skip for Now\",IF(A22=\"Later\",\"Defer\",IF(OR(O22>=1,P22=\"Exam Ready\"),\"Keep Warm\",IF(P22=\"Skipped\",\"Skip for Now\",IF(K22>=6,\"Study Next\",IF(K22>=4.5,\"Study This Week\",IF(K22>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S22",
+          "formula": "=K22+ROW()/100000"
+        },
+        {
+          "coord": "T22",
+          "formula": "=IF(A22=\"No\",0,IF(P22=\"Skipped\",0,(J22*2-H22-I22+5)*IF(O22>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U22",
+          "formula": "=IF(A22=\"Yes\",10-K22,0)+ROW()/100000"
+        },
+        {
+          "coord": "V22",
+          "formula": "=IF(A22=\"No\",0,IF(P22=\"Skipped\",0,IF(F22=1,0,IF(O22>=1,0,(J22*2-H22-I22+5)*0.5+(6-G22)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K23",
+          "formula": "=IF(A23=\"No\",0,IF(P23=\"Skipped\",0,ROUND((E23*0.35+(6-G23)*0.25+J23*0.2+IF(F23=1,5,IF(F23=2,3,1))*0.15-I23*0.05)*IF(A23=\"Later\",0.5,1)*IF(OR(IFERROR(N23/M23,0)>=1,P23=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O23",
+          "formula": "=IFERROR(MIN(N23/M23,1),0)"
+        },
+        {
+          "coord": "Q23",
+          "formula": "=IF(A23=\"No\",\"Skip for Now\",IF(A23=\"Later\",\"Defer\",IF(OR(O23>=1,P23=\"Exam Ready\"),\"Keep Warm\",IF(P23=\"Skipped\",\"Skip for Now\",IF(K23>=6,\"Study Next\",IF(K23>=4.5,\"Study This Week\",IF(K23>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S23",
+          "formula": "=K23+ROW()/100000"
+        },
+        {
+          "coord": "T23",
+          "formula": "=IF(A23=\"No\",0,IF(P23=\"Skipped\",0,(J23*2-H23-I23+5)*IF(O23>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U23",
+          "formula": "=IF(A23=\"Yes\",10-K23,0)+ROW()/100000"
+        },
+        {
+          "coord": "V23",
+          "formula": "=IF(A23=\"No\",0,IF(P23=\"Skipped\",0,IF(F23=1,0,IF(O23>=1,0,(J23*2-H23-I23+5)*0.5+(6-G23)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K24",
+          "formula": "=IF(A24=\"No\",0,IF(P24=\"Skipped\",0,ROUND((E24*0.35+(6-G24)*0.25+J24*0.2+IF(F24=1,5,IF(F24=2,3,1))*0.15-I24*0.05)*IF(A24=\"Later\",0.5,1)*IF(OR(IFERROR(N24/M24,0)>=1,P24=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O24",
+          "formula": "=IFERROR(MIN(N24/M24,1),0)"
+        },
+        {
+          "coord": "Q24",
+          "formula": "=IF(A24=\"No\",\"Skip for Now\",IF(A24=\"Later\",\"Defer\",IF(OR(O24>=1,P24=\"Exam Ready\"),\"Keep Warm\",IF(P24=\"Skipped\",\"Skip for Now\",IF(K24>=6,\"Study Next\",IF(K24>=4.5,\"Study This Week\",IF(K24>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S24",
+          "formula": "=K24+ROW()/100000"
+        },
+        {
+          "coord": "T24",
+          "formula": "=IF(A24=\"No\",0,IF(P24=\"Skipped\",0,(J24*2-H24-I24+5)*IF(O24>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U24",
+          "formula": "=IF(A24=\"Yes\",10-K24,0)+ROW()/100000"
+        },
+        {
+          "coord": "V24",
+          "formula": "=IF(A24=\"No\",0,IF(P24=\"Skipped\",0,IF(F24=1,0,IF(O24>=1,0,(J24*2-H24-I24+5)*0.5+(6-G24)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K25",
+          "formula": "=IF(A25=\"No\",0,IF(P25=\"Skipped\",0,ROUND((E25*0.35+(6-G25)*0.25+J25*0.2+IF(F25=1,5,IF(F25=2,3,1))*0.15-I25*0.05)*IF(A25=\"Later\",0.5,1)*IF(OR(IFERROR(N25/M25,0)>=1,P25=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O25",
+          "formula": "=IFERROR(MIN(N25/M25,1),0)"
+        },
+        {
+          "coord": "Q25",
+          "formula": "=IF(A25=\"No\",\"Skip for Now\",IF(A25=\"Later\",\"Defer\",IF(OR(O25>=1,P25=\"Exam Ready\"),\"Keep Warm\",IF(P25=\"Skipped\",\"Skip for Now\",IF(K25>=6,\"Study Next\",IF(K25>=4.5,\"Study This Week\",IF(K25>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S25",
+          "formula": "=K25+ROW()/100000"
+        },
+        {
+          "coord": "T25",
+          "formula": "=IF(A25=\"No\",0,IF(P25=\"Skipped\",0,(J25*2-H25-I25+5)*IF(O25>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U25",
+          "formula": "=IF(A25=\"Yes\",10-K25,0)+ROW()/100000"
+        },
+        {
+          "coord": "V25",
+          "formula": "=IF(A25=\"No\",0,IF(P25=\"Skipped\",0,IF(F25=1,0,IF(O25>=1,0,(J25*2-H25-I25+5)*0.5+(6-G25)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K26",
+          "formula": "=IF(A26=\"No\",0,IF(P26=\"Skipped\",0,ROUND((E26*0.35+(6-G26)*0.25+J26*0.2+IF(F26=1,5,IF(F26=2,3,1))*0.15-I26*0.05)*IF(A26=\"Later\",0.5,1)*IF(OR(IFERROR(N26/M26,0)>=1,P26=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O26",
+          "formula": "=IFERROR(MIN(N26/M26,1),0)"
+        },
+        {
+          "coord": "Q26",
+          "formula": "=IF(A26=\"No\",\"Skip for Now\",IF(A26=\"Later\",\"Defer\",IF(OR(O26>=1,P26=\"Exam Ready\"),\"Keep Warm\",IF(P26=\"Skipped\",\"Skip for Now\",IF(K26>=6,\"Study Next\",IF(K26>=4.5,\"Study This Week\",IF(K26>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S26",
+          "formula": "=K26+ROW()/100000"
+        },
+        {
+          "coord": "T26",
+          "formula": "=IF(A26=\"No\",0,IF(P26=\"Skipped\",0,(J26*2-H26-I26+5)*IF(O26>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U26",
+          "formula": "=IF(A26=\"Yes\",10-K26,0)+ROW()/100000"
+        },
+        {
+          "coord": "V26",
+          "formula": "=IF(A26=\"No\",0,IF(P26=\"Skipped\",0,IF(F26=1,0,IF(O26>=1,0,(J26*2-H26-I26+5)*0.5+(6-G26)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K27",
+          "formula": "=IF(A27=\"No\",0,IF(P27=\"Skipped\",0,ROUND((E27*0.35+(6-G27)*0.25+J27*0.2+IF(F27=1,5,IF(F27=2,3,1))*0.15-I27*0.05)*IF(A27=\"Later\",0.5,1)*IF(OR(IFERROR(N27/M27,0)>=1,P27=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O27",
+          "formula": "=IFERROR(MIN(N27/M27,1),0)"
+        },
+        {
+          "coord": "Q27",
+          "formula": "=IF(A27=\"No\",\"Skip for Now\",IF(A27=\"Later\",\"Defer\",IF(OR(O27>=1,P27=\"Exam Ready\"),\"Keep Warm\",IF(P27=\"Skipped\",\"Skip for Now\",IF(K27>=6,\"Study Next\",IF(K27>=4.5,\"Study This Week\",IF(K27>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S27",
+          "formula": "=K27+ROW()/100000"
+        },
+        {
+          "coord": "T27",
+          "formula": "=IF(A27=\"No\",0,IF(P27=\"Skipped\",0,(J27*2-H27-I27+5)*IF(O27>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U27",
+          "formula": "=IF(A27=\"Yes\",10-K27,0)+ROW()/100000"
+        },
+        {
+          "coord": "V27",
+          "formula": "=IF(A27=\"No\",0,IF(P27=\"Skipped\",0,IF(F27=1,0,IF(O27>=1,0,(J27*2-H27-I27+5)*0.5+(6-G27)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K28",
+          "formula": "=IF(A28=\"No\",0,IF(P28=\"Skipped\",0,ROUND((E28*0.35+(6-G28)*0.25+J28*0.2+IF(F28=1,5,IF(F28=2,3,1))*0.15-I28*0.05)*IF(A28=\"Later\",0.5,1)*IF(OR(IFERROR(N28/M28,0)>=1,P28=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O28",
+          "formula": "=IFERROR(MIN(N28/M28,1),0)"
+        },
+        {
+          "coord": "Q28",
+          "formula": "=IF(A28=\"No\",\"Skip for Now\",IF(A28=\"Later\",\"Defer\",IF(OR(O28>=1,P28=\"Exam Ready\"),\"Keep Warm\",IF(P28=\"Skipped\",\"Skip for Now\",IF(K28>=6,\"Study Next\",IF(K28>=4.5,\"Study This Week\",IF(K28>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S28",
+          "formula": "=K28+ROW()/100000"
+        },
+        {
+          "coord": "T28",
+          "formula": "=IF(A28=\"No\",0,IF(P28=\"Skipped\",0,(J28*2-H28-I28+5)*IF(O28>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U28",
+          "formula": "=IF(A28=\"Yes\",10-K28,0)+ROW()/100000"
+        },
+        {
+          "coord": "V28",
+          "formula": "=IF(A28=\"No\",0,IF(P28=\"Skipped\",0,IF(F28=1,0,IF(O28>=1,0,(J28*2-H28-I28+5)*0.5+(6-G28)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K29",
+          "formula": "=IF(A29=\"No\",0,IF(P29=\"Skipped\",0,ROUND((E29*0.35+(6-G29)*0.25+J29*0.2+IF(F29=1,5,IF(F29=2,3,1))*0.15-I29*0.05)*IF(A29=\"Later\",0.5,1)*IF(OR(IFERROR(N29/M29,0)>=1,P29=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O29",
+          "formula": "=IFERROR(MIN(N29/M29,1),0)"
+        },
+        {
+          "coord": "Q29",
+          "formula": "=IF(A29=\"No\",\"Skip for Now\",IF(A29=\"Later\",\"Defer\",IF(OR(O29>=1,P29=\"Exam Ready\"),\"Keep Warm\",IF(P29=\"Skipped\",\"Skip for Now\",IF(K29>=6,\"Study Next\",IF(K29>=4.5,\"Study This Week\",IF(K29>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S29",
+          "formula": "=K29+ROW()/100000"
+        },
+        {
+          "coord": "T29",
+          "formula": "=IF(A29=\"No\",0,IF(P29=\"Skipped\",0,(J29*2-H29-I29+5)*IF(O29>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U29",
+          "formula": "=IF(A29=\"Yes\",10-K29,0)+ROW()/100000"
+        },
+        {
+          "coord": "V29",
+          "formula": "=IF(A29=\"No\",0,IF(P29=\"Skipped\",0,IF(F29=1,0,IF(O29>=1,0,(J29*2-H29-I29+5)*0.5+(6-G29)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K30",
+          "formula": "=IF(A30=\"No\",0,IF(P30=\"Skipped\",0,ROUND((E30*0.35+(6-G30)*0.25+J30*0.2+IF(F30=1,5,IF(F30=2,3,1))*0.15-I30*0.05)*IF(A30=\"Later\",0.5,1)*IF(OR(IFERROR(N30/M30,0)>=1,P30=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O30",
+          "formula": "=IFERROR(MIN(N30/M30,1),0)"
+        },
+        {
+          "coord": "Q30",
+          "formula": "=IF(A30=\"No\",\"Skip for Now\",IF(A30=\"Later\",\"Defer\",IF(OR(O30>=1,P30=\"Exam Ready\"),\"Keep Warm\",IF(P30=\"Skipped\",\"Skip for Now\",IF(K30>=6,\"Study Next\",IF(K30>=4.5,\"Study This Week\",IF(K30>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S30",
+          "formula": "=K30+ROW()/100000"
+        },
+        {
+          "coord": "T30",
+          "formula": "=IF(A30=\"No\",0,IF(P30=\"Skipped\",0,(J30*2-H30-I30+5)*IF(O30>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U30",
+          "formula": "=IF(A30=\"Yes\",10-K30,0)+ROW()/100000"
+        },
+        {
+          "coord": "V30",
+          "formula": "=IF(A30=\"No\",0,IF(P30=\"Skipped\",0,IF(F30=1,0,IF(O30>=1,0,(J30*2-H30-I30+5)*0.5+(6-G30)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K31",
+          "formula": "=IF(A31=\"No\",0,IF(P31=\"Skipped\",0,ROUND((E31*0.35+(6-G31)*0.25+J31*0.2+IF(F31=1,5,IF(F31=2,3,1))*0.15-I31*0.05)*IF(A31=\"Later\",0.5,1)*IF(OR(IFERROR(N31/M31,0)>=1,P31=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O31",
+          "formula": "=IFERROR(MIN(N31/M31,1),0)"
+        },
+        {
+          "coord": "Q31",
+          "formula": "=IF(A31=\"No\",\"Skip for Now\",IF(A31=\"Later\",\"Defer\",IF(OR(O31>=1,P31=\"Exam Ready\"),\"Keep Warm\",IF(P31=\"Skipped\",\"Skip for Now\",IF(K31>=6,\"Study Next\",IF(K31>=4.5,\"Study This Week\",IF(K31>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S31",
+          "formula": "=K31+ROW()/100000"
+        },
+        {
+          "coord": "T31",
+          "formula": "=IF(A31=\"No\",0,IF(P31=\"Skipped\",0,(J31*2-H31-I31+5)*IF(O31>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U31",
+          "formula": "=IF(A31=\"Yes\",10-K31,0)+ROW()/100000"
+        },
+        {
+          "coord": "V31",
+          "formula": "=IF(A31=\"No\",0,IF(P31=\"Skipped\",0,IF(F31=1,0,IF(O31>=1,0,(J31*2-H31-I31+5)*0.5+(6-G31)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K32",
+          "formula": "=IF(A32=\"No\",0,IF(P32=\"Skipped\",0,ROUND((E32*0.35+(6-G32)*0.25+J32*0.2+IF(F32=1,5,IF(F32=2,3,1))*0.15-I32*0.05)*IF(A32=\"Later\",0.5,1)*IF(OR(IFERROR(N32/M32,0)>=1,P32=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O32",
+          "formula": "=IFERROR(MIN(N32/M32,1),0)"
+        },
+        {
+          "coord": "Q32",
+          "formula": "=IF(A32=\"No\",\"Skip for Now\",IF(A32=\"Later\",\"Defer\",IF(OR(O32>=1,P32=\"Exam Ready\"),\"Keep Warm\",IF(P32=\"Skipped\",\"Skip for Now\",IF(K32>=6,\"Study Next\",IF(K32>=4.5,\"Study This Week\",IF(K32>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S32",
+          "formula": "=K32+ROW()/100000"
+        },
+        {
+          "coord": "T32",
+          "formula": "=IF(A32=\"No\",0,IF(P32=\"Skipped\",0,(J32*2-H32-I32+5)*IF(O32>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U32",
+          "formula": "=IF(A32=\"Yes\",10-K32,0)+ROW()/100000"
+        },
+        {
+          "coord": "V32",
+          "formula": "=IF(A32=\"No\",0,IF(P32=\"Skipped\",0,IF(F32=1,0,IF(O32>=1,0,(J32*2-H32-I32+5)*0.5+(6-G32)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K33",
+          "formula": "=IF(A33=\"No\",0,IF(P33=\"Skipped\",0,ROUND((E33*0.35+(6-G33)*0.25+J33*0.2+IF(F33=1,5,IF(F33=2,3,1))*0.15-I33*0.05)*IF(A33=\"Later\",0.5,1)*IF(OR(IFERROR(N33/M33,0)>=1,P33=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O33",
+          "formula": "=IFERROR(MIN(N33/M33,1),0)"
+        },
+        {
+          "coord": "Q33",
+          "formula": "=IF(A33=\"No\",\"Skip for Now\",IF(A33=\"Later\",\"Defer\",IF(OR(O33>=1,P33=\"Exam Ready\"),\"Keep Warm\",IF(P33=\"Skipped\",\"Skip for Now\",IF(K33>=6,\"Study Next\",IF(K33>=4.5,\"Study This Week\",IF(K33>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S33",
+          "formula": "=K33+ROW()/100000"
+        },
+        {
+          "coord": "T33",
+          "formula": "=IF(A33=\"No\",0,IF(P33=\"Skipped\",0,(J33*2-H33-I33+5)*IF(O33>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U33",
+          "formula": "=IF(A33=\"Yes\",10-K33,0)+ROW()/100000"
+        },
+        {
+          "coord": "V33",
+          "formula": "=IF(A33=\"No\",0,IF(P33=\"Skipped\",0,IF(F33=1,0,IF(O33>=1,0,(J33*2-H33-I33+5)*0.5+(6-G33)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K34",
+          "formula": "=IF(A34=\"No\",0,IF(P34=\"Skipped\",0,ROUND((E34*0.35+(6-G34)*0.25+J34*0.2+IF(F34=1,5,IF(F34=2,3,1))*0.15-I34*0.05)*IF(A34=\"Later\",0.5,1)*IF(OR(IFERROR(N34/M34,0)>=1,P34=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O34",
+          "formula": "=IFERROR(MIN(N34/M34,1),0)"
+        },
+        {
+          "coord": "Q34",
+          "formula": "=IF(A34=\"No\",\"Skip for Now\",IF(A34=\"Later\",\"Defer\",IF(OR(O34>=1,P34=\"Exam Ready\"),\"Keep Warm\",IF(P34=\"Skipped\",\"Skip for Now\",IF(K34>=6,\"Study Next\",IF(K34>=4.5,\"Study This Week\",IF(K34>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S34",
+          "formula": "=K34+ROW()/100000"
+        },
+        {
+          "coord": "T34",
+          "formula": "=IF(A34=\"No\",0,IF(P34=\"Skipped\",0,(J34*2-H34-I34+5)*IF(O34>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U34",
+          "formula": "=IF(A34=\"Yes\",10-K34,0)+ROW()/100000"
+        },
+        {
+          "coord": "V34",
+          "formula": "=IF(A34=\"No\",0,IF(P34=\"Skipped\",0,IF(F34=1,0,IF(O34>=1,0,(J34*2-H34-I34+5)*0.5+(6-G34)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K35",
+          "formula": "=IF(A35=\"No\",0,IF(P35=\"Skipped\",0,ROUND((E35*0.35+(6-G35)*0.25+J35*0.2+IF(F35=1,5,IF(F35=2,3,1))*0.15-I35*0.05)*IF(A35=\"Later\",0.5,1)*IF(OR(IFERROR(N35/M35,0)>=1,P35=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O35",
+          "formula": "=IFERROR(MIN(N35/M35,1),0)"
+        },
+        {
+          "coord": "Q35",
+          "formula": "=IF(A35=\"No\",\"Skip for Now\",IF(A35=\"Later\",\"Defer\",IF(OR(O35>=1,P35=\"Exam Ready\"),\"Keep Warm\",IF(P35=\"Skipped\",\"Skip for Now\",IF(K35>=6,\"Study Next\",IF(K35>=4.5,\"Study This Week\",IF(K35>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S35",
+          "formula": "=K35+ROW()/100000"
+        },
+        {
+          "coord": "T35",
+          "formula": "=IF(A35=\"No\",0,IF(P35=\"Skipped\",0,(J35*2-H35-I35+5)*IF(O35>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U35",
+          "formula": "=IF(A35=\"Yes\",10-K35,0)+ROW()/100000"
+        },
+        {
+          "coord": "V35",
+          "formula": "=IF(A35=\"No\",0,IF(P35=\"Skipped\",0,IF(F35=1,0,IF(O35>=1,0,(J35*2-H35-I35+5)*0.5+(6-G35)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K36",
+          "formula": "=IF(A36=\"No\",0,IF(P36=\"Skipped\",0,ROUND((E36*0.35+(6-G36)*0.25+J36*0.2+IF(F36=1,5,IF(F36=2,3,1))*0.15-I36*0.05)*IF(A36=\"Later\",0.5,1)*IF(OR(IFERROR(N36/M36,0)>=1,P36=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O36",
+          "formula": "=IFERROR(MIN(N36/M36,1),0)"
+        },
+        {
+          "coord": "Q36",
+          "formula": "=IF(A36=\"No\",\"Skip for Now\",IF(A36=\"Later\",\"Defer\",IF(OR(O36>=1,P36=\"Exam Ready\"),\"Keep Warm\",IF(P36=\"Skipped\",\"Skip for Now\",IF(K36>=6,\"Study Next\",IF(K36>=4.5,\"Study This Week\",IF(K36>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S36",
+          "formula": "=K36+ROW()/100000"
+        },
+        {
+          "coord": "T36",
+          "formula": "=IF(A36=\"No\",0,IF(P36=\"Skipped\",0,(J36*2-H36-I36+5)*IF(O36>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U36",
+          "formula": "=IF(A36=\"Yes\",10-K36,0)+ROW()/100000"
+        },
+        {
+          "coord": "V36",
+          "formula": "=IF(A36=\"No\",0,IF(P36=\"Skipped\",0,IF(F36=1,0,IF(O36>=1,0,(J36*2-H36-I36+5)*0.5+(6-G36)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K37",
+          "formula": "=IF(A37=\"No\",0,IF(P37=\"Skipped\",0,ROUND((E37*0.35+(6-G37)*0.25+J37*0.2+IF(F37=1,5,IF(F37=2,3,1))*0.15-I37*0.05)*IF(A37=\"Later\",0.5,1)*IF(OR(IFERROR(N37/M37,0)>=1,P37=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O37",
+          "formula": "=IFERROR(MIN(N37/M37,1),0)"
+        },
+        {
+          "coord": "Q37",
+          "formula": "=IF(A37=\"No\",\"Skip for Now\",IF(A37=\"Later\",\"Defer\",IF(OR(O37>=1,P37=\"Exam Ready\"),\"Keep Warm\",IF(P37=\"Skipped\",\"Skip for Now\",IF(K37>=6,\"Study Next\",IF(K37>=4.5,\"Study This Week\",IF(K37>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S37",
+          "formula": "=K37+ROW()/100000"
+        },
+        {
+          "coord": "T37",
+          "formula": "=IF(A37=\"No\",0,IF(P37=\"Skipped\",0,(J37*2-H37-I37+5)*IF(O37>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U37",
+          "formula": "=IF(A37=\"Yes\",10-K37,0)+ROW()/100000"
+        },
+        {
+          "coord": "V37",
+          "formula": "=IF(A37=\"No\",0,IF(P37=\"Skipped\",0,IF(F37=1,0,IF(O37>=1,0,(J37*2-H37-I37+5)*0.5+(6-G37)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K38",
+          "formula": "=IF(A38=\"No\",0,IF(P38=\"Skipped\",0,ROUND((E38*0.35+(6-G38)*0.25+J38*0.2+IF(F38=1,5,IF(F38=2,3,1))*0.15-I38*0.05)*IF(A38=\"Later\",0.5,1)*IF(OR(IFERROR(N38/M38,0)>=1,P38=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O38",
+          "formula": "=IFERROR(MIN(N38/M38,1),0)"
+        },
+        {
+          "coord": "Q38",
+          "formula": "=IF(A38=\"No\",\"Skip for Now\",IF(A38=\"Later\",\"Defer\",IF(OR(O38>=1,P38=\"Exam Ready\"),\"Keep Warm\",IF(P38=\"Skipped\",\"Skip for Now\",IF(K38>=6,\"Study Next\",IF(K38>=4.5,\"Study This Week\",IF(K38>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S38",
+          "formula": "=K38+ROW()/100000"
+        },
+        {
+          "coord": "T38",
+          "formula": "=IF(A38=\"No\",0,IF(P38=\"Skipped\",0,(J38*2-H38-I38+5)*IF(O38>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U38",
+          "formula": "=IF(A38=\"Yes\",10-K38,0)+ROW()/100000"
+        },
+        {
+          "coord": "V38",
+          "formula": "=IF(A38=\"No\",0,IF(P38=\"Skipped\",0,IF(F38=1,0,IF(O38>=1,0,(J38*2-H38-I38+5)*0.5+(6-G38)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K39",
+          "formula": "=IF(A39=\"No\",0,IF(P39=\"Skipped\",0,ROUND((E39*0.35+(6-G39)*0.25+J39*0.2+IF(F39=1,5,IF(F39=2,3,1))*0.15-I39*0.05)*IF(A39=\"Later\",0.5,1)*IF(OR(IFERROR(N39/M39,0)>=1,P39=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O39",
+          "formula": "=IFERROR(MIN(N39/M39,1),0)"
+        },
+        {
+          "coord": "Q39",
+          "formula": "=IF(A39=\"No\",\"Skip for Now\",IF(A39=\"Later\",\"Defer\",IF(OR(O39>=1,P39=\"Exam Ready\"),\"Keep Warm\",IF(P39=\"Skipped\",\"Skip for Now\",IF(K39>=6,\"Study Next\",IF(K39>=4.5,\"Study This Week\",IF(K39>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S39",
+          "formula": "=K39+ROW()/100000"
+        },
+        {
+          "coord": "T39",
+          "formula": "=IF(A39=\"No\",0,IF(P39=\"Skipped\",0,(J39*2-H39-I39+5)*IF(O39>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U39",
+          "formula": "=IF(A39=\"Yes\",10-K39,0)+ROW()/100000"
+        },
+        {
+          "coord": "V39",
+          "formula": "=IF(A39=\"No\",0,IF(P39=\"Skipped\",0,IF(F39=1,0,IF(O39>=1,0,(J39*2-H39-I39+5)*0.5+(6-G39)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K40",
+          "formula": "=IF(A40=\"No\",0,IF(P40=\"Skipped\",0,ROUND((E40*0.35+(6-G40)*0.25+J40*0.2+IF(F40=1,5,IF(F40=2,3,1))*0.15-I40*0.05)*IF(A40=\"Later\",0.5,1)*IF(OR(IFERROR(N40/M40,0)>=1,P40=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O40",
+          "formula": "=IFERROR(MIN(N40/M40,1),0)"
+        },
+        {
+          "coord": "Q40",
+          "formula": "=IF(A40=\"No\",\"Skip for Now\",IF(A40=\"Later\",\"Defer\",IF(OR(O40>=1,P40=\"Exam Ready\"),\"Keep Warm\",IF(P40=\"Skipped\",\"Skip for Now\",IF(K40>=6,\"Study Next\",IF(K40>=4.5,\"Study This Week\",IF(K40>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S40",
+          "formula": "=K40+ROW()/100000"
+        },
+        {
+          "coord": "T40",
+          "formula": "=IF(A40=\"No\",0,IF(P40=\"Skipped\",0,(J40*2-H40-I40+5)*IF(O40>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U40",
+          "formula": "=IF(A40=\"Yes\",10-K40,0)+ROW()/100000"
+        },
+        {
+          "coord": "V40",
+          "formula": "=IF(A40=\"No\",0,IF(P40=\"Skipped\",0,IF(F40=1,0,IF(O40>=1,0,(J40*2-H40-I40+5)*0.5+(6-G40)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K41",
+          "formula": "=IF(A41=\"No\",0,IF(P41=\"Skipped\",0,ROUND((E41*0.35+(6-G41)*0.25+J41*0.2+IF(F41=1,5,IF(F41=2,3,1))*0.15-I41*0.05)*IF(A41=\"Later\",0.5,1)*IF(OR(IFERROR(N41/M41,0)>=1,P41=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O41",
+          "formula": "=IFERROR(MIN(N41/M41,1),0)"
+        },
+        {
+          "coord": "Q41",
+          "formula": "=IF(A41=\"No\",\"Skip for Now\",IF(A41=\"Later\",\"Defer\",IF(OR(O41>=1,P41=\"Exam Ready\"),\"Keep Warm\",IF(P41=\"Skipped\",\"Skip for Now\",IF(K41>=6,\"Study Next\",IF(K41>=4.5,\"Study This Week\",IF(K41>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S41",
+          "formula": "=K41+ROW()/100000"
+        },
+        {
+          "coord": "T41",
+          "formula": "=IF(A41=\"No\",0,IF(P41=\"Skipped\",0,(J41*2-H41-I41+5)*IF(O41>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U41",
+          "formula": "=IF(A41=\"Yes\",10-K41,0)+ROW()/100000"
+        },
+        {
+          "coord": "V41",
+          "formula": "=IF(A41=\"No\",0,IF(P41=\"Skipped\",0,IF(F41=1,0,IF(O41>=1,0,(J41*2-H41-I41+5)*0.5+(6-G41)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K42",
+          "formula": "=IF(A42=\"No\",0,IF(P42=\"Skipped\",0,ROUND((E42*0.35+(6-G42)*0.25+J42*0.2+IF(F42=1,5,IF(F42=2,3,1))*0.15-I42*0.05)*IF(A42=\"Later\",0.5,1)*IF(OR(IFERROR(N42/M42,0)>=1,P42=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O42",
+          "formula": "=IFERROR(MIN(N42/M42,1),0)"
+        },
+        {
+          "coord": "Q42",
+          "formula": "=IF(A42=\"No\",\"Skip for Now\",IF(A42=\"Later\",\"Defer\",IF(OR(O42>=1,P42=\"Exam Ready\"),\"Keep Warm\",IF(P42=\"Skipped\",\"Skip for Now\",IF(K42>=6,\"Study Next\",IF(K42>=4.5,\"Study This Week\",IF(K42>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S42",
+          "formula": "=K42+ROW()/100000"
+        },
+        {
+          "coord": "T42",
+          "formula": "=IF(A42=\"No\",0,IF(P42=\"Skipped\",0,(J42*2-H42-I42+5)*IF(O42>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U42",
+          "formula": "=IF(A42=\"Yes\",10-K42,0)+ROW()/100000"
+        },
+        {
+          "coord": "V42",
+          "formula": "=IF(A42=\"No\",0,IF(P42=\"Skipped\",0,IF(F42=1,0,IF(O42>=1,0,(J42*2-H42-I42+5)*0.5+(6-G42)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K43",
+          "formula": "=IF(A43=\"No\",0,IF(P43=\"Skipped\",0,ROUND((E43*0.35+(6-G43)*0.25+J43*0.2+IF(F43=1,5,IF(F43=2,3,1))*0.15-I43*0.05)*IF(A43=\"Later\",0.5,1)*IF(OR(IFERROR(N43/M43,0)>=1,P43=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O43",
+          "formula": "=IFERROR(MIN(N43/M43,1),0)"
+        },
+        {
+          "coord": "Q43",
+          "formula": "=IF(A43=\"No\",\"Skip for Now\",IF(A43=\"Later\",\"Defer\",IF(OR(O43>=1,P43=\"Exam Ready\"),\"Keep Warm\",IF(P43=\"Skipped\",\"Skip for Now\",IF(K43>=6,\"Study Next\",IF(K43>=4.5,\"Study This Week\",IF(K43>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S43",
+          "formula": "=K43+ROW()/100000"
+        },
+        {
+          "coord": "T43",
+          "formula": "=IF(A43=\"No\",0,IF(P43=\"Skipped\",0,(J43*2-H43-I43+5)*IF(O43>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U43",
+          "formula": "=IF(A43=\"Yes\",10-K43,0)+ROW()/100000"
+        },
+        {
+          "coord": "V43",
+          "formula": "=IF(A43=\"No\",0,IF(P43=\"Skipped\",0,IF(F43=1,0,IF(O43>=1,0,(J43*2-H43-I43+5)*0.5+(6-G43)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K44",
+          "formula": "=IF(A44=\"No\",0,IF(P44=\"Skipped\",0,ROUND((E44*0.35+(6-G44)*0.25+J44*0.2+IF(F44=1,5,IF(F44=2,3,1))*0.15-I44*0.05)*IF(A44=\"Later\",0.5,1)*IF(OR(IFERROR(N44/M44,0)>=1,P44=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O44",
+          "formula": "=IFERROR(MIN(N44/M44,1),0)"
+        },
+        {
+          "coord": "Q44",
+          "formula": "=IF(A44=\"No\",\"Skip for Now\",IF(A44=\"Later\",\"Defer\",IF(OR(O44>=1,P44=\"Exam Ready\"),\"Keep Warm\",IF(P44=\"Skipped\",\"Skip for Now\",IF(K44>=6,\"Study Next\",IF(K44>=4.5,\"Study This Week\",IF(K44>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S44",
+          "formula": "=K44+ROW()/100000"
+        },
+        {
+          "coord": "T44",
+          "formula": "=IF(A44=\"No\",0,IF(P44=\"Skipped\",0,(J44*2-H44-I44+5)*IF(O44>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U44",
+          "formula": "=IF(A44=\"Yes\",10-K44,0)+ROW()/100000"
+        },
+        {
+          "coord": "V44",
+          "formula": "=IF(A44=\"No\",0,IF(P44=\"Skipped\",0,IF(F44=1,0,IF(O44>=1,0,(J44*2-H44-I44+5)*0.5+(6-G44)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K45",
+          "formula": "=IF(A45=\"No\",0,IF(P45=\"Skipped\",0,ROUND((E45*0.35+(6-G45)*0.25+J45*0.2+IF(F45=1,5,IF(F45=2,3,1))*0.15-I45*0.05)*IF(A45=\"Later\",0.5,1)*IF(OR(IFERROR(N45/M45,0)>=1,P45=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O45",
+          "formula": "=IFERROR(MIN(N45/M45,1),0)"
+        },
+        {
+          "coord": "Q45",
+          "formula": "=IF(A45=\"No\",\"Skip for Now\",IF(A45=\"Later\",\"Defer\",IF(OR(O45>=1,P45=\"Exam Ready\"),\"Keep Warm\",IF(P45=\"Skipped\",\"Skip for Now\",IF(K45>=6,\"Study Next\",IF(K45>=4.5,\"Study This Week\",IF(K45>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S45",
+          "formula": "=K45+ROW()/100000"
+        },
+        {
+          "coord": "T45",
+          "formula": "=IF(A45=\"No\",0,IF(P45=\"Skipped\",0,(J45*2-H45-I45+5)*IF(O45>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U45",
+          "formula": "=IF(A45=\"Yes\",10-K45,0)+ROW()/100000"
+        },
+        {
+          "coord": "V45",
+          "formula": "=IF(A45=\"No\",0,IF(P45=\"Skipped\",0,IF(F45=1,0,IF(O45>=1,0,(J45*2-H45-I45+5)*0.5+(6-G45)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K46",
+          "formula": "=IF(A46=\"No\",0,IF(P46=\"Skipped\",0,ROUND((E46*0.35+(6-G46)*0.25+J46*0.2+IF(F46=1,5,IF(F46=2,3,1))*0.15-I46*0.05)*IF(A46=\"Later\",0.5,1)*IF(OR(IFERROR(N46/M46,0)>=1,P46=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O46",
+          "formula": "=IFERROR(MIN(N46/M46,1),0)"
+        },
+        {
+          "coord": "Q46",
+          "formula": "=IF(A46=\"No\",\"Skip for Now\",IF(A46=\"Later\",\"Defer\",IF(OR(O46>=1,P46=\"Exam Ready\"),\"Keep Warm\",IF(P46=\"Skipped\",\"Skip for Now\",IF(K46>=6,\"Study Next\",IF(K46>=4.5,\"Study This Week\",IF(K46>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S46",
+          "formula": "=K46+ROW()/100000"
+        },
+        {
+          "coord": "T46",
+          "formula": "=IF(A46=\"No\",0,IF(P46=\"Skipped\",0,(J46*2-H46-I46+5)*IF(O46>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U46",
+          "formula": "=IF(A46=\"Yes\",10-K46,0)+ROW()/100000"
+        },
+        {
+          "coord": "V46",
+          "formula": "=IF(A46=\"No\",0,IF(P46=\"Skipped\",0,IF(F46=1,0,IF(O46>=1,0,(J46*2-H46-I46+5)*0.5+(6-G46)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K47",
+          "formula": "=IF(A47=\"No\",0,IF(P47=\"Skipped\",0,ROUND((E47*0.35+(6-G47)*0.25+J47*0.2+IF(F47=1,5,IF(F47=2,3,1))*0.15-I47*0.05)*IF(A47=\"Later\",0.5,1)*IF(OR(IFERROR(N47/M47,0)>=1,P47=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O47",
+          "formula": "=IFERROR(MIN(N47/M47,1),0)"
+        },
+        {
+          "coord": "Q47",
+          "formula": "=IF(A47=\"No\",\"Skip for Now\",IF(A47=\"Later\",\"Defer\",IF(OR(O47>=1,P47=\"Exam Ready\"),\"Keep Warm\",IF(P47=\"Skipped\",\"Skip for Now\",IF(K47>=6,\"Study Next\",IF(K47>=4.5,\"Study This Week\",IF(K47>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S47",
+          "formula": "=K47+ROW()/100000"
+        },
+        {
+          "coord": "T47",
+          "formula": "=IF(A47=\"No\",0,IF(P47=\"Skipped\",0,(J47*2-H47-I47+5)*IF(O47>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U47",
+          "formula": "=IF(A47=\"Yes\",10-K47,0)+ROW()/100000"
+        },
+        {
+          "coord": "V47",
+          "formula": "=IF(A47=\"No\",0,IF(P47=\"Skipped\",0,IF(F47=1,0,IF(O47>=1,0,(J47*2-H47-I47+5)*0.5+(6-G47)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K48",
+          "formula": "=IF(A48=\"No\",0,IF(P48=\"Skipped\",0,ROUND((E48*0.35+(6-G48)*0.25+J48*0.2+IF(F48=1,5,IF(F48=2,3,1))*0.15-I48*0.05)*IF(A48=\"Later\",0.5,1)*IF(OR(IFERROR(N48/M48,0)>=1,P48=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O48",
+          "formula": "=IFERROR(MIN(N48/M48,1),0)"
+        },
+        {
+          "coord": "Q48",
+          "formula": "=IF(A48=\"No\",\"Skip for Now\",IF(A48=\"Later\",\"Defer\",IF(OR(O48>=1,P48=\"Exam Ready\"),\"Keep Warm\",IF(P48=\"Skipped\",\"Skip for Now\",IF(K48>=6,\"Study Next\",IF(K48>=4.5,\"Study This Week\",IF(K48>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S48",
+          "formula": "=K48+ROW()/100000"
+        },
+        {
+          "coord": "T48",
+          "formula": "=IF(A48=\"No\",0,IF(P48=\"Skipped\",0,(J48*2-H48-I48+5)*IF(O48>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U48",
+          "formula": "=IF(A48=\"Yes\",10-K48,0)+ROW()/100000"
+        },
+        {
+          "coord": "V48",
+          "formula": "=IF(A48=\"No\",0,IF(P48=\"Skipped\",0,IF(F48=1,0,IF(O48>=1,0,(J48*2-H48-I48+5)*0.5+(6-G48)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K49",
+          "formula": "=IF(A49=\"No\",0,IF(P49=\"Skipped\",0,ROUND((E49*0.35+(6-G49)*0.25+J49*0.2+IF(F49=1,5,IF(F49=2,3,1))*0.15-I49*0.05)*IF(A49=\"Later\",0.5,1)*IF(OR(IFERROR(N49/M49,0)>=1,P49=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O49",
+          "formula": "=IFERROR(MIN(N49/M49,1),0)"
+        },
+        {
+          "coord": "Q49",
+          "formula": "=IF(A49=\"No\",\"Skip for Now\",IF(A49=\"Later\",\"Defer\",IF(OR(O49>=1,P49=\"Exam Ready\"),\"Keep Warm\",IF(P49=\"Skipped\",\"Skip for Now\",IF(K49>=6,\"Study Next\",IF(K49>=4.5,\"Study This Week\",IF(K49>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S49",
+          "formula": "=K49+ROW()/100000"
+        },
+        {
+          "coord": "T49",
+          "formula": "=IF(A49=\"No\",0,IF(P49=\"Skipped\",0,(J49*2-H49-I49+5)*IF(O49>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U49",
+          "formula": "=IF(A49=\"Yes\",10-K49,0)+ROW()/100000"
+        },
+        {
+          "coord": "V49",
+          "formula": "=IF(A49=\"No\",0,IF(P49=\"Skipped\",0,IF(F49=1,0,IF(O49>=1,0,(J49*2-H49-I49+5)*0.5+(6-G49)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K50",
+          "formula": "=IF(A50=\"No\",0,IF(P50=\"Skipped\",0,ROUND((E50*0.35+(6-G50)*0.25+J50*0.2+IF(F50=1,5,IF(F50=2,3,1))*0.15-I50*0.05)*IF(A50=\"Later\",0.5,1)*IF(OR(IFERROR(N50/M50,0)>=1,P50=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O50",
+          "formula": "=IFERROR(MIN(N50/M50,1),0)"
+        },
+        {
+          "coord": "Q50",
+          "formula": "=IF(A50=\"No\",\"Skip for Now\",IF(A50=\"Later\",\"Defer\",IF(OR(O50>=1,P50=\"Exam Ready\"),\"Keep Warm\",IF(P50=\"Skipped\",\"Skip for Now\",IF(K50>=6,\"Study Next\",IF(K50>=4.5,\"Study This Week\",IF(K50>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S50",
+          "formula": "=K50+ROW()/100000"
+        },
+        {
+          "coord": "T50",
+          "formula": "=IF(A50=\"No\",0,IF(P50=\"Skipped\",0,(J50*2-H50-I50+5)*IF(O50>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U50",
+          "formula": "=IF(A50=\"Yes\",10-K50,0)+ROW()/100000"
+        },
+        {
+          "coord": "V50",
+          "formula": "=IF(A50=\"No\",0,IF(P50=\"Skipped\",0,IF(F50=1,0,IF(O50>=1,0,(J50*2-H50-I50+5)*0.5+(6-G50)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K51",
+          "formula": "=IF(A51=\"No\",0,IF(P51=\"Skipped\",0,ROUND((E51*0.35+(6-G51)*0.25+J51*0.2+IF(F51=1,5,IF(F51=2,3,1))*0.15-I51*0.05)*IF(A51=\"Later\",0.5,1)*IF(OR(IFERROR(N51/M51,0)>=1,P51=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O51",
+          "formula": "=IFERROR(MIN(N51/M51,1),0)"
+        },
+        {
+          "coord": "Q51",
+          "formula": "=IF(A51=\"No\",\"Skip for Now\",IF(A51=\"Later\",\"Defer\",IF(OR(O51>=1,P51=\"Exam Ready\"),\"Keep Warm\",IF(P51=\"Skipped\",\"Skip for Now\",IF(K51>=6,\"Study Next\",IF(K51>=4.5,\"Study This Week\",IF(K51>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S51",
+          "formula": "=K51+ROW()/100000"
+        },
+        {
+          "coord": "T51",
+          "formula": "=IF(A51=\"No\",0,IF(P51=\"Skipped\",0,(J51*2-H51-I51+5)*IF(O51>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U51",
+          "formula": "=IF(A51=\"Yes\",10-K51,0)+ROW()/100000"
+        },
+        {
+          "coord": "V51",
+          "formula": "=IF(A51=\"No\",0,IF(P51=\"Skipped\",0,IF(F51=1,0,IF(O51>=1,0,(J51*2-H51-I51+5)*0.5+(6-G51)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K52",
+          "formula": "=IF(A52=\"No\",0,IF(P52=\"Skipped\",0,ROUND((E52*0.35+(6-G52)*0.25+J52*0.2+IF(F52=1,5,IF(F52=2,3,1))*0.15-I52*0.05)*IF(A52=\"Later\",0.5,1)*IF(OR(IFERROR(N52/M52,0)>=1,P52=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O52",
+          "formula": "=IFERROR(MIN(N52/M52,1),0)"
+        },
+        {
+          "coord": "Q52",
+          "formula": "=IF(A52=\"No\",\"Skip for Now\",IF(A52=\"Later\",\"Defer\",IF(OR(O52>=1,P52=\"Exam Ready\"),\"Keep Warm\",IF(P52=\"Skipped\",\"Skip for Now\",IF(K52>=6,\"Study Next\",IF(K52>=4.5,\"Study This Week\",IF(K52>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S52",
+          "formula": "=K52+ROW()/100000"
+        },
+        {
+          "coord": "T52",
+          "formula": "=IF(A52=\"No\",0,IF(P52=\"Skipped\",0,(J52*2-H52-I52+5)*IF(O52>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U52",
+          "formula": "=IF(A52=\"Yes\",10-K52,0)+ROW()/100000"
+        },
+        {
+          "coord": "V52",
+          "formula": "=IF(A52=\"No\",0,IF(P52=\"Skipped\",0,IF(F52=1,0,IF(O52>=1,0,(J52*2-H52-I52+5)*0.5+(6-G52)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K53",
+          "formula": "=IF(A53=\"No\",0,IF(P53=\"Skipped\",0,ROUND((E53*0.35+(6-G53)*0.25+J53*0.2+IF(F53=1,5,IF(F53=2,3,1))*0.15-I53*0.05)*IF(A53=\"Later\",0.5,1)*IF(OR(IFERROR(N53/M53,0)>=1,P53=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O53",
+          "formula": "=IFERROR(MIN(N53/M53,1),0)"
+        },
+        {
+          "coord": "Q53",
+          "formula": "=IF(A53=\"No\",\"Skip for Now\",IF(A53=\"Later\",\"Defer\",IF(OR(O53>=1,P53=\"Exam Ready\"),\"Keep Warm\",IF(P53=\"Skipped\",\"Skip for Now\",IF(K53>=6,\"Study Next\",IF(K53>=4.5,\"Study This Week\",IF(K53>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S53",
+          "formula": "=K53+ROW()/100000"
+        },
+        {
+          "coord": "T53",
+          "formula": "=IF(A53=\"No\",0,IF(P53=\"Skipped\",0,(J53*2-H53-I53+5)*IF(O53>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U53",
+          "formula": "=IF(A53=\"Yes\",10-K53,0)+ROW()/100000"
+        },
+        {
+          "coord": "V53",
+          "formula": "=IF(A53=\"No\",0,IF(P53=\"Skipped\",0,IF(F53=1,0,IF(O53>=1,0,(J53*2-H53-I53+5)*0.5+(6-G53)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K54",
+          "formula": "=IF(A54=\"No\",0,IF(P54=\"Skipped\",0,ROUND((E54*0.35+(6-G54)*0.25+J54*0.2+IF(F54=1,5,IF(F54=2,3,1))*0.15-I54*0.05)*IF(A54=\"Later\",0.5,1)*IF(OR(IFERROR(N54/M54,0)>=1,P54=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O54",
+          "formula": "=IFERROR(MIN(N54/M54,1),0)"
+        },
+        {
+          "coord": "Q54",
+          "formula": "=IF(A54=\"No\",\"Skip for Now\",IF(A54=\"Later\",\"Defer\",IF(OR(O54>=1,P54=\"Exam Ready\"),\"Keep Warm\",IF(P54=\"Skipped\",\"Skip for Now\",IF(K54>=6,\"Study Next\",IF(K54>=4.5,\"Study This Week\",IF(K54>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S54",
+          "formula": "=K54+ROW()/100000"
+        },
+        {
+          "coord": "T54",
+          "formula": "=IF(A54=\"No\",0,IF(P54=\"Skipped\",0,(J54*2-H54-I54+5)*IF(O54>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U54",
+          "formula": "=IF(A54=\"Yes\",10-K54,0)+ROW()/100000"
+        },
+        {
+          "coord": "V54",
+          "formula": "=IF(A54=\"No\",0,IF(P54=\"Skipped\",0,IF(F54=1,0,IF(O54>=1,0,(J54*2-H54-I54+5)*0.5+(6-G54)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K55",
+          "formula": "=IF(A55=\"No\",0,IF(P55=\"Skipped\",0,ROUND((E55*0.35+(6-G55)*0.25+J55*0.2+IF(F55=1,5,IF(F55=2,3,1))*0.15-I55*0.05)*IF(A55=\"Later\",0.5,1)*IF(OR(IFERROR(N55/M55,0)>=1,P55=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O55",
+          "formula": "=IFERROR(MIN(N55/M55,1),0)"
+        },
+        {
+          "coord": "Q55",
+          "formula": "=IF(A55=\"No\",\"Skip for Now\",IF(A55=\"Later\",\"Defer\",IF(OR(O55>=1,P55=\"Exam Ready\"),\"Keep Warm\",IF(P55=\"Skipped\",\"Skip for Now\",IF(K55>=6,\"Study Next\",IF(K55>=4.5,\"Study This Week\",IF(K55>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S55",
+          "formula": "=K55+ROW()/100000"
+        },
+        {
+          "coord": "T55",
+          "formula": "=IF(A55=\"No\",0,IF(P55=\"Skipped\",0,(J55*2-H55-I55+5)*IF(O55>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U55",
+          "formula": "=IF(A55=\"Yes\",10-K55,0)+ROW()/100000"
+        },
+        {
+          "coord": "V55",
+          "formula": "=IF(A55=\"No\",0,IF(P55=\"Skipped\",0,IF(F55=1,0,IF(O55>=1,0,(J55*2-H55-I55+5)*0.5+(6-G55)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K56",
+          "formula": "=IF(A56=\"No\",0,IF(P56=\"Skipped\",0,ROUND((E56*0.35+(6-G56)*0.25+J56*0.2+IF(F56=1,5,IF(F56=2,3,1))*0.15-I56*0.05)*IF(A56=\"Later\",0.5,1)*IF(OR(IFERROR(N56/M56,0)>=1,P56=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O56",
+          "formula": "=IFERROR(MIN(N56/M56,1),0)"
+        },
+        {
+          "coord": "Q56",
+          "formula": "=IF(A56=\"No\",\"Skip for Now\",IF(A56=\"Later\",\"Defer\",IF(OR(O56>=1,P56=\"Exam Ready\"),\"Keep Warm\",IF(P56=\"Skipped\",\"Skip for Now\",IF(K56>=6,\"Study Next\",IF(K56>=4.5,\"Study This Week\",IF(K56>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S56",
+          "formula": "=K56+ROW()/100000"
+        },
+        {
+          "coord": "T56",
+          "formula": "=IF(A56=\"No\",0,IF(P56=\"Skipped\",0,(J56*2-H56-I56+5)*IF(O56>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U56",
+          "formula": "=IF(A56=\"Yes\",10-K56,0)+ROW()/100000"
+        },
+        {
+          "coord": "V56",
+          "formula": "=IF(A56=\"No\",0,IF(P56=\"Skipped\",0,IF(F56=1,0,IF(O56>=1,0,(J56*2-H56-I56+5)*0.5+(6-G56)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K57",
+          "formula": "=IF(A57=\"No\",0,IF(P57=\"Skipped\",0,ROUND((E57*0.35+(6-G57)*0.25+J57*0.2+IF(F57=1,5,IF(F57=2,3,1))*0.15-I57*0.05)*IF(A57=\"Later\",0.5,1)*IF(OR(IFERROR(N57/M57,0)>=1,P57=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O57",
+          "formula": "=IFERROR(MIN(N57/M57,1),0)"
+        },
+        {
+          "coord": "Q57",
+          "formula": "=IF(A57=\"No\",\"Skip for Now\",IF(A57=\"Later\",\"Defer\",IF(OR(O57>=1,P57=\"Exam Ready\"),\"Keep Warm\",IF(P57=\"Skipped\",\"Skip for Now\",IF(K57>=6,\"Study Next\",IF(K57>=4.5,\"Study This Week\",IF(K57>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S57",
+          "formula": "=K57+ROW()/100000"
+        },
+        {
+          "coord": "T57",
+          "formula": "=IF(A57=\"No\",0,IF(P57=\"Skipped\",0,(J57*2-H57-I57+5)*IF(O57>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U57",
+          "formula": "=IF(A57=\"Yes\",10-K57,0)+ROW()/100000"
+        },
+        {
+          "coord": "V57",
+          "formula": "=IF(A57=\"No\",0,IF(P57=\"Skipped\",0,IF(F57=1,0,IF(O57>=1,0,(J57*2-H57-I57+5)*0.5+(6-G57)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K58",
+          "formula": "=IF(A58=\"No\",0,IF(P58=\"Skipped\",0,ROUND((E58*0.35+(6-G58)*0.25+J58*0.2+IF(F58=1,5,IF(F58=2,3,1))*0.15-I58*0.05)*IF(A58=\"Later\",0.5,1)*IF(OR(IFERROR(N58/M58,0)>=1,P58=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O58",
+          "formula": "=IFERROR(MIN(N58/M58,1),0)"
+        },
+        {
+          "coord": "Q58",
+          "formula": "=IF(A58=\"No\",\"Skip for Now\",IF(A58=\"Later\",\"Defer\",IF(OR(O58>=1,P58=\"Exam Ready\"),\"Keep Warm\",IF(P58=\"Skipped\",\"Skip for Now\",IF(K58>=6,\"Study Next\",IF(K58>=4.5,\"Study This Week\",IF(K58>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S58",
+          "formula": "=K58+ROW()/100000"
+        },
+        {
+          "coord": "T58",
+          "formula": "=IF(A58=\"No\",0,IF(P58=\"Skipped\",0,(J58*2-H58-I58+5)*IF(O58>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U58",
+          "formula": "=IF(A58=\"Yes\",10-K58,0)+ROW()/100000"
+        },
+        {
+          "coord": "V58",
+          "formula": "=IF(A58=\"No\",0,IF(P58=\"Skipped\",0,IF(F58=1,0,IF(O58>=1,0,(J58*2-H58-I58+5)*0.5+(6-G58)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K59",
+          "formula": "=IF(A59=\"No\",0,IF(P59=\"Skipped\",0,ROUND((E59*0.35+(6-G59)*0.25+J59*0.2+IF(F59=1,5,IF(F59=2,3,1))*0.15-I59*0.05)*IF(A59=\"Later\",0.5,1)*IF(OR(IFERROR(N59/M59,0)>=1,P59=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O59",
+          "formula": "=IFERROR(MIN(N59/M59,1),0)"
+        },
+        {
+          "coord": "Q59",
+          "formula": "=IF(A59=\"No\",\"Skip for Now\",IF(A59=\"Later\",\"Defer\",IF(OR(O59>=1,P59=\"Exam Ready\"),\"Keep Warm\",IF(P59=\"Skipped\",\"Skip for Now\",IF(K59>=6,\"Study Next\",IF(K59>=4.5,\"Study This Week\",IF(K59>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S59",
+          "formula": "=K59+ROW()/100000"
+        },
+        {
+          "coord": "T59",
+          "formula": "=IF(A59=\"No\",0,IF(P59=\"Skipped\",0,(J59*2-H59-I59+5)*IF(O59>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U59",
+          "formula": "=IF(A59=\"Yes\",10-K59,0)+ROW()/100000"
+        },
+        {
+          "coord": "V59",
+          "formula": "=IF(A59=\"No\",0,IF(P59=\"Skipped\",0,IF(F59=1,0,IF(O59>=1,0,(J59*2-H59-I59+5)*0.5+(6-G59)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K60",
+          "formula": "=IF(A60=\"No\",0,IF(P60=\"Skipped\",0,ROUND((E60*0.35+(6-G60)*0.25+J60*0.2+IF(F60=1,5,IF(F60=2,3,1))*0.15-I60*0.05)*IF(A60=\"Later\",0.5,1)*IF(OR(IFERROR(N60/M60,0)>=1,P60=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O60",
+          "formula": "=IFERROR(MIN(N60/M60,1),0)"
+        },
+        {
+          "coord": "Q60",
+          "formula": "=IF(A60=\"No\",\"Skip for Now\",IF(A60=\"Later\",\"Defer\",IF(OR(O60>=1,P60=\"Exam Ready\"),\"Keep Warm\",IF(P60=\"Skipped\",\"Skip for Now\",IF(K60>=6,\"Study Next\",IF(K60>=4.5,\"Study This Week\",IF(K60>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S60",
+          "formula": "=K60+ROW()/100000"
+        },
+        {
+          "coord": "T60",
+          "formula": "=IF(A60=\"No\",0,IF(P60=\"Skipped\",0,(J60*2-H60-I60+5)*IF(O60>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U60",
+          "formula": "=IF(A60=\"Yes\",10-K60,0)+ROW()/100000"
+        },
+        {
+          "coord": "V60",
+          "formula": "=IF(A60=\"No\",0,IF(P60=\"Skipped\",0,IF(F60=1,0,IF(O60>=1,0,(J60*2-H60-I60+5)*0.5+(6-G60)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K61",
+          "formula": "=IF(A61=\"No\",0,IF(P61=\"Skipped\",0,ROUND((E61*0.35+(6-G61)*0.25+J61*0.2+IF(F61=1,5,IF(F61=2,3,1))*0.15-I61*0.05)*IF(A61=\"Later\",0.5,1)*IF(OR(IFERROR(N61/M61,0)>=1,P61=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O61",
+          "formula": "=IFERROR(MIN(N61/M61,1),0)"
+        },
+        {
+          "coord": "Q61",
+          "formula": "=IF(A61=\"No\",\"Skip for Now\",IF(A61=\"Later\",\"Defer\",IF(OR(O61>=1,P61=\"Exam Ready\"),\"Keep Warm\",IF(P61=\"Skipped\",\"Skip for Now\",IF(K61>=6,\"Study Next\",IF(K61>=4.5,\"Study This Week\",IF(K61>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S61",
+          "formula": "=K61+ROW()/100000"
+        },
+        {
+          "coord": "T61",
+          "formula": "=IF(A61=\"No\",0,IF(P61=\"Skipped\",0,(J61*2-H61-I61+5)*IF(O61>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U61",
+          "formula": "=IF(A61=\"Yes\",10-K61,0)+ROW()/100000"
+        },
+        {
+          "coord": "V61",
+          "formula": "=IF(A61=\"No\",0,IF(P61=\"Skipped\",0,IF(F61=1,0,IF(O61>=1,0,(J61*2-H61-I61+5)*0.5+(6-G61)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K62",
+          "formula": "=IF(A62=\"No\",0,IF(P62=\"Skipped\",0,ROUND((E62*0.35+(6-G62)*0.25+J62*0.2+IF(F62=1,5,IF(F62=2,3,1))*0.15-I62*0.05)*IF(A62=\"Later\",0.5,1)*IF(OR(IFERROR(N62/M62,0)>=1,P62=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O62",
+          "formula": "=IFERROR(MIN(N62/M62,1),0)"
+        },
+        {
+          "coord": "Q62",
+          "formula": "=IF(A62=\"No\",\"Skip for Now\",IF(A62=\"Later\",\"Defer\",IF(OR(O62>=1,P62=\"Exam Ready\"),\"Keep Warm\",IF(P62=\"Skipped\",\"Skip for Now\",IF(K62>=6,\"Study Next\",IF(K62>=4.5,\"Study This Week\",IF(K62>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S62",
+          "formula": "=K62+ROW()/100000"
+        },
+        {
+          "coord": "T62",
+          "formula": "=IF(A62=\"No\",0,IF(P62=\"Skipped\",0,(J62*2-H62-I62+5)*IF(O62>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U62",
+          "formula": "=IF(A62=\"Yes\",10-K62,0)+ROW()/100000"
+        },
+        {
+          "coord": "V62",
+          "formula": "=IF(A62=\"No\",0,IF(P62=\"Skipped\",0,IF(F62=1,0,IF(O62>=1,0,(J62*2-H62-I62+5)*0.5+(6-G62)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K63",
+          "formula": "=IF(A63=\"No\",0,IF(P63=\"Skipped\",0,ROUND((E63*0.35+(6-G63)*0.25+J63*0.2+IF(F63=1,5,IF(F63=2,3,1))*0.15-I63*0.05)*IF(A63=\"Later\",0.5,1)*IF(OR(IFERROR(N63/M63,0)>=1,P63=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O63",
+          "formula": "=IFERROR(MIN(N63/M63,1),0)"
+        },
+        {
+          "coord": "Q63",
+          "formula": "=IF(A63=\"No\",\"Skip for Now\",IF(A63=\"Later\",\"Defer\",IF(OR(O63>=1,P63=\"Exam Ready\"),\"Keep Warm\",IF(P63=\"Skipped\",\"Skip for Now\",IF(K63>=6,\"Study Next\",IF(K63>=4.5,\"Study This Week\",IF(K63>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S63",
+          "formula": "=K63+ROW()/100000"
+        },
+        {
+          "coord": "T63",
+          "formula": "=IF(A63=\"No\",0,IF(P63=\"Skipped\",0,(J63*2-H63-I63+5)*IF(O63>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U63",
+          "formula": "=IF(A63=\"Yes\",10-K63,0)+ROW()/100000"
+        },
+        {
+          "coord": "V63",
+          "formula": "=IF(A63=\"No\",0,IF(P63=\"Skipped\",0,IF(F63=1,0,IF(O63>=1,0,(J63*2-H63-I63+5)*0.5+(6-G63)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K64",
+          "formula": "=IF(A64=\"No\",0,IF(P64=\"Skipped\",0,ROUND((E64*0.35+(6-G64)*0.25+J64*0.2+IF(F64=1,5,IF(F64=2,3,1))*0.15-I64*0.05)*IF(A64=\"Later\",0.5,1)*IF(OR(IFERROR(N64/M64,0)>=1,P64=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O64",
+          "formula": "=IFERROR(MIN(N64/M64,1),0)"
+        },
+        {
+          "coord": "Q64",
+          "formula": "=IF(A64=\"No\",\"Skip for Now\",IF(A64=\"Later\",\"Defer\",IF(OR(O64>=1,P64=\"Exam Ready\"),\"Keep Warm\",IF(P64=\"Skipped\",\"Skip for Now\",IF(K64>=6,\"Study Next\",IF(K64>=4.5,\"Study This Week\",IF(K64>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S64",
+          "formula": "=K64+ROW()/100000"
+        },
+        {
+          "coord": "T64",
+          "formula": "=IF(A64=\"No\",0,IF(P64=\"Skipped\",0,(J64*2-H64-I64+5)*IF(O64>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U64",
+          "formula": "=IF(A64=\"Yes\",10-K64,0)+ROW()/100000"
+        },
+        {
+          "coord": "V64",
+          "formula": "=IF(A64=\"No\",0,IF(P64=\"Skipped\",0,IF(F64=1,0,IF(O64>=1,0,(J64*2-H64-I64+5)*0.5+(6-G64)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K65",
+          "formula": "=IF(A65=\"No\",0,IF(P65=\"Skipped\",0,ROUND((E65*0.35+(6-G65)*0.25+J65*0.2+IF(F65=1,5,IF(F65=2,3,1))*0.15-I65*0.05)*IF(A65=\"Later\",0.5,1)*IF(OR(IFERROR(N65/M65,0)>=1,P65=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O65",
+          "formula": "=IFERROR(MIN(N65/M65,1),0)"
+        },
+        {
+          "coord": "Q65",
+          "formula": "=IF(A65=\"No\",\"Skip for Now\",IF(A65=\"Later\",\"Defer\",IF(OR(O65>=1,P65=\"Exam Ready\"),\"Keep Warm\",IF(P65=\"Skipped\",\"Skip for Now\",IF(K65>=6,\"Study Next\",IF(K65>=4.5,\"Study This Week\",IF(K65>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S65",
+          "formula": "=K65+ROW()/100000"
+        },
+        {
+          "coord": "T65",
+          "formula": "=IF(A65=\"No\",0,IF(P65=\"Skipped\",0,(J65*2-H65-I65+5)*IF(O65>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U65",
+          "formula": "=IF(A65=\"Yes\",10-K65,0)+ROW()/100000"
+        },
+        {
+          "coord": "V65",
+          "formula": "=IF(A65=\"No\",0,IF(P65=\"Skipped\",0,IF(F65=1,0,IF(O65>=1,0,(J65*2-H65-I65+5)*0.5+(6-G65)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K66",
+          "formula": "=IF(A66=\"No\",0,IF(P66=\"Skipped\",0,ROUND((E66*0.35+(6-G66)*0.25+J66*0.2+IF(F66=1,5,IF(F66=2,3,1))*0.15-I66*0.05)*IF(A66=\"Later\",0.5,1)*IF(OR(IFERROR(N66/M66,0)>=1,P66=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O66",
+          "formula": "=IFERROR(MIN(N66/M66,1),0)"
+        },
+        {
+          "coord": "Q66",
+          "formula": "=IF(A66=\"No\",\"Skip for Now\",IF(A66=\"Later\",\"Defer\",IF(OR(O66>=1,P66=\"Exam Ready\"),\"Keep Warm\",IF(P66=\"Skipped\",\"Skip for Now\",IF(K66>=6,\"Study Next\",IF(K66>=4.5,\"Study This Week\",IF(K66>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S66",
+          "formula": "=K66+ROW()/100000"
+        },
+        {
+          "coord": "T66",
+          "formula": "=IF(A66=\"No\",0,IF(P66=\"Skipped\",0,(J66*2-H66-I66+5)*IF(O66>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U66",
+          "formula": "=IF(A66=\"Yes\",10-K66,0)+ROW()/100000"
+        },
+        {
+          "coord": "V66",
+          "formula": "=IF(A66=\"No\",0,IF(P66=\"Skipped\",0,IF(F66=1,0,IF(O66>=1,0,(J66*2-H66-I66+5)*0.5+(6-G66)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K67",
+          "formula": "=IF(A67=\"No\",0,IF(P67=\"Skipped\",0,ROUND((E67*0.35+(6-G67)*0.25+J67*0.2+IF(F67=1,5,IF(F67=2,3,1))*0.15-I67*0.05)*IF(A67=\"Later\",0.5,1)*IF(OR(IFERROR(N67/M67,0)>=1,P67=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O67",
+          "formula": "=IFERROR(MIN(N67/M67,1),0)"
+        },
+        {
+          "coord": "Q67",
+          "formula": "=IF(A67=\"No\",\"Skip for Now\",IF(A67=\"Later\",\"Defer\",IF(OR(O67>=1,P67=\"Exam Ready\"),\"Keep Warm\",IF(P67=\"Skipped\",\"Skip for Now\",IF(K67>=6,\"Study Next\",IF(K67>=4.5,\"Study This Week\",IF(K67>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S67",
+          "formula": "=K67+ROW()/100000"
+        },
+        {
+          "coord": "T67",
+          "formula": "=IF(A67=\"No\",0,IF(P67=\"Skipped\",0,(J67*2-H67-I67+5)*IF(O67>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U67",
+          "formula": "=IF(A67=\"Yes\",10-K67,0)+ROW()/100000"
+        },
+        {
+          "coord": "V67",
+          "formula": "=IF(A67=\"No\",0,IF(P67=\"Skipped\",0,IF(F67=1,0,IF(O67>=1,0,(J67*2-H67-I67+5)*0.5+(6-G67)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K68",
+          "formula": "=IF(A68=\"No\",0,IF(P68=\"Skipped\",0,ROUND((E68*0.35+(6-G68)*0.25+J68*0.2+IF(F68=1,5,IF(F68=2,3,1))*0.15-I68*0.05)*IF(A68=\"Later\",0.5,1)*IF(OR(IFERROR(N68/M68,0)>=1,P68=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O68",
+          "formula": "=IFERROR(MIN(N68/M68,1),0)"
+        },
+        {
+          "coord": "Q68",
+          "formula": "=IF(A68=\"No\",\"Skip for Now\",IF(A68=\"Later\",\"Defer\",IF(OR(O68>=1,P68=\"Exam Ready\"),\"Keep Warm\",IF(P68=\"Skipped\",\"Skip for Now\",IF(K68>=6,\"Study Next\",IF(K68>=4.5,\"Study This Week\",IF(K68>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S68",
+          "formula": "=K68+ROW()/100000"
+        },
+        {
+          "coord": "T68",
+          "formula": "=IF(A68=\"No\",0,IF(P68=\"Skipped\",0,(J68*2-H68-I68+5)*IF(O68>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U68",
+          "formula": "=IF(A68=\"Yes\",10-K68,0)+ROW()/100000"
+        },
+        {
+          "coord": "V68",
+          "formula": "=IF(A68=\"No\",0,IF(P68=\"Skipped\",0,IF(F68=1,0,IF(O68>=1,0,(J68*2-H68-I68+5)*0.5+(6-G68)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K69",
+          "formula": "=IF(A69=\"No\",0,IF(P69=\"Skipped\",0,ROUND((E69*0.35+(6-G69)*0.25+J69*0.2+IF(F69=1,5,IF(F69=2,3,1))*0.15-I69*0.05)*IF(A69=\"Later\",0.5,1)*IF(OR(IFERROR(N69/M69,0)>=1,P69=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O69",
+          "formula": "=IFERROR(MIN(N69/M69,1),0)"
+        },
+        {
+          "coord": "Q69",
+          "formula": "=IF(A69=\"No\",\"Skip for Now\",IF(A69=\"Later\",\"Defer\",IF(OR(O69>=1,P69=\"Exam Ready\"),\"Keep Warm\",IF(P69=\"Skipped\",\"Skip for Now\",IF(K69>=6,\"Study Next\",IF(K69>=4.5,\"Study This Week\",IF(K69>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S69",
+          "formula": "=K69+ROW()/100000"
+        },
+        {
+          "coord": "T69",
+          "formula": "=IF(A69=\"No\",0,IF(P69=\"Skipped\",0,(J69*2-H69-I69+5)*IF(O69>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U69",
+          "formula": "=IF(A69=\"Yes\",10-K69,0)+ROW()/100000"
+        },
+        {
+          "coord": "V69",
+          "formula": "=IF(A69=\"No\",0,IF(P69=\"Skipped\",0,IF(F69=1,0,IF(O69>=1,0,(J69*2-H69-I69+5)*0.5+(6-G69)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K70",
+          "formula": "=IF(A70=\"No\",0,IF(P70=\"Skipped\",0,ROUND((E70*0.35+(6-G70)*0.25+J70*0.2+IF(F70=1,5,IF(F70=2,3,1))*0.15-I70*0.05)*IF(A70=\"Later\",0.5,1)*IF(OR(IFERROR(N70/M70,0)>=1,P70=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O70",
+          "formula": "=IFERROR(MIN(N70/M70,1),0)"
+        },
+        {
+          "coord": "Q70",
+          "formula": "=IF(A70=\"No\",\"Skip for Now\",IF(A70=\"Later\",\"Defer\",IF(OR(O70>=1,P70=\"Exam Ready\"),\"Keep Warm\",IF(P70=\"Skipped\",\"Skip for Now\",IF(K70>=6,\"Study Next\",IF(K70>=4.5,\"Study This Week\",IF(K70>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S70",
+          "formula": "=K70+ROW()/100000"
+        },
+        {
+          "coord": "T70",
+          "formula": "=IF(A70=\"No\",0,IF(P70=\"Skipped\",0,(J70*2-H70-I70+5)*IF(O70>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U70",
+          "formula": "=IF(A70=\"Yes\",10-K70,0)+ROW()/100000"
+        },
+        {
+          "coord": "V70",
+          "formula": "=IF(A70=\"No\",0,IF(P70=\"Skipped\",0,IF(F70=1,0,IF(O70>=1,0,(J70*2-H70-I70+5)*0.5+(6-G70)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K71",
+          "formula": "=IF(A71=\"No\",0,IF(P71=\"Skipped\",0,ROUND((E71*0.35+(6-G71)*0.25+J71*0.2+IF(F71=1,5,IF(F71=2,3,1))*0.15-I71*0.05)*IF(A71=\"Later\",0.5,1)*IF(OR(IFERROR(N71/M71,0)>=1,P71=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O71",
+          "formula": "=IFERROR(MIN(N71/M71,1),0)"
+        },
+        {
+          "coord": "Q71",
+          "formula": "=IF(A71=\"No\",\"Skip for Now\",IF(A71=\"Later\",\"Defer\",IF(OR(O71>=1,P71=\"Exam Ready\"),\"Keep Warm\",IF(P71=\"Skipped\",\"Skip for Now\",IF(K71>=6,\"Study Next\",IF(K71>=4.5,\"Study This Week\",IF(K71>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S71",
+          "formula": "=K71+ROW()/100000"
+        },
+        {
+          "coord": "T71",
+          "formula": "=IF(A71=\"No\",0,IF(P71=\"Skipped\",0,(J71*2-H71-I71+5)*IF(O71>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U71",
+          "formula": "=IF(A71=\"Yes\",10-K71,0)+ROW()/100000"
+        },
+        {
+          "coord": "V71",
+          "formula": "=IF(A71=\"No\",0,IF(P71=\"Skipped\",0,IF(F71=1,0,IF(O71>=1,0,(J71*2-H71-I71+5)*0.5+(6-G71)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K72",
+          "formula": "=IF(A72=\"No\",0,IF(P72=\"Skipped\",0,ROUND((E72*0.35+(6-G72)*0.25+J72*0.2+IF(F72=1,5,IF(F72=2,3,1))*0.15-I72*0.05)*IF(A72=\"Later\",0.5,1)*IF(OR(IFERROR(N72/M72,0)>=1,P72=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O72",
+          "formula": "=IFERROR(MIN(N72/M72,1),0)"
+        },
+        {
+          "coord": "Q72",
+          "formula": "=IF(A72=\"No\",\"Skip for Now\",IF(A72=\"Later\",\"Defer\",IF(OR(O72>=1,P72=\"Exam Ready\"),\"Keep Warm\",IF(P72=\"Skipped\",\"Skip for Now\",IF(K72>=6,\"Study Next\",IF(K72>=4.5,\"Study This Week\",IF(K72>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S72",
+          "formula": "=K72+ROW()/100000"
+        },
+        {
+          "coord": "T72",
+          "formula": "=IF(A72=\"No\",0,IF(P72=\"Skipped\",0,(J72*2-H72-I72+5)*IF(O72>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U72",
+          "formula": "=IF(A72=\"Yes\",10-K72,0)+ROW()/100000"
+        },
+        {
+          "coord": "V72",
+          "formula": "=IF(A72=\"No\",0,IF(P72=\"Skipped\",0,IF(F72=1,0,IF(O72>=1,0,(J72*2-H72-I72+5)*0.5+(6-G72)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K73",
+          "formula": "=IF(A73=\"No\",0,IF(P73=\"Skipped\",0,ROUND((E73*0.35+(6-G73)*0.25+J73*0.2+IF(F73=1,5,IF(F73=2,3,1))*0.15-I73*0.05)*IF(A73=\"Later\",0.5,1)*IF(OR(IFERROR(N73/M73,0)>=1,P73=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O73",
+          "formula": "=IFERROR(MIN(N73/M73,1),0)"
+        },
+        {
+          "coord": "Q73",
+          "formula": "=IF(A73=\"No\",\"Skip for Now\",IF(A73=\"Later\",\"Defer\",IF(OR(O73>=1,P73=\"Exam Ready\"),\"Keep Warm\",IF(P73=\"Skipped\",\"Skip for Now\",IF(K73>=6,\"Study Next\",IF(K73>=4.5,\"Study This Week\",IF(K73>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S73",
+          "formula": "=K73+ROW()/100000"
+        },
+        {
+          "coord": "T73",
+          "formula": "=IF(A73=\"No\",0,IF(P73=\"Skipped\",0,(J73*2-H73-I73+5)*IF(O73>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U73",
+          "formula": "=IF(A73=\"Yes\",10-K73,0)+ROW()/100000"
+        },
+        {
+          "coord": "V73",
+          "formula": "=IF(A73=\"No\",0,IF(P73=\"Skipped\",0,IF(F73=1,0,IF(O73>=1,0,(J73*2-H73-I73+5)*0.5+(6-G73)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K74",
+          "formula": "=IF(A74=\"No\",0,IF(P74=\"Skipped\",0,ROUND((E74*0.35+(6-G74)*0.25+J74*0.2+IF(F74=1,5,IF(F74=2,3,1))*0.15-I74*0.05)*IF(A74=\"Later\",0.5,1)*IF(OR(IFERROR(N74/M74,0)>=1,P74=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O74",
+          "formula": "=IFERROR(MIN(N74/M74,1),0)"
+        },
+        {
+          "coord": "Q74",
+          "formula": "=IF(A74=\"No\",\"Skip for Now\",IF(A74=\"Later\",\"Defer\",IF(OR(O74>=1,P74=\"Exam Ready\"),\"Keep Warm\",IF(P74=\"Skipped\",\"Skip for Now\",IF(K74>=6,\"Study Next\",IF(K74>=4.5,\"Study This Week\",IF(K74>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S74",
+          "formula": "=K74+ROW()/100000"
+        },
+        {
+          "coord": "T74",
+          "formula": "=IF(A74=\"No\",0,IF(P74=\"Skipped\",0,(J74*2-H74-I74+5)*IF(O74>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U74",
+          "formula": "=IF(A74=\"Yes\",10-K74,0)+ROW()/100000"
+        },
+        {
+          "coord": "V74",
+          "formula": "=IF(A74=\"No\",0,IF(P74=\"Skipped\",0,IF(F74=1,0,IF(O74>=1,0,(J74*2-H74-I74+5)*0.5+(6-G74)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K75",
+          "formula": "=IF(A75=\"No\",0,IF(P75=\"Skipped\",0,ROUND((E75*0.35+(6-G75)*0.25+J75*0.2+IF(F75=1,5,IF(F75=2,3,1))*0.15-I75*0.05)*IF(A75=\"Later\",0.5,1)*IF(OR(IFERROR(N75/M75,0)>=1,P75=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O75",
+          "formula": "=IFERROR(MIN(N75/M75,1),0)"
+        },
+        {
+          "coord": "Q75",
+          "formula": "=IF(A75=\"No\",\"Skip for Now\",IF(A75=\"Later\",\"Defer\",IF(OR(O75>=1,P75=\"Exam Ready\"),\"Keep Warm\",IF(P75=\"Skipped\",\"Skip for Now\",IF(K75>=6,\"Study Next\",IF(K75>=4.5,\"Study This Week\",IF(K75>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S75",
+          "formula": "=K75+ROW()/100000"
+        },
+        {
+          "coord": "T75",
+          "formula": "=IF(A75=\"No\",0,IF(P75=\"Skipped\",0,(J75*2-H75-I75+5)*IF(O75>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U75",
+          "formula": "=IF(A75=\"Yes\",10-K75,0)+ROW()/100000"
+        },
+        {
+          "coord": "V75",
+          "formula": "=IF(A75=\"No\",0,IF(P75=\"Skipped\",0,IF(F75=1,0,IF(O75>=1,0,(J75*2-H75-I75+5)*0.5+(6-G75)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K76",
+          "formula": "=IF(A76=\"No\",0,IF(P76=\"Skipped\",0,ROUND((E76*0.35+(6-G76)*0.25+J76*0.2+IF(F76=1,5,IF(F76=2,3,1))*0.15-I76*0.05)*IF(A76=\"Later\",0.5,1)*IF(OR(IFERROR(N76/M76,0)>=1,P76=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O76",
+          "formula": "=IFERROR(MIN(N76/M76,1),0)"
+        },
+        {
+          "coord": "Q76",
+          "formula": "=IF(A76=\"No\",\"Skip for Now\",IF(A76=\"Later\",\"Defer\",IF(OR(O76>=1,P76=\"Exam Ready\"),\"Keep Warm\",IF(P76=\"Skipped\",\"Skip for Now\",IF(K76>=6,\"Study Next\",IF(K76>=4.5,\"Study This Week\",IF(K76>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S76",
+          "formula": "=K76+ROW()/100000"
+        },
+        {
+          "coord": "T76",
+          "formula": "=IF(A76=\"No\",0,IF(P76=\"Skipped\",0,(J76*2-H76-I76+5)*IF(O76>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U76",
+          "formula": "=IF(A76=\"Yes\",10-K76,0)+ROW()/100000"
+        },
+        {
+          "coord": "V76",
+          "formula": "=IF(A76=\"No\",0,IF(P76=\"Skipped\",0,IF(F76=1,0,IF(O76>=1,0,(J76*2-H76-I76+5)*0.5+(6-G76)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K77",
+          "formula": "=IF(A77=\"No\",0,IF(P77=\"Skipped\",0,ROUND((E77*0.35+(6-G77)*0.25+J77*0.2+IF(F77=1,5,IF(F77=2,3,1))*0.15-I77*0.05)*IF(A77=\"Later\",0.5,1)*IF(OR(IFERROR(N77/M77,0)>=1,P77=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O77",
+          "formula": "=IFERROR(MIN(N77/M77,1),0)"
+        },
+        {
+          "coord": "Q77",
+          "formula": "=IF(A77=\"No\",\"Skip for Now\",IF(A77=\"Later\",\"Defer\",IF(OR(O77>=1,P77=\"Exam Ready\"),\"Keep Warm\",IF(P77=\"Skipped\",\"Skip for Now\",IF(K77>=6,\"Study Next\",IF(K77>=4.5,\"Study This Week\",IF(K77>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S77",
+          "formula": "=K77+ROW()/100000"
+        },
+        {
+          "coord": "T77",
+          "formula": "=IF(A77=\"No\",0,IF(P77=\"Skipped\",0,(J77*2-H77-I77+5)*IF(O77>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U77",
+          "formula": "=IF(A77=\"Yes\",10-K77,0)+ROW()/100000"
+        },
+        {
+          "coord": "V77",
+          "formula": "=IF(A77=\"No\",0,IF(P77=\"Skipped\",0,IF(F77=1,0,IF(O77>=1,0,(J77*2-H77-I77+5)*0.5+(6-G77)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K78",
+          "formula": "=IF(A78=\"No\",0,IF(P78=\"Skipped\",0,ROUND((E78*0.35+(6-G78)*0.25+J78*0.2+IF(F78=1,5,IF(F78=2,3,1))*0.15-I78*0.05)*IF(A78=\"Later\",0.5,1)*IF(OR(IFERROR(N78/M78,0)>=1,P78=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O78",
+          "formula": "=IFERROR(MIN(N78/M78,1),0)"
+        },
+        {
+          "coord": "Q78",
+          "formula": "=IF(A78=\"No\",\"Skip for Now\",IF(A78=\"Later\",\"Defer\",IF(OR(O78>=1,P78=\"Exam Ready\"),\"Keep Warm\",IF(P78=\"Skipped\",\"Skip for Now\",IF(K78>=6,\"Study Next\",IF(K78>=4.5,\"Study This Week\",IF(K78>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S78",
+          "formula": "=K78+ROW()/100000"
+        },
+        {
+          "coord": "T78",
+          "formula": "=IF(A78=\"No\",0,IF(P78=\"Skipped\",0,(J78*2-H78-I78+5)*IF(O78>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U78",
+          "formula": "=IF(A78=\"Yes\",10-K78,0)+ROW()/100000"
+        },
+        {
+          "coord": "V78",
+          "formula": "=IF(A78=\"No\",0,IF(P78=\"Skipped\",0,IF(F78=1,0,IF(O78>=1,0,(J78*2-H78-I78+5)*0.5+(6-G78)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K79",
+          "formula": "=IF(A79=\"No\",0,IF(P79=\"Skipped\",0,ROUND((E79*0.35+(6-G79)*0.25+J79*0.2+IF(F79=1,5,IF(F79=2,3,1))*0.15-I79*0.05)*IF(A79=\"Later\",0.5,1)*IF(OR(IFERROR(N79/M79,0)>=1,P79=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O79",
+          "formula": "=IFERROR(MIN(N79/M79,1),0)"
+        },
+        {
+          "coord": "Q79",
+          "formula": "=IF(A79=\"No\",\"Skip for Now\",IF(A79=\"Later\",\"Defer\",IF(OR(O79>=1,P79=\"Exam Ready\"),\"Keep Warm\",IF(P79=\"Skipped\",\"Skip for Now\",IF(K79>=6,\"Study Next\",IF(K79>=4.5,\"Study This Week\",IF(K79>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S79",
+          "formula": "=K79+ROW()/100000"
+        },
+        {
+          "coord": "T79",
+          "formula": "=IF(A79=\"No\",0,IF(P79=\"Skipped\",0,(J79*2-H79-I79+5)*IF(O79>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U79",
+          "formula": "=IF(A79=\"Yes\",10-K79,0)+ROW()/100000"
+        },
+        {
+          "coord": "V79",
+          "formula": "=IF(A79=\"No\",0,IF(P79=\"Skipped\",0,IF(F79=1,0,IF(O79>=1,0,(J79*2-H79-I79+5)*0.5+(6-G79)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K80",
+          "formula": "=IF(A80=\"No\",0,IF(P80=\"Skipped\",0,ROUND((E80*0.35+(6-G80)*0.25+J80*0.2+IF(F80=1,5,IF(F80=2,3,1))*0.15-I80*0.05)*IF(A80=\"Later\",0.5,1)*IF(OR(IFERROR(N80/M80,0)>=1,P80=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O80",
+          "formula": "=IFERROR(MIN(N80/M80,1),0)"
+        },
+        {
+          "coord": "Q80",
+          "formula": "=IF(A80=\"No\",\"Skip for Now\",IF(A80=\"Later\",\"Defer\",IF(OR(O80>=1,P80=\"Exam Ready\"),\"Keep Warm\",IF(P80=\"Skipped\",\"Skip for Now\",IF(K80>=6,\"Study Next\",IF(K80>=4.5,\"Study This Week\",IF(K80>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S80",
+          "formula": "=K80+ROW()/100000"
+        },
+        {
+          "coord": "T80",
+          "formula": "=IF(A80=\"No\",0,IF(P80=\"Skipped\",0,(J80*2-H80-I80+5)*IF(O80>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U80",
+          "formula": "=IF(A80=\"Yes\",10-K80,0)+ROW()/100000"
+        },
+        {
+          "coord": "V80",
+          "formula": "=IF(A80=\"No\",0,IF(P80=\"Skipped\",0,IF(F80=1,0,IF(O80>=1,0,(J80*2-H80-I80+5)*0.5+(6-G80)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K81",
+          "formula": "=IF(A81=\"No\",0,IF(P81=\"Skipped\",0,ROUND((E81*0.35+(6-G81)*0.25+J81*0.2+IF(F81=1,5,IF(F81=2,3,1))*0.15-I81*0.05)*IF(A81=\"Later\",0.5,1)*IF(OR(IFERROR(N81/M81,0)>=1,P81=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O81",
+          "formula": "=IFERROR(MIN(N81/M81,1),0)"
+        },
+        {
+          "coord": "Q81",
+          "formula": "=IF(A81=\"No\",\"Skip for Now\",IF(A81=\"Later\",\"Defer\",IF(OR(O81>=1,P81=\"Exam Ready\"),\"Keep Warm\",IF(P81=\"Skipped\",\"Skip for Now\",IF(K81>=6,\"Study Next\",IF(K81>=4.5,\"Study This Week\",IF(K81>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S81",
+          "formula": "=K81+ROW()/100000"
+        },
+        {
+          "coord": "T81",
+          "formula": "=IF(A81=\"No\",0,IF(P81=\"Skipped\",0,(J81*2-H81-I81+5)*IF(O81>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U81",
+          "formula": "=IF(A81=\"Yes\",10-K81,0)+ROW()/100000"
+        },
+        {
+          "coord": "V81",
+          "formula": "=IF(A81=\"No\",0,IF(P81=\"Skipped\",0,IF(F81=1,0,IF(O81>=1,0,(J81*2-H81-I81+5)*0.5+(6-G81)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K82",
+          "formula": "=IF(A82=\"No\",0,IF(P82=\"Skipped\",0,ROUND((E82*0.35+(6-G82)*0.25+J82*0.2+IF(F82=1,5,IF(F82=2,3,1))*0.15-I82*0.05)*IF(A82=\"Later\",0.5,1)*IF(OR(IFERROR(N82/M82,0)>=1,P82=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O82",
+          "formula": "=IFERROR(MIN(N82/M82,1),0)"
+        },
+        {
+          "coord": "Q82",
+          "formula": "=IF(A82=\"No\",\"Skip for Now\",IF(A82=\"Later\",\"Defer\",IF(OR(O82>=1,P82=\"Exam Ready\"),\"Keep Warm\",IF(P82=\"Skipped\",\"Skip for Now\",IF(K82>=6,\"Study Next\",IF(K82>=4.5,\"Study This Week\",IF(K82>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S82",
+          "formula": "=K82+ROW()/100000"
+        },
+        {
+          "coord": "T82",
+          "formula": "=IF(A82=\"No\",0,IF(P82=\"Skipped\",0,(J82*2-H82-I82+5)*IF(O82>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U82",
+          "formula": "=IF(A82=\"Yes\",10-K82,0)+ROW()/100000"
+        },
+        {
+          "coord": "V82",
+          "formula": "=IF(A82=\"No\",0,IF(P82=\"Skipped\",0,IF(F82=1,0,IF(O82>=1,0,(J82*2-H82-I82+5)*0.5+(6-G82)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K83",
+          "formula": "=IF(A83=\"No\",0,IF(P83=\"Skipped\",0,ROUND((E83*0.35+(6-G83)*0.25+J83*0.2+IF(F83=1,5,IF(F83=2,3,1))*0.15-I83*0.05)*IF(A83=\"Later\",0.5,1)*IF(OR(IFERROR(N83/M83,0)>=1,P83=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O83",
+          "formula": "=IFERROR(MIN(N83/M83,1),0)"
+        },
+        {
+          "coord": "Q83",
+          "formula": "=IF(A83=\"No\",\"Skip for Now\",IF(A83=\"Later\",\"Defer\",IF(OR(O83>=1,P83=\"Exam Ready\"),\"Keep Warm\",IF(P83=\"Skipped\",\"Skip for Now\",IF(K83>=6,\"Study Next\",IF(K83>=4.5,\"Study This Week\",IF(K83>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S83",
+          "formula": "=K83+ROW()/100000"
+        },
+        {
+          "coord": "T83",
+          "formula": "=IF(A83=\"No\",0,IF(P83=\"Skipped\",0,(J83*2-H83-I83+5)*IF(O83>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U83",
+          "formula": "=IF(A83=\"Yes\",10-K83,0)+ROW()/100000"
+        },
+        {
+          "coord": "V83",
+          "formula": "=IF(A83=\"No\",0,IF(P83=\"Skipped\",0,IF(F83=1,0,IF(O83>=1,0,(J83*2-H83-I83+5)*0.5+(6-G83)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K84",
+          "formula": "=IF(A84=\"No\",0,IF(P84=\"Skipped\",0,ROUND((E84*0.35+(6-G84)*0.25+J84*0.2+IF(F84=1,5,IF(F84=2,3,1))*0.15-I84*0.05)*IF(A84=\"Later\",0.5,1)*IF(OR(IFERROR(N84/M84,0)>=1,P84=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O84",
+          "formula": "=IFERROR(MIN(N84/M84,1),0)"
+        },
+        {
+          "coord": "Q84",
+          "formula": "=IF(A84=\"No\",\"Skip for Now\",IF(A84=\"Later\",\"Defer\",IF(OR(O84>=1,P84=\"Exam Ready\"),\"Keep Warm\",IF(P84=\"Skipped\",\"Skip for Now\",IF(K84>=6,\"Study Next\",IF(K84>=4.5,\"Study This Week\",IF(K84>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S84",
+          "formula": "=K84+ROW()/100000"
+        },
+        {
+          "coord": "T84",
+          "formula": "=IF(A84=\"No\",0,IF(P84=\"Skipped\",0,(J84*2-H84-I84+5)*IF(O84>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U84",
+          "formula": "=IF(A84=\"Yes\",10-K84,0)+ROW()/100000"
+        },
+        {
+          "coord": "V84",
+          "formula": "=IF(A84=\"No\",0,IF(P84=\"Skipped\",0,IF(F84=1,0,IF(O84>=1,0,(J84*2-H84-I84+5)*0.5+(6-G84)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K85",
+          "formula": "=IF(A85=\"No\",0,IF(P85=\"Skipped\",0,ROUND((E85*0.35+(6-G85)*0.25+J85*0.2+IF(F85=1,5,IF(F85=2,3,1))*0.15-I85*0.05)*IF(A85=\"Later\",0.5,1)*IF(OR(IFERROR(N85/M85,0)>=1,P85=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O85",
+          "formula": "=IFERROR(MIN(N85/M85,1),0)"
+        },
+        {
+          "coord": "Q85",
+          "formula": "=IF(A85=\"No\",\"Skip for Now\",IF(A85=\"Later\",\"Defer\",IF(OR(O85>=1,P85=\"Exam Ready\"),\"Keep Warm\",IF(P85=\"Skipped\",\"Skip for Now\",IF(K85>=6,\"Study Next\",IF(K85>=4.5,\"Study This Week\",IF(K85>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S85",
+          "formula": "=K85+ROW()/100000"
+        },
+        {
+          "coord": "T85",
+          "formula": "=IF(A85=\"No\",0,IF(P85=\"Skipped\",0,(J85*2-H85-I85+5)*IF(O85>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U85",
+          "formula": "=IF(A85=\"Yes\",10-K85,0)+ROW()/100000"
+        },
+        {
+          "coord": "V85",
+          "formula": "=IF(A85=\"No\",0,IF(P85=\"Skipped\",0,IF(F85=1,0,IF(O85>=1,0,(J85*2-H85-I85+5)*0.5+(6-G85)*0.3))))+ROW()/100000"
+        },
+        {
+          "coord": "K86",
+          "formula": "=IF(A86=\"No\",0,IF(P86=\"Skipped\",0,ROUND((E86*0.35+(6-G86)*0.25+J86*0.2+IF(F86=1,5,IF(F86=2,3,1))*0.15-I86*0.05)*IF(A86=\"Later\",0.5,1)*IF(OR(IFERROR(N86/M86,0)>=1,P86=\"Exam Ready\"),0.1,1),2)))"
+        },
+        {
+          "coord": "O86",
+          "formula": "=IFERROR(MIN(N86/M86,1),0)"
+        },
+        {
+          "coord": "Q86",
+          "formula": "=IF(A86=\"No\",\"Skip for Now\",IF(A86=\"Later\",\"Defer\",IF(OR(O86>=1,P86=\"Exam Ready\"),\"Keep Warm\",IF(P86=\"Skipped\",\"Skip for Now\",IF(K86>=6,\"Study Next\",IF(K86>=4.5,\"Study This Week\",IF(K86>=3,\"Practice\",\"Review\")))))))"
+        },
+        {
+          "coord": "S86",
+          "formula": "=K86+ROW()/100000"
+        },
+        {
+          "coord": "T86",
+          "formula": "=IF(A86=\"No\",0,IF(P86=\"Skipped\",0,(J86*2-H86-I86+5)*IF(O86>=1,0.1,1)))+ROW()/100000"
+        },
+        {
+          "coord": "U86",
+          "formula": "=IF(A86=\"Yes\",10-K86,0)+ROW()/100000"
+        },
+        {
+          "coord": "V86",
+          "formula": "=IF(A86=\"No\",0,IF(P86=\"Skipped\",0,IF(F86=1,0,IF(O86>=1,0,(J86*2-H86-I86+5)*0.5+(6-G86)*0.3))))+ROW()/100000"
+        }
+      ],
+      "error_cells": []
+    },
+    {
+      "title": "Weekly Plan",
+      "state": "visible",
+      "dimensions": "A1:J23",
+      "max_row": 23,
+      "max_col": 10,
+      "freeze_panes": "A6",
+      "protection": {
+        "sheet": false,
+        "password_hash": null,
+        "selectLockedCells": false,
+        "selectUnlockedCells": false,
+        "formatCells": true,
+        "insertRows": true,
+        "deleteRows": true
+      },
+      "merged_cells": [
+        "A4:J4",
+        "G16:J16",
+        "A21:C21",
+        "E17:F17",
+        "A19:J19",
+        "D23:J23",
+        "A16:B16",
+        "C16:D16",
+        "A23:C23",
+        "A22:C22",
+        "D20:J20",
+        "A15:J15",
+        "A20:C20",
+        "A1:J1",
+        "D22:J22",
+        "G17:J17",
+        "D21:J21",
+        "A17:B17",
+        "C17:D17",
+        "E16:F16",
+        "A2:J2"
+      ],
+      "hidden_columns": [],
+      "hidden_rows": [],
+      "column_widths": {
+        "A": 13.0,
+        "B": 11.0,
+        "C": 13.0,
+        "D": 10.0,
+        "E": 26.0,
+        "F": 50.0,
+        "G": 11.0,
+        "H": 9.0,
+        "I": 11.0,
+        "J": 28.0
+      },
+      "data_validations": [
+        {
+          "type": "list",
+          "operator": null,
+          "formula1": "\"Yes,No,Skipped\"",
+          "formula2": null,
+          "allow_blank": false,
+          "showErrorMessage": false,
+          "errorTitle": null,
+          "error": null,
+          "showInputMessage": false,
+          "promptTitle": null,
+          "prompt": null,
+          "sqref": "H6:H12"
+        }
+      ],
+      "conditional_formatting": [
+        {
+          "range": "H6:H12",
+          "type": "expression",
+          "operator": null,
+          "formula": [
+            "$H6=\"Yes\""
+          ],
+          "priority": 1,
+          "dxfId": 7,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "H6:H12",
+          "type": "expression",
+          "operator": null,
+          "formula": [
+            "$H6=\"Skipped\""
+          ],
+          "priority": 2,
+          "dxfId": 6,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "C6:C12",
+          "type": "expression",
+          "operator": null,
+          "formula": [
+            "$C6=\"Rest\""
+          ],
+          "priority": 3,
+          "dxfId": 5,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "C6:C12",
+          "type": "expression",
+          "operator": null,
+          "formula": [
+            "$C6=\"Family\""
+          ],
+          "priority": 4,
+          "dxfId": 4,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "C6:C12",
+          "type": "expression",
+          "operator": null,
+          "formula": [
+            "$C6=\"Low Energy\""
+          ],
+          "priority": 5,
+          "dxfId": 3,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "G17",
+          "type": "expression",
+          "operator": null,
+          "formula": [
+            "ISNUMBER(SEARCH(\"Under\",G17))"
+          ],
+          "priority": 6,
+          "dxfId": 2,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "G17",
+          "type": "expression",
+          "operator": null,
+          "formula": [
+            "ISNUMBER(SEARCH(\"Over\",G17))"
+          ],
+          "priority": 7,
+          "dxfId": 1,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        },
+        {
+          "range": "G17",
+          "type": "expression",
+          "operator": null,
+          "formula": [
+            "G17=\"Balanced\""
+          ],
+          "priority": 8,
+          "dxfId": 0,
+          "text": null,
+          "rank": null,
+          "stdDev": null,
+          "colorScale": null,
+          "dataBar": null,
+          "iconSet": null
+        }
+      ],
+      "formula_count": 56,
+      "formulas": [
+        {
+          "coord": "A6",
+          "formula": "=_PlanEngine!B2"
+        },
+        {
+          "coord": "B6",
+          "formula": "=_PlanEngine!C2"
+        },
+        {
+          "coord": "C6",
+          "formula": "=_PlanEngine!D2"
+        },
+        {
+          "coord": "D6",
+          "formula": "=_PlanEngine!E2"
+        },
+        {
+          "coord": "E6",
+          "formula": "=_PlanEngine!K2"
+        },
+        {
+          "coord": "F6",
+          "formula": "=_PlanEngine!O2"
+        },
+        {
+          "coord": "G6",
+          "formula": "=_PlanEngine!N2"
+        },
+        {
+          "coord": "A7",
+          "formula": "=_PlanEngine!B3"
+        },
+        {
+          "coord": "B7",
+          "formula": "=_PlanEngine!C3"
+        },
+        {
+          "coord": "C7",
+          "formula": "=_PlanEngine!D3"
+        },
+        {
+          "coord": "D7",
+          "formula": "=_PlanEngine!E3"
+        },
+        {
+          "coord": "E7",
+          "formula": "=_PlanEngine!K3"
+        },
+        {
+          "coord": "F7",
+          "formula": "=_PlanEngine!O3"
+        },
+        {
+          "coord": "G7",
+          "formula": "=_PlanEngine!N3"
+        },
+        {
+          "coord": "A8",
+          "formula": "=_PlanEngine!B4"
+        },
+        {
+          "coord": "B8",
+          "formula": "=_PlanEngine!C4"
+        },
+        {
+          "coord": "C8",
+          "formula": "=_PlanEngine!D4"
+        },
+        {
+          "coord": "D8",
+          "formula": "=_PlanEngine!E4"
+        },
+        {
+          "coord": "E8",
+          "formula": "=_PlanEngine!K4"
+        },
+        {
+          "coord": "F8",
+          "formula": "=_PlanEngine!O4"
+        },
+        {
+          "coord": "G8",
+          "formula": "=_PlanEngine!N4"
+        },
+        {
+          "coord": "A9",
+          "formula": "=_PlanEngine!B5"
+        },
+        {
+          "coord": "B9",
+          "formula": "=_PlanEngine!C5"
+        },
+        {
+          "coord": "C9",
+          "formula": "=_PlanEngine!D5"
+        },
+        {
+          "coord": "D9",
+          "formula": "=_PlanEngine!E5"
+        },
+        {
+          "coord": "E9",
+          "formula": "=_PlanEngine!K5"
+        },
+        {
+          "coord": "F9",
+          "formula": "=_PlanEngine!O5"
+        },
+        {
+          "coord": "G9",
+          "formula": "=_PlanEngine!N5"
+        },
+        {
+          "coord": "A10",
+          "formula": "=_PlanEngine!B6"
+        },
+        {
+          "coord": "B10",
+          "formula": "=_PlanEngine!C6"
+        },
+        {
+          "coord": "C10",
+          "formula": "=_PlanEngine!D6"
+        },
+        {
+          "coord": "D10",
+          "formula": "=_PlanEngine!E6"
+        },
+        {
+          "coord": "E10",
+          "formula": "=_PlanEngine!K6"
+        },
+        {
+          "coord": "F10",
+          "formula": "=_PlanEngine!O6"
+        },
+        {
+          "coord": "G10",
+          "formula": "=_PlanEngine!N6"
+        },
+        {
+          "coord": "A11",
+          "formula": "=_PlanEngine!B7"
+        },
+        {
+          "coord": "B11",
+          "formula": "=_PlanEngine!C7"
+        },
+        {
+          "coord": "C11",
+          "formula": "=_PlanEngine!D7"
+        },
+        {
+          "coord": "D11",
+          "formula": "=_PlanEngine!E7"
+        },
+        {
+          "coord": "E11",
+          "formula": "=_PlanEngine!K7"
+        },
+        {
+          "coord": "F11",
+          "formula": "=_PlanEngine!O7"
+        },
+        {
+          "coord": "G11",
+          "formula": "=_PlanEngine!N7"
+        },
+        {
+          "coord": "A12",
+          "formula": "=_PlanEngine!B8"
+        },
+        {
+          "coord": "B12",
+          "formula": "=_PlanEngine!C8"
+        },
+        {
+          "coord": "C12",
+          "formula": "=_PlanEngine!D8"
+        },
+        {
+          "coord": "D12",
+          "formula": "=_PlanEngine!E8"
+        },
+        {
+          "coord": "E12",
+          "formula": "=_PlanEngine!K8"
+        },
+        {
+          "coord": "F12",
+          "formula": "=_PlanEngine!O8"
+        },
+        {
+          "coord": "G12",
+          "formula": "=_PlanEngine!N8"
+        },
+        {
+          "coord": "G13",
+          "formula": "=SUM(G6:G12)"
+        },
+        {
+          "coord": "H13",
+          "formula": "=COUNTIF(H6:H12,\"Yes\")&\" / 7\""
+        },
+        {
+          "coord": "I13",
+          "formula": "=SUM(I6:I12)"
+        },
+        {
+          "coord": "A17",
+          "formula": "=ROUND(SUM(D6:D12)/60,1)"
+        },
+        {
+          "coord": "C17",
+          "formula": "=ROUND(SUM(G6:G12)/60,1)"
+        },
+        {
+          "coord": "E17",
+          "formula": "=ROUND(SUM(I6:I12)/60,1)"
+        },
+        {
+          "coord": "G17",
+          "formula": "=IF(SUM(G6:G12)=0,\"-\",IF(SUM(G6:G12)/60<3,\"Under capacity - focus on Tier 1\",IF(SUM(G6:G12)/60>SUM(D6:D12)/60,\"Over capacity - reduce sessions\",\"Balanced\")))"
+        }
+      ],
+      "error_cells": []
+    },
+    {
+      "title": "_Lists",
+      "state": "hidden",
+      "dimensions": "A1:J8",
+      "max_row": 8,
+      "max_col": 10,
+      "freeze_panes": null,
+      "protection": {
+        "sheet": false,
+        "password_hash": null,
+        "selectLockedCells": false,
+        "selectUnlockedCells": false,
+        "formatCells": true,
+        "insertRows": true,
+        "deleteRows": true
+      },
+      "merged_cells": [],
+      "hidden_columns": [],
+      "hidden_rows": [],
+      "column_widths": {
+        "A": 5.0,
+        "B": 50.0
+      },
+      "data_validations": [],
+      "conditional_formatting": [],
+      "formula_count": 0,
+      "formulas": [],
+      "error_cells": []
+    },
+    {
+      "title": "_Calc",
+      "state": "hidden",
+      "dimensions": "A1:D39",
+      "max_row": 39,
+      "max_col": 4,
+      "freeze_panes": null,
+      "protection": {
+        "sheet": false,
+        "password_hash": null,
+        "selectLockedCells": false,
+        "selectUnlockedCells": false,
+        "formatCells": true,
+        "insertRows": true,
+        "deleteRows": true
+      },
+      "merged_cells": [],
+      "hidden_columns": [],
+      "hidden_rows": [],
+      "column_widths": {
+        "A": 26.0,
+        "B": 14.0,
+        "D": 40.0,
+        "E": 14.0
+      },
+      "data_validations": [],
+      "conditional_formatting": [],
+      "formula_count": 39,
+      "formulas": [
+        {
+          "coord": "B2",
+          "formula": "=SUMIFS(TopicCompleted,TopicInclude,\"Yes\")"
+        },
+        {
+          "coord": "B3",
+          "formula": "=MAX(SUMIFS(TopicHours,TopicInclude,\"Yes\")-SUMIFS(TopicCompleted,TopicInclude,\"Yes\"),0)"
+        },
+        {
+          "coord": "B6",
+          "formula": "=COUNTIFS(TopicStatus,\"Not Started\",TopicInclude,\"Yes\")"
+        },
+        {
+          "coord": "B7",
+          "formula": "=COUNTIFS(TopicStatus,\"Learning\",TopicInclude,\"Yes\")"
+        },
+        {
+          "coord": "B8",
+          "formula": "=COUNTIFS(TopicStatus,\"Practicing\",TopicInclude,\"Yes\")"
+        },
+        {
+          "coord": "B9",
+          "formula": "=COUNTIFS(TopicStatus,\"Improving\",TopicInclude,\"Yes\")"
+        },
+        {
+          "coord": "B10",
+          "formula": "=COUNTIFS(TopicStatus,\"Strong\",TopicInclude,\"Yes\")"
+        },
+        {
+          "coord": "B11",
+          "formula": "=COUNTIFS(TopicStatus,\"Exam Ready\",TopicInclude,\"Yes\")"
+        },
+        {
+          "coord": "B12",
+          "formula": "=COUNTIFS(TopicStatus,\"Skipped\",TopicInclude,\"Yes\")"
+        },
+        {
+          "coord": "B15",
+          "formula": "=INDEX(TopicName,MATCH(LARGE(PriorityKey,1),PriorityKey,0))"
+        },
+        {
+          "coord": "C15",
+          "formula": "=INDEX(TopicPriority,MATCH(LARGE(PriorityKey,1),PriorityKey,0))"
+        },
+        {
+          "coord": "D15",
+          "formula": "=INDEX(TopicSection,MATCH(LARGE(PriorityKey,1),PriorityKey,0))"
+        },
+        {
+          "coord": "B16",
+          "formula": "=INDEX(TopicName,MATCH(LARGE(PriorityKey,2),PriorityKey,0))"
+        },
+        {
+          "coord": "C16",
+          "formula": "=INDEX(TopicPriority,MATCH(LARGE(PriorityKey,2),PriorityKey,0))"
+        },
+        {
+          "coord": "D16",
+          "formula": "=INDEX(TopicSection,MATCH(LARGE(PriorityKey,2),PriorityKey,0))"
+        },
+        {
+          "coord": "B17",
+          "formula": "=INDEX(TopicName,MATCH(LARGE(PriorityKey,3),PriorityKey,0))"
+        },
+        {
+          "coord": "C17",
+          "formula": "=INDEX(TopicPriority,MATCH(LARGE(PriorityKey,3),PriorityKey,0))"
+        },
+        {
+          "coord": "D17",
+          "formula": "=INDEX(TopicSection,MATCH(LARGE(PriorityKey,3),PriorityKey,0))"
+        },
+        {
+          "coord": "B18",
+          "formula": "=INDEX(TopicName,MATCH(LARGE(PriorityKey,4),PriorityKey,0))"
+        },
+        {
+          "coord": "C18",
+          "formula": "=INDEX(TopicPriority,MATCH(LARGE(PriorityKey,4),PriorityKey,0))"
+        },
+        {
+          "coord": "D18",
+          "formula": "=INDEX(TopicSection,MATCH(LARGE(PriorityKey,4),PriorityKey,0))"
+        },
+        {
+          "coord": "B19",
+          "formula": "=INDEX(TopicName,MATCH(LARGE(PriorityKey,5),PriorityKey,0))"
+        },
+        {
+          "coord": "C19",
+          "formula": "=INDEX(TopicPriority,MATCH(LARGE(PriorityKey,5),PriorityKey,0))"
+        },
+        {
+          "coord": "D19",
+          "formula": "=INDEX(TopicSection,MATCH(LARGE(PriorityKey,5),PriorityKey,0))"
+        },
+        {
+          "coord": "B22",
+          "formula": "=COUNTIF(TopicInclude,\"Yes\")"
+        },
+        {
+          "coord": "B23",
+          "formula": "=SUMPRODUCT((TopicPriority>=5)*(TopicInclude=\"Yes\")*(TopicCompleted<TopicHours)*(TopicStatus<>\"Exam Ready\"))"
+        },
+        {
+          "coord": "B24",
+          "formula": "=SUMIFS(TopicHours,TopicInclude,\"Yes\")"
+        },
+        {
+          "coord": "B25",
+          "formula": "=SUMIFS(TopicCompleted,TopicInclude,\"Yes\")"
+        },
+        {
+          "coord": "B26",
+          "formula": "=MAX(B24-B25,0)"
+        },
+        {
+          "coord": "B27",
+          "formula": "=IFERROR(B25/B24,0)"
+        },
+        {
+          "coord": "B28",
+          "formula": "=IFERROR(SUMPRODUCT(TopicPriority,TopicCompleted)/SUMPRODUCT(TopicPriority,TopicHours),0)"
+        },
+        {
+          "coord": "B32",
+          "formula": "=SUMIFS(TopicCompleted,TopicTier,1,TopicInclude,\"Yes\")"
+        },
+        {
+          "coord": "C32",
+          "formula": "=MAX(SUMIFS(TopicHours,TopicTier,1,TopicInclude,\"Yes\")-SUMIFS(TopicCompleted,TopicTier,1,TopicInclude,\"Yes\"),0)"
+        },
+        {
+          "coord": "B33",
+          "formula": "=SUMIFS(TopicCompleted,TopicTier,2,TopicInclude,\"Yes\")"
+        },
+        {
+          "coord": "C33",
+          "formula": "=MAX(SUMIFS(TopicHours,TopicTier,2,TopicInclude,\"Yes\")-SUMIFS(TopicCompleted,TopicTier,2,TopicInclude,\"Yes\"),0)"
+        },
+        {
+          "coord": "B34",
+          "formula": "=SUMIFS(TopicCompleted,TopicTier,3,TopicInclude,\"Yes\")"
+        },
+        {
+          "coord": "C34",
+          "formula": "=MAX(SUMIFS(TopicHours,TopicTier,3,TopicInclude,\"Yes\")-SUMIFS(TopicCompleted,TopicTier,3,TopicInclude,\"Yes\"),0)"
+        },
+        {
+          "coord": "B38",
+          "formula": "=ROUND(SUM(_PlanEngine!E2:E8)/60,1)"
+        },
+        {
+          "coord": "B39",
+          "formula": "=ROUND(SUM(_PlanEngine!N2:N8)/60,1)"
+        }
+      ],
+      "error_cells": []
+    },
+    {
+      "title": "_PlanEngine",
+      "state": "hidden",
+      "dimensions": "A1:Q8",
+      "max_row": 8,
+      "max_col": 17,
+      "freeze_panes": null,
+      "protection": {
+        "sheet": false,
+        "password_hash": null,
+        "selectLockedCells": false,
+        "selectUnlockedCells": false,
+        "formatCells": true,
+        "insertRows": true,
+        "deleteRows": true
+      },
+      "merged_cells": [],
+      "hidden_columns": [],
+      "hidden_rows": [],
+      "column_widths": {
+        "A": 14.0,
+        "K": 30.0,
+        "L": 20.0,
+        "M": 14.0,
+        "O": 60.0,
+        "P": 14.0
+      },
+      "data_validations": [],
+      "conditional_formatting": [],
+      "formula_count": 112,
+      "formulas": [
+        {
+          "coord": "B2",
+          "formula": "=TODAY()-WEEKDAY(TODAY(),1)+1"
+        },
+        {
+          "coord": "C2",
+          "formula": "=INDEX(DayNames,1)"
+        },
+        {
+          "coord": "D2",
+          "formula": "=INDEX(DailyMode,1)"
+        },
+        {
+          "coord": "E2",
+          "formula": "=INDEX(DailyMins,1)"
+        },
+        {
+          "coord": "F2",
+          "formula": "=INDEX(DailyEnergy,1)"
+        },
+        {
+          "coord": "G2",
+          "formula": "=IF(D2=\"Normal\",COUNTIF($D$2:D2,\"Normal\"),0)"
+        },
+        {
+          "coord": "H2",
+          "formula": "=IF(D2=\"Low Energy\",COUNTIF($D$2:D2,\"Low Energy\"),0)"
+        },
+        {
+          "coord": "I2",
+          "formula": "=IF(D2=\"Family\",COUNTIF($D$2:D2,\"Family\"),0)"
+        },
+        {
+          "coord": "J2",
+          "formula": "=IF(D2=\"Rest\",0,IF(D2=\"Low Energy\",0,IF(D2=\"Family\",IFERROR(MATCH(LARGE(FamilyKey,I2),FamilyKey,0),0),IFERROR(MATCH(LARGE(PriorityKey,G2),PriorityKey,0),0))))"
+        },
+        {
+          "coord": "K2",
+          "formula": "=IF(J2=0,\"\",INDEX(TopicName,J2))"
+        },
+        {
+          "coord": "L2",
+          "formula": "=IF(J2=0,\"\",INDEX(TopicSection,J2))"
+        },
+        {
+          "coord": "M2",
+          "formula": "=IF(J2=0,\"\",INDEX(TopicTier,J2))"
+        },
+        {
+          "coord": "N2",
+          "formula": "=IF(D2=\"Rest\",0,IF(E2<=0,0,IF(D2=\"Low Energy\",MIN(20,MAX(10,E2)),IF(D2=\"Family\",MIN(45,MAX(20,E2)),MIN(45,MAX(25,E2))))))"
+        },
+        {
+          "coord": "O2",
+          "formula": "=IF(D2=\"Rest\",\"Rest. No study required.\",IF(D2=\"Low Energy\",INDEX(LowEnergyTasks,MOD(H2-1,6)+1),IF(K2=\"\",\"No included topics. Update Topic Planner.\",IF(D2=\"Family\",\"Light review of \"&K2&\". No heavy problem solving.\",INDEX(NormalTaskTemplates,MOD(G2-1,3)+1)&\" Topic: \"&K2))))"
+        },
+        {
+          "coord": "P2",
+          "formula": "=IF(N2>E2,1,0)"
+        },
+        {
+          "coord": "Q2",
+          "formula": "=IF(AND(D2=\"Normal\",E2<25,E2>0),1,0)"
+        },
+        {
+          "coord": "B3",
+          "formula": "=B2+1"
+        },
+        {
+          "coord": "C3",
+          "formula": "=INDEX(DayNames,2)"
+        },
+        {
+          "coord": "D3",
+          "formula": "=INDEX(DailyMode,2)"
+        },
+        {
+          "coord": "E3",
+          "formula": "=INDEX(DailyMins,2)"
+        },
+        {
+          "coord": "F3",
+          "formula": "=INDEX(DailyEnergy,2)"
+        },
+        {
+          "coord": "G3",
+          "formula": "=IF(D3=\"Normal\",COUNTIF($D$2:D3,\"Normal\"),0)"
+        },
+        {
+          "coord": "H3",
+          "formula": "=IF(D3=\"Low Energy\",COUNTIF($D$2:D3,\"Low Energy\"),0)"
+        },
+        {
+          "coord": "I3",
+          "formula": "=IF(D3=\"Family\",COUNTIF($D$2:D3,\"Family\"),0)"
+        },
+        {
+          "coord": "J3",
+          "formula": "=IF(D3=\"Rest\",0,IF(D3=\"Low Energy\",0,IF(D3=\"Family\",IFERROR(MATCH(LARGE(FamilyKey,I3),FamilyKey,0),0),IFERROR(MATCH(LARGE(PriorityKey,G3),PriorityKey,0),0))))"
+        },
+        {
+          "coord": "K3",
+          "formula": "=IF(J3=0,\"\",INDEX(TopicName,J3))"
+        },
+        {
+          "coord": "L3",
+          "formula": "=IF(J3=0,\"\",INDEX(TopicSection,J3))"
+        },
+        {
+          "coord": "M3",
+          "formula": "=IF(J3=0,\"\",INDEX(TopicTier,J3))"
+        },
+        {
+          "coord": "N3",
+          "formula": "=IF(D3=\"Rest\",0,IF(E3<=0,0,IF(D3=\"Low Energy\",MIN(20,MAX(10,E3)),IF(D3=\"Family\",MIN(45,MAX(20,E3)),MIN(45,MAX(25,E3))))))"
+        },
+        {
+          "coord": "O3",
+          "formula": "=IF(D3=\"Rest\",\"Rest. No study required.\",IF(D3=\"Low Energy\",INDEX(LowEnergyTasks,MOD(H3-1,6)+1),IF(K3=\"\",\"No included topics. Update Topic Planner.\",IF(D3=\"Family\",\"Light review of \"&K3&\". No heavy problem solving.\",INDEX(NormalTaskTemplates,MOD(G3-1,3)+1)&\" Topic: \"&K3))))"
+        },
+        {
+          "coord": "P3",
+          "formula": "=IF(N3>E3,1,0)"
+        },
+        {
+          "coord": "Q3",
+          "formula": "=IF(AND(D3=\"Normal\",E3<25,E3>0),1,0)"
+        },
+        {
+          "coord": "B4",
+          "formula": "=B3+1"
+        },
+        {
+          "coord": "C4",
+          "formula": "=INDEX(DayNames,3)"
+        },
+        {
+          "coord": "D4",
+          "formula": "=INDEX(DailyMode,3)"
+        },
+        {
+          "coord": "E4",
+          "formula": "=INDEX(DailyMins,3)"
+        },
+        {
+          "coord": "F4",
+          "formula": "=INDEX(DailyEnergy,3)"
+        },
+        {
+          "coord": "G4",
+          "formula": "=IF(D4=\"Normal\",COUNTIF($D$2:D4,\"Normal\"),0)"
+        },
+        {
+          "coord": "H4",
+          "formula": "=IF(D4=\"Low Energy\",COUNTIF($D$2:D4,\"Low Energy\"),0)"
+        },
+        {
+          "coord": "I4",
+          "formula": "=IF(D4=\"Family\",COUNTIF($D$2:D4,\"Family\"),0)"
+        },
+        {
+          "coord": "J4",
+          "formula": "=IF(D4=\"Rest\",0,IF(D4=\"Low Energy\",0,IF(D4=\"Family\",IFERROR(MATCH(LARGE(FamilyKey,I4),FamilyKey,0),0),IFERROR(MATCH(LARGE(PriorityKey,G4),PriorityKey,0),0))))"
+        },
+        {
+          "coord": "K4",
+          "formula": "=IF(J4=0,\"\",INDEX(TopicName,J4))"
+        },
+        {
+          "coord": "L4",
+          "formula": "=IF(J4=0,\"\",INDEX(TopicSection,J4))"
+        },
+        {
+          "coord": "M4",
+          "formula": "=IF(J4=0,\"\",INDEX(TopicTier,J4))"
+        },
+        {
+          "coord": "N4",
+          "formula": "=IF(D4=\"Rest\",0,IF(E4<=0,0,IF(D4=\"Low Energy\",MIN(20,MAX(10,E4)),IF(D4=\"Family\",MIN(45,MAX(20,E4)),MIN(45,MAX(25,E4))))))"
+        },
+        {
+          "coord": "O4",
+          "formula": "=IF(D4=\"Rest\",\"Rest. No study required.\",IF(D4=\"Low Energy\",INDEX(LowEnergyTasks,MOD(H4-1,6)+1),IF(K4=\"\",\"No included topics. Update Topic Planner.\",IF(D4=\"Family\",\"Light review of \"&K4&\". No heavy problem solving.\",INDEX(NormalTaskTemplates,MOD(G4-1,3)+1)&\" Topic: \"&K4))))"
+        },
+        {
+          "coord": "P4",
+          "formula": "=IF(N4>E4,1,0)"
+        },
+        {
+          "coord": "Q4",
+          "formula": "=IF(AND(D4=\"Normal\",E4<25,E4>0),1,0)"
+        },
+        {
+          "coord": "B5",
+          "formula": "=B4+1"
+        },
+        {
+          "coord": "C5",
+          "formula": "=INDEX(DayNames,4)"
+        },
+        {
+          "coord": "D5",
+          "formula": "=INDEX(DailyMode,4)"
+        },
+        {
+          "coord": "E5",
+          "formula": "=INDEX(DailyMins,4)"
+        },
+        {
+          "coord": "F5",
+          "formula": "=INDEX(DailyEnergy,4)"
+        },
+        {
+          "coord": "G5",
+          "formula": "=IF(D5=\"Normal\",COUNTIF($D$2:D5,\"Normal\"),0)"
+        },
+        {
+          "coord": "H5",
+          "formula": "=IF(D5=\"Low Energy\",COUNTIF($D$2:D5,\"Low Energy\"),0)"
+        },
+        {
+          "coord": "I5",
+          "formula": "=IF(D5=\"Family\",COUNTIF($D$2:D5,\"Family\"),0)"
+        },
+        {
+          "coord": "J5",
+          "formula": "=IF(D5=\"Rest\",0,IF(D5=\"Low Energy\",0,IF(D5=\"Family\",IFERROR(MATCH(LARGE(FamilyKey,I5),FamilyKey,0),0),IFERROR(MATCH(LARGE(PriorityKey,G5),PriorityKey,0),0))))"
+        },
+        {
+          "coord": "K5",
+          "formula": "=IF(J5=0,\"\",INDEX(TopicName,J5))"
+        },
+        {
+          "coord": "L5",
+          "formula": "=IF(J5=0,\"\",INDEX(TopicSection,J5))"
+        },
+        {
+          "coord": "M5",
+          "formula": "=IF(J5=0,\"\",INDEX(TopicTier,J5))"
+        },
+        {
+          "coord": "N5",
+          "formula": "=IF(D5=\"Rest\",0,IF(E5<=0,0,IF(D5=\"Low Energy\",MIN(20,MAX(10,E5)),IF(D5=\"Family\",MIN(45,MAX(20,E5)),MIN(45,MAX(25,E5))))))"
+        },
+        {
+          "coord": "O5",
+          "formula": "=IF(D5=\"Rest\",\"Rest. No study required.\",IF(D5=\"Low Energy\",INDEX(LowEnergyTasks,MOD(H5-1,6)+1),IF(K5=\"\",\"No included topics. Update Topic Planner.\",IF(D5=\"Family\",\"Light review of \"&K5&\". No heavy problem solving.\",INDEX(NormalTaskTemplates,MOD(G5-1,3)+1)&\" Topic: \"&K5))))"
+        },
+        {
+          "coord": "P5",
+          "formula": "=IF(N5>E5,1,0)"
+        },
+        {
+          "coord": "Q5",
+          "formula": "=IF(AND(D5=\"Normal\",E5<25,E5>0),1,0)"
+        },
+        {
+          "coord": "B6",
+          "formula": "=B5+1"
+        },
+        {
+          "coord": "C6",
+          "formula": "=INDEX(DayNames,5)"
+        },
+        {
+          "coord": "D6",
+          "formula": "=INDEX(DailyMode,5)"
+        },
+        {
+          "coord": "E6",
+          "formula": "=INDEX(DailyMins,5)"
+        },
+        {
+          "coord": "F6",
+          "formula": "=INDEX(DailyEnergy,5)"
+        },
+        {
+          "coord": "G6",
+          "formula": "=IF(D6=\"Normal\",COUNTIF($D$2:D6,\"Normal\"),0)"
+        },
+        {
+          "coord": "H6",
+          "formula": "=IF(D6=\"Low Energy\",COUNTIF($D$2:D6,\"Low Energy\"),0)"
+        },
+        {
+          "coord": "I6",
+          "formula": "=IF(D6=\"Family\",COUNTIF($D$2:D6,\"Family\"),0)"
+        },
+        {
+          "coord": "J6",
+          "formula": "=IF(D6=\"Rest\",0,IF(D6=\"Low Energy\",0,IF(D6=\"Family\",IFERROR(MATCH(LARGE(FamilyKey,I6),FamilyKey,0),0),IFERROR(MATCH(LARGE(PriorityKey,G6),PriorityKey,0),0))))"
+        },
+        {
+          "coord": "K6",
+          "formula": "=IF(J6=0,\"\",INDEX(TopicName,J6))"
+        },
+        {
+          "coord": "L6",
+          "formula": "=IF(J6=0,\"\",INDEX(TopicSection,J6))"
+        },
+        {
+          "coord": "M6",
+          "formula": "=IF(J6=0,\"\",INDEX(TopicTier,J6))"
+        },
+        {
+          "coord": "N6",
+          "formula": "=IF(D6=\"Rest\",0,IF(E6<=0,0,IF(D6=\"Low Energy\",MIN(20,MAX(10,E6)),IF(D6=\"Family\",MIN(45,MAX(20,E6)),MIN(45,MAX(25,E6))))))"
+        },
+        {
+          "coord": "O6",
+          "formula": "=IF(D6=\"Rest\",\"Rest. No study required.\",IF(D6=\"Low Energy\",INDEX(LowEnergyTasks,MOD(H6-1,6)+1),IF(K6=\"\",\"No included topics. Update Topic Planner.\",IF(D6=\"Family\",\"Light review of \"&K6&\". No heavy problem solving.\",INDEX(NormalTaskTemplates,MOD(G6-1,3)+1)&\" Topic: \"&K6))))"
+        },
+        {
+          "coord": "P6",
+          "formula": "=IF(N6>E6,1,0)"
+        },
+        {
+          "coord": "Q6",
+          "formula": "=IF(AND(D6=\"Normal\",E6<25,E6>0),1,0)"
+        },
+        {
+          "coord": "B7",
+          "formula": "=B6+1"
+        },
+        {
+          "coord": "C7",
+          "formula": "=INDEX(DayNames,6)"
+        },
+        {
+          "coord": "D7",
+          "formula": "=INDEX(DailyMode,6)"
+        },
+        {
+          "coord": "E7",
+          "formula": "=INDEX(DailyMins,6)"
+        },
+        {
+          "coord": "F7",
+          "formula": "=INDEX(DailyEnergy,6)"
+        },
+        {
+          "coord": "G7",
+          "formula": "=IF(D7=\"Normal\",COUNTIF($D$2:D7,\"Normal\"),0)"
+        },
+        {
+          "coord": "H7",
+          "formula": "=IF(D7=\"Low Energy\",COUNTIF($D$2:D7,\"Low Energy\"),0)"
+        },
+        {
+          "coord": "I7",
+          "formula": "=IF(D7=\"Family\",COUNTIF($D$2:D7,\"Family\"),0)"
+        },
+        {
+          "coord": "J7",
+          "formula": "=IF(D7=\"Rest\",0,IF(D7=\"Low Energy\",0,IF(D7=\"Family\",IFERROR(MATCH(LARGE(FamilyKey,I7),FamilyKey,0),0),IFERROR(MATCH(LARGE(PriorityKey,G7),PriorityKey,0),0))))"
+        },
+        {
+          "coord": "K7",
+          "formula": "=IF(J7=0,\"\",INDEX(TopicName,J7))"
+        },
+        {
+          "coord": "L7",
+          "formula": "=IF(J7=0,\"\",INDEX(TopicSection,J7))"
+        },
+        {
+          "coord": "M7",
+          "formula": "=IF(J7=0,\"\",INDEX(TopicTier,J7))"
+        },
+        {
+          "coord": "N7",
+          "formula": "=IF(D7=\"Rest\",0,IF(E7<=0,0,IF(D7=\"Low Energy\",MIN(20,MAX(10,E7)),IF(D7=\"Family\",MIN(45,MAX(20,E7)),MIN(45,MAX(25,E7))))))"
+        },
+        {
+          "coord": "O7",
+          "formula": "=IF(D7=\"Rest\",\"Rest. No study required.\",IF(D7=\"Low Energy\",INDEX(LowEnergyTasks,MOD(H7-1,6)+1),IF(K7=\"\",\"No included topics. Update Topic Planner.\",IF(D7=\"Family\",\"Light review of \"&K7&\". No heavy problem solving.\",INDEX(NormalTaskTemplates,MOD(G7-1,3)+1)&\" Topic: \"&K7))))"
+        },
+        {
+          "coord": "P7",
+          "formula": "=IF(N7>E7,1,0)"
+        },
+        {
+          "coord": "Q7",
+          "formula": "=IF(AND(D7=\"Normal\",E7<25,E7>0),1,0)"
+        },
+        {
+          "coord": "B8",
+          "formula": "=B7+1"
+        },
+        {
+          "coord": "C8",
+          "formula": "=INDEX(DayNames,7)"
+        },
+        {
+          "coord": "D8",
+          "formula": "=INDEX(DailyMode,7)"
+        },
+        {
+          "coord": "E8",
+          "formula": "=INDEX(DailyMins,7)"
+        },
+        {
+          "coord": "F8",
+          "formula": "=INDEX(DailyEnergy,7)"
+        },
+        {
+          "coord": "G8",
+          "formula": "=IF(D8=\"Normal\",COUNTIF($D$2:D8,\"Normal\"),0)"
+        },
+        {
+          "coord": "H8",
+          "formula": "=IF(D8=\"Low Energy\",COUNTIF($D$2:D8,\"Low Energy\"),0)"
+        },
+        {
+          "coord": "I8",
+          "formula": "=IF(D8=\"Family\",COUNTIF($D$2:D8,\"Family\"),0)"
+        },
+        {
+          "coord": "J8",
+          "formula": "=IF(D8=\"Rest\",0,IF(D8=\"Low Energy\",0,IF(D8=\"Family\",IFERROR(MATCH(LARGE(FamilyKey,I8),FamilyKey,0),0),IFERROR(MATCH(LARGE(PriorityKey,G8),PriorityKey,0),0))))"
+        },
+        {
+          "coord": "K8",
+          "formula": "=IF(J8=0,\"\",INDEX(TopicName,J8))"
+        },
+        {
+          "coord": "L8",
+          "formula": "=IF(J8=0,\"\",INDEX(TopicSection,J8))"
+        },
+        {
+          "coord": "M8",
+          "formula": "=IF(J8=0,\"\",INDEX(TopicTier,J8))"
+        },
+        {
+          "coord": "N8",
+          "formula": "=IF(D8=\"Rest\",0,IF(E8<=0,0,IF(D8=\"Low Energy\",MIN(20,MAX(10,E8)),IF(D8=\"Family\",MIN(45,MAX(20,E8)),MIN(45,MAX(25,E8))))))"
+        },
+        {
+          "coord": "O8",
+          "formula": "=IF(D8=\"Rest\",\"Rest. No study required.\",IF(D8=\"Low Energy\",INDEX(LowEnergyTasks,MOD(H8-1,6)+1),IF(K8=\"\",\"No included topics. Update Topic Planner.\",IF(D8=\"Family\",\"Light review of \"&K8&\". No heavy problem solving.\",INDEX(NormalTaskTemplates,MOD(G8-1,3)+1)&\" Topic: \"&K8))))"
+        },
+        {
+          "coord": "P8",
+          "formula": "=IF(N8>E8,1,0)"
+        },
+        {
+          "coord": "Q8",
+          "formula": "=IF(AND(D8=\"Normal\",E8<25,E8>0),1,0)"
+        }
+      ],
+      "error_cells": []
+    }
+  ],
+  "volatile_usage": {
+    "TODAY": [
+      "Dashboard!D5",
+      "Dashboard!G5",
+      "Dashboard!A10",
+      "Dashboard!E11",
+      "Dashboard!E12",
+      "Dashboard!E13",
+      "_PlanEngine!B2"
+    ]
+  },
+  "total_formulas": 856
+}

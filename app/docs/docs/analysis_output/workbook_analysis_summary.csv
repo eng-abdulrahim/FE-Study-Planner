@@ -1,0 +1,7 @@
+﻿sheet,state,dimensions,max_row,max_col,formulas,data_validations,conditional_formats,merged_cells,error_cells,protected
+Dashboard,visible,A1:R65,65,18,54,3,16,100,0,False
+Topic Planner,visible,A1:V86,86,22,595,4,10,0,0,False
+Weekly Plan,visible,A1:J23,23,10,56,1,8,21,0,False
+_Lists,hidden,A1:J8,8,10,0,0,0,0,0,False
+_Calc,hidden,A1:D39,39,4,39,0,0,0,0,False
+_PlanEngine,hidden,A1:Q8,8,17,112,0,0,0,0,False

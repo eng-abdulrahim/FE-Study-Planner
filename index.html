@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Latifah FE Study Planner - a calm, simple study planner for the FE Electrical & Computer exam." />
+    <meta name="theme-color" content="#5468ff" />
+    <title>Latifah FE Study Planner</title>
+    <script>
+      // Resolve and apply the theme BEFORE React loads to avoid a wrong-theme flash.
+      (function () {
+        try {
+          var pref = localStorage.getItem("latifah-fe-theme") || "light";
+          var prefersDark =
+            window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var resolved = pref === "dark" || (pref === "system" && prefersDark) ? "dark" : "light";
+          document.documentElement.dataset.theme = resolved;
+        } catch (e) {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-DcRSPhUh.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-C4ps5kvq.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

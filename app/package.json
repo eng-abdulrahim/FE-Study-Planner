@@ -1,0 +1,31 @@
+{
+  "name": "latifah-fe-study-planner",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Frontend-only React rebuild of the Latifah FE Auto-Generated Study Planner (Excel). No backend; all data persists in the browser.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:telegram": "node scripts/test-telegram-notify.mjs",
+    "test:visit:e2e": "node scripts/e2e-visit-notify.mjs",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "gh-pages": "^6.1.1",
+    "playwright": "^1.61.0",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.2",
+    "vitest": "^2.1.9"
+  }
+}

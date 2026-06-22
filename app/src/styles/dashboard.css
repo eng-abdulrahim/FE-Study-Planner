@@ -1,0 +1,1242 @@
+/* Dashboard: layout grid, cards, weekly plan, charts, edit drawer */
+
+.eyebrow {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-primary-strong);
+}
+
+.panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--color-border);
+}
+.panel-head h3 {
+  font-size: 15px;
+}
+
+/* Dashboard grid: today | exam  /  summary (full)  /  weekly (full) */
+.dash-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1.55fr 1fr;
+  grid-template-areas:
+    "today side"
+    "summary summary"
+    "weekly weekly";
+  align-items: start;
+  margin-bottom: 22px;
+}
+.db-area {
+  min-width: 0;
+  display: flex;
+}
+.db-area > * {
+  width: 100%;
+}
+.db-today {
+  grid-area: today;
+}
+/* Right column: exam date stacked above the gentle reminder. It stretches to
+   the tall Today card so the reminder fills what used to be empty space. */
+.db-side {
+  grid-area: side;
+  flex-direction: column;
+  gap: 18px;
+  align-self: stretch;
+}
+.db-summary {
+  grid-area: summary;
+}
+.db-weekly {
+  grid-area: weekly;
+}
+
+/* Tablet: keep two columns for the paired top row (today | side). */
+@media (max-width: 980px) {
+  .dash-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* Phones: single-column stack (today, exam + reminder, metrics, weekly). */
+@media (max-width: 640px) {
+  .dash-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "today"
+      "side"
+      "summary"
+      "weekly";
+  }
+  .db-side {
+    align-self: auto;
+  }
+}
+
+/* Exam date card */
+.exam-card {
+  display: flex;
+  flex-direction: column;
+}
+.exam-body {
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.exam-display {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.exam-date-text {
+  font-size: 22px;
+  font-weight: 760;
+  letter-spacing: -0.02em;
+}
+.exam-status {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+.exam-status.is-passed {
+  color: var(--color-danger);
+}
+.exam-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.field-label {
+  font-size: 12px;
+  font-weight: 620;
+  color: var(--color-text-muted);
+  letter-spacing: 0;
+}
+
+/* Today card - the calm, inviting centre of the dashboard. A soft blush wash
+   sets it apart from the cooler info cards without shouting. */
+.today-card {
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(
+      120% 140% at 0% 0%,
+      color-mix(in srgb, var(--color-primary-soft) 60%, var(--color-card)),
+      var(--color-card) 58%
+    );
+  border-color: color-mix(in srgb, var(--color-primary) 16%, var(--color-border));
+}
+.today-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.today-topic {
+  font-size: 20px;
+  margin: 2px 0 6px;
+}
+.today-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+}
+.dot-sep {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--color-border-strong);
+}
+.today-task {
+  font-size: 14.5px;
+  margin-bottom: 16px;
+}
+.today-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid color-mix(in srgb, var(--color-primary) 12%, var(--color-border));
+}
+/* Keep the Day-mode button and its subtle badge visually paired. */
+.today-mode {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.day-mode-menu {
+  padding: 8px;
+}
+.menu-item.is-active {
+  color: var(--color-primary-strong);
+  font-weight: 650;
+  background: var(--color-row-hover);
+}
+.today-empty-text {
+  margin: 2px 0 4px;
+}
+
+/* Summary stat cards: one full-width row on desktop, wraps when narrow */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+@media (max-width: 1180px) {
+  .stat-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 560px) {
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.stat {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.stat-label {
+  font-size: 12.5px;
+  font-weight: 640;
+  color: var(--color-text-muted);
+  letter-spacing: 0;
+}
+.stat-value {
+  font-size: 23px;
+  font-weight: 720;
+  letter-spacing: -0.015em;
+  overflow-wrap: anywhere;
+}
+.stat-sub {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}
+
+/* Gentle reminder: a soft hand-written-style note that sits under the Exam date
+   card in the upper grid. Not a metric - a short supportive sentence in readable
+   body text, tinted with the lavender accent so it feels like a gentle aside. It
+   grows to fill the right column so the upper area stays balanced. */
+.reminder-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px 18px;
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-accent-soft),
+      color-mix(in srgb, var(--color-primary-soft) 55%, var(--color-card))
+    );
+  border-color: color-mix(in srgb, var(--color-accent) 22%, var(--color-border));
+}
+.reminder-label {
+  font-size: 12.5px;
+  font-weight: 640;
+  letter-spacing: 0;
+  color: var(--color-accent-strong);
+}
+.reminder-text {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: 14.5px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--color-text);
+  overflow-wrap: anywhere;
+}
+.reminder-sub {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}
+
+/* Weekly plan: light day rows (one primary action + one menu) */
+.week-list {
+  list-style: none;
+  margin: 0;
+  /* No bottom padding: the last row reaches the card edge so its rounded clip
+     (below) lines up with the panel's rounded bottom corners. */
+  padding: 4px 0 0;
+  /* The list is the panel's last child, so its bottom edge IS the card's bottom
+     edge. Clip row hover / today / expanded backgrounds to the card radius so the
+     bottom corners stay rounded at all times - collapsed, expanded, and during
+     the row's background/expand transition. Inner radius = card radius - 1px
+     border so the clip sits just inside the panel border (no overpaint). The
+     list holds no popovers (Manage lives in the head; day mode is a native
+     select), so clipping here is safe. */
+  overflow: hidden;
+  border-bottom-left-radius: calc(var(--radius-card) - 1px);
+  border-bottom-right-radius: calc(var(--radius-card) - 1px);
+}
+.wk-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px 18px;
+  transition: background 0.16s ease, box-shadow 0.16s ease;
+}
+.wk-row + .wk-row {
+  border-top: 1px solid var(--color-border);
+}
+@media (hover: hover) and (pointer: fine) {
+  .wk-row:hover {
+    background: var(--color-row-hover);
+  }
+}
+.wk-row.is-today {
+  background: color-mix(in srgb, var(--color-primary-soft) 60%, transparent);
+  box-shadow: inset 3px 0 0 var(--color-primary);
+}
+.wk-main {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.wk-day {
+  flex: 0 0 auto;
+  width: 40px;
+  font-weight: 680;
+  font-size: 13px;
+}
+.today-tag {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary-strong);
+  background: var(--color-card);
+  border: 1px solid var(--color-primary-soft);
+  padding: 1px 5px;
+  border-radius: 6px;
+}
+.wk-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.wk-topic {
+  font-size: 13.5px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.wk-sub {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+  min-width: 0;
+}
+.wk-sub-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.wk-actions {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.wk-time {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+  min-width: 32px;
+  text-align: right;
+}
+
+/* Completed-this-week collapsible section */
+.week-completed {
+  border-top: 1px solid var(--color-border);
+  padding: 4px 10px 8px;
+}
+.week-completed-toggle {
+  appearance: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: none;
+  border: none;
+  padding: 8px;
+  border-radius: var(--radius-input);
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+.week-completed-toggle:hover {
+  background: var(--color-row-hover);
+}
+.week-completed-toggle:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+.chev {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+  transition: transform 0.15s ease;
+}
+.chev.open {
+  transform: rotate(180deg);
+}
+.week-done-list {
+  list-style: none;
+  margin: 2px 0 0;
+  padding: 0;
+}
+.week-done-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+}
+.week-done-row .wk-day {
+  width: 40px;
+}
+.wk-done-topic {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Reusable popover (mode menu, topic picker, more, manage week) */
+.popover {
+  position: relative;
+  display: inline-flex;
+}
+.popover-panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  z-index: 40;
+  min-width: 184px;
+  padding: 6px;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  animation: popIn 0.13s ease;
+}
+.popover-panel.align-right {
+  right: 0;
+}
+.popover-panel.align-left {
+  left: 0;
+}
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.menu-item {
+  appearance: none;
+  border: none;
+  background: none;
+  text-align: left;
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: var(--radius-input);
+  font: inherit;
+  font-size: 13px;
+  color: var(--color-text);
+  cursor: pointer;
+}
+.menu-item:hover {
+  background: var(--color-row-hover);
+}
+.menu-item:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+.menu-item[aria-pressed="true"] {
+  color: var(--color-primary-strong);
+  font-weight: 650;
+}
+.menu-item.danger {
+  color: var(--color-danger);
+}
+.menu-note {
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+  margin: 6px 8px 4px;
+  max-width: 220px;
+}
+
+/* Compact day-actions menu (two views: actions list + topic search) */
+.day-menu-panel {
+  width: min(284px, calc(100vw - 32px));
+  padding: 10px;
+}
+.menu-view {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.menu-view-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.menu-back {
+  appearance: none;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-muted);
+  border-radius: var(--radius-pill);
+  padding: 3px 10px;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.menu-back:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+.menu-view-title {
+  font-size: 13px;
+  font-weight: 650;
+}
+.menu-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.menu-field-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-text-muted);
+}
+.menu-divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: 2px 0;
+}
+.select-sm {
+  min-height: 34px;
+  padding: 6px 8px;
+  font-size: 13px;
+}
+.today-options {
+  width: min(260px, calc(100vw - 32px));
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Topic picker popover */
+.topic-picker {
+  width: min(320px, calc(100vw - 32px));
+  padding: 10px;
+}
+.tp-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 8px;
+}
+.tp-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 240px;
+  overflow-y: auto;
+}
+.tp-item {
+  appearance: none;
+  border: none;
+  background: none;
+  text-align: left;
+  width: 100%;
+  padding: 7px 8px;
+  border-radius: var(--radius-input);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.tp-item:hover {
+  background: var(--color-row-hover);
+}
+.tp-item:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+.tp-item.is-current {
+  background: var(--color-primary-soft);
+}
+.tp-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+.tp-sub {
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+}
+.tp-empty {
+  padding: 10px 8px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+.tp-clear {
+  margin-top: 8px;
+  width: 100%;
+}
+
+/* This-week header right side */
+.wk-head-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Transient "Plan refreshed" feedback after Regenerate. Empty (and invisible)
+   the rest of the time; gently fades in when it gets text. */
+.wk-regen-note {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-success-strong, var(--color-success, #4f9d77));
+  white-space: nowrap;
+}
+.wk-regen-note:empty {
+  display: none;
+}
+.wk-regen-note:not(:empty) {
+  animation: regenNoteIn 0.22s ease both;
+}
+@keyframes regenNoteIn {
+  from {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Today card: badges, dynamic note, controls */
+.today-badges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.today-body {
+  display: flex;
+  flex-direction: column;
+}
+.today-note {
+  font-size: 13px;
+  color: var(--color-text);
+  background: color-mix(in srgb, var(--color-accent-soft) 75%, var(--color-card));
+  border: 1px solid color-mix(in srgb, var(--color-accent) 18%, transparent);
+  border-radius: var(--radius-input);
+  padding: 9px 12px;
+  margin: 0 0 12px;
+}
+.mode-fade {
+  animation: modeFade 0.22s ease;
+}
+@keyframes modeFade {
+  from {
+    opacity: 0.35;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Charts */
+.charts {
+  margin-top: 4px;
+}
+.charts-title {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.charts-grid {
+  display: grid;
+  /* minmax(0, 1fr) lets cards shrink instead of overflowing on narrow widths. */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+.chart-card {
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.chart-head {
+  font-size: 14px;
+}
+.chart-progress {
+  align-items: center;
+}
+.chart-empty {
+  margin: 0;
+  font-size: 13px;
+}
+
+/* Section coverage: a compact, internally scrolling list so all sections are
+   reachable without making the card (or page) awkwardly tall. */
+.chart-scroll {
+  max-height: 208px;
+  overflow-y: auto;
+  /* keep the scrollbar clear of the value column */
+  padding-right: 6px;
+  margin-right: -6px;
+  scrollbar-width: thin;
+}
+.section-coverage .barlist-row {
+  /* Section names are long, so give the label more room than the default list. */
+  grid-template-columns: minmax(0, 1.35fr) minmax(54px, 1fr) 54px;
+}
+.span-2 {
+  grid-column: 1 / -1;
+}
+@media (max-width: 640px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+  .span-2 {
+    grid-column: auto;
+  }
+}
+
+/* Subtle card lift on hover-capable (non-touch) pointers only. */
+@media (hover: hover) and (pointer: fine) {
+  .db-area .panel,
+  .chart-card,
+  .stat {
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  }
+  .db-area .panel:hover,
+  .chart-card:hover,
+  .stat:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lift);
+    border-color: color-mix(in srgb, var(--color-primary) 18%, var(--color-border));
+  }
+}
+
+/* Donut */
+.donut {
+  display: block;
+  margin: 4px auto;
+}
+.donut-value {
+  font-size: 26px;
+  font-weight: 780;
+  fill: var(--color-text);
+}
+.donut-sub {
+  font-size: 11px;
+  fill: var(--color-text-muted);
+}
+
+/* Bar list */
+.barlist {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.barlist-row {
+  display: grid;
+  grid-template-columns: 116px 1fr 42px;
+  align-items: center;
+  gap: 10px;
+}
+.barlist-label {
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.barlist-track {
+  height: 9px;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-muted);
+  overflow: hidden;
+}
+.barlist-fill {
+  display: block;
+  height: 100%;
+  border-radius: var(--radius-pill);
+  /* Grow in on mount, then transition smoothly when values change (e.g. a topic
+     is marked done). The global prefers-reduced-motion rule disables both. */
+  transform-origin: left center;
+  animation: barGrow 0.55s ease both;
+  transition: width 0.4s ease;
+}
+@keyframes barGrow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+.barlist-value {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Weekly bars */
+.weekbars {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.weekbars-plot {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 132px;
+}
+.weekbars-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  height: 100%;
+}
+.weekbars-bars {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+}
+.weekbars-bar {
+  width: 36%;
+  max-width: 18px;
+  min-height: 2px;
+  border-radius: 4px 4px 0 0;
+}
+.weekbars-bar.planned {
+  background: var(--color-primary);
+}
+.weekbars-bar.completed {
+  background: var(--color-success);
+}
+.weekbars-day {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+.weekbars-legend {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+.legend-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+}
+.legend-swatch.planned {
+  background: var(--color-primary);
+}
+.legend-swatch.completed {
+  background: var(--color-success);
+}
+
+/* Edit drawer */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(42, 26, 46, 0.46);
+  z-index: 80;
+  display: flex;
+  justify-content: flex-end;
+}
+.drawer {
+  width: min(420px, 100%);
+  height: 100%;
+  background: var(--color-card);
+  border-left: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  animation: drawer-in 0.2s ease;
+}
+@keyframes drawer-in {
+  from {
+    transform: translateX(24px);
+    opacity: 0.5;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.drawer-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+.drawer-head h3 {
+  font-size: 17px;
+  margin-top: 4px;
+}
+.drawer-close {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font: inherit;
+  font-weight: 620;
+  font-size: 13px;
+  cursor: pointer;
+  color: var(--color-text);
+}
+.drawer-close:hover {
+  background: var(--color-surface-muted);
+}
+.drawer-body {
+  padding: 18px 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+.drawer-foot {
+  padding: 14px 20px;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--color-border);
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 14px;
+}
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+@media (max-width: 560px) {
+  .barlist-row {
+    grid-template-columns: 92px 1fr 38px;
+  }
+  .stat-value {
+    font-size: 21px;
+  }
+}
+
+/* Phones: let weekly actions drop to a clean second line (card-like row) */
+@media (max-width: 480px) {
+  .wk-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* ===========================================================================
+   Multi-task daily plan (Today card blocks, weekly day summaries, controls)
+   =========================================================================== */
+
+/* Today card header + focus message */
+.today-head-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.today-focus {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 2px 0 12px;
+  color: var(--color-text);
+}
+.today-empty {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+.today-coverage {
+  margin: 12px 0 0;
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}
+
+/* Task block list (shared by Today and expanded weekly days) */
+.task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.task-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 11px 13px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-input);
+  transition: opacity 0.16s ease, background 0.16s ease, border-color 0.16s ease;
+}
+.task-lead {
+  flex: 0 0 auto;
+  width: 86px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+.task-time {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.task-body {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.task-title {
+  font-size: 14px;
+  font-weight: 640;
+  overflow-wrap: anywhere;
+}
+.task-section {
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+}
+.task-reason {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+.task-actions {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.task-row.is-done {
+  opacity: 0.66;
+  background: color-mix(in srgb, var(--color-success-soft) 45%, var(--color-surface));
+  border-color: color-mix(in srgb, var(--color-success) 24%, var(--color-border));
+}
+.task-row.is-done .task-title,
+.task-row.is-skipped .task-title {
+  text-decoration: line-through;
+}
+.task-row.is-skipped {
+  opacity: 0.58;
+}
+@media (max-width: 560px) {
+  .task-lead {
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    gap: 8px;
+  }
+  .task-row {
+    flex-wrap: wrap;
+  }
+  .task-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* Weekly day summary: the .wk-row is now a block container with a clickable
+   summary header and an expandable body (overrides the older single-row flex). */
+.wk-row {
+  display: block;
+  padding: 0;
+}
+.wk-summary {
+  appearance: none;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+}
+.wk-summary-static {
+  cursor: default;
+}
+.wk-summary:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+  border-radius: var(--radius-input);
+}
+@media (hover: hover) and (pointer: fine) {
+  .wk-summary:not(.wk-summary-static):hover {
+    background: var(--color-row-hover);
+  }
+}
+.wk-summary .wk-info {
+  flex: 1 1 auto;
+}
+.wk-expand {
+  padding: 2px 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.wk-focus {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+.wk-day-controls {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.wk-day-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.wk-day-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.wk-coverage {
+  padding: 0 18px;
+  margin: 2px 0 8px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+/* Plan-shaping controls popover */
+.plan-controls {
+  width: min(264px, calc(100vw - 32px));
+  padding: 12px;
+}
+.plan-toggles {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.plan-toggle {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 8px 10px;
+  border-radius: var(--radius-input);
+  cursor: pointer;
+}
+.plan-toggle:hover {
+  background: var(--color-row-hover);
+}
+.plan-toggle input {
+  margin-top: 3px;
+  flex: 0 0 auto;
+}
+.plan-toggle-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.plan-toggle-label {
+  font-size: 13px;
+  font-weight: 600;
+}
+.plan-toggle-hint {
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+}

@@ -1,0 +1,326 @@
+/* App shell: full-height sidebar on the left, then a content column
+   (header bar + scrollable main) on the right. Only main scrolls. */
+
+.app-shell {
+  height: 100dvh;
+  display: flex;
+  overflow: hidden;
+}
+
+/* ---- Sidebar (full height) -------------------------------------------- */
+.app-sidebar {
+  flex: 0 0 240px;
+  width: 240px;
+  height: 100%;
+  background: var(--color-sidebar);
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: flex-basis 0.18s ease, width 0.18s ease;
+}
+
+/* Brand block: logo + full (wrapping) name + subtitle */
+.side-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 16px 14px 14px;
+  min-width: 0;
+}
+.brand-mark {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  box-shadow: 0 6px 14px color-mix(in srgb, var(--color-primary) 28%, transparent);
+}
+.side-brand-text {
+  min-width: 0;
+}
+.brand-title {
+  font-size: 15px;
+  font-weight: 730;
+  line-height: 1.25;
+}
+.brand-sub {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-top: 1px;
+}
+
+/* Nav fills the middle and pushes the footer to the bottom */
+.side-nav {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px 12px;
+}
+.side-link {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: transparent;
+  color: var(--color-text-muted);
+  padding: 10px 12px;
+  border-radius: 9px;
+  font-weight: 620;
+  font-size: 14.5px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.side-icon {
+  flex-shrink: 0;
+}
+.side-link:hover {
+  background: var(--color-surface-muted);
+  color: var(--color-text);
+}
+.side-link.active {
+  background: var(--color-primary-soft);
+  color: var(--color-primary-strong);
+}
+
+/* Collapse/expand control pinned to the bottom of the sidebar */
+.side-foot {
+  flex-shrink: 0;
+  padding: 10px 12px;
+  border-top: 1px solid var(--color-border);
+}
+.side-collapse-btn {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  border-radius: 9px;
+  color: var(--color-text-muted);
+  font: inherit;
+  font-size: 13.5px;
+  font-weight: 620;
+  cursor: pointer;
+}
+.side-collapse-btn:hover {
+  background: var(--color-surface-muted);
+  color: var(--color-text);
+}
+
+/* ---- Collapsed sidebar (desktop only) --------------------------------- */
+@media (min-width: 901px) {
+  .app-sidebar.collapsed {
+    flex-basis: 72px;
+    width: 72px;
+  }
+  .app-sidebar.collapsed .side-brand-text,
+  .app-sidebar.collapsed .side-collapse-btn .label,
+  .app-sidebar.collapsed .side-link .label {
+    display: none;
+  }
+  .app-sidebar.collapsed .side-brand {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .app-sidebar.collapsed .side-collapse-btn,
+  .app-sidebar.collapsed .side-link {
+    justify-content: center;
+    gap: 0;
+  }
+  .app-sidebar.collapsed .side-nav {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* ---- Content column (header + main) ----------------------------------- */
+.app-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.app-header {
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 20;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--color-primary-soft) 28%, var(--color-surface)),
+    var(--color-surface)
+  );
+  border-bottom: 1px solid var(--color-border);
+}
+.app-header-row {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 clamp(12px, 2vw, 18px);
+}
+/* Header button is the mobile drawer menu only; hidden on desktop. */
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  border-radius: 9px;
+  cursor: pointer;
+  color: var(--color-text);
+  transition: background 0.15s ease, transform 0.08s ease;
+}
+.icon-btn:hover {
+  background: var(--color-surface-muted);
+}
+.icon-btn:active {
+  transform: translateY(1px);
+}
+.header-brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  flex: 1 1 auto;
+  line-height: 1.15;
+}
+.header-brand-title {
+  font-size: clamp(14px, 1.6vw, 16px);
+  font-weight: 740;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.header-brand-sub {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+.header-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* Drawer close button lives in the sidebar brand row (mobile only, via .icon-btn) */
+.side-close {
+  margin-left: auto;
+  align-self: flex-start;
+}
+
+.app-main {
+  flex: 1;
+  min-width: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 22px 24px 28px;
+}
+
+/* Slim context row at the top of each page (no large heading) */
+.content-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.content-sub {
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
+/* ---- Mobile / tablet: sidebar becomes a drawer ------------------------- */
+@media (max-width: 900px) {
+  .icon-btn {
+    display: inline-flex;
+  }
+  /* Collapse control is desktop-only; the drawer opens/closes from the header. */
+  .side-foot {
+    display: none;
+  }
+
+  .app-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 264px;
+    flex-basis: 264px;
+    height: 100dvh;
+    z-index: 60;
+    transform: translateX(-100%);
+    transition: transform 0.22s ease;
+    box-shadow: var(--shadow-card);
+  }
+  .app-sidebar.open {
+    transform: translateX(0);
+  }
+  .sidebar-overlay.show {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(35, 22, 40, 0.5);
+    z-index: 50;
+  }
+  .app-main {
+    padding: 18px 16px 32px;
+  }
+  .header-brand-sub {
+    display: none;
+  }
+  /* Keep one clean line (ellipsis) so the fixed-height header never clips. */
+  .header-brand-title {
+    font-size: 14px;
+    line-height: 1.12;
+  }
+}
+
+/* Free up header space on phones: the Sync button + auto-save already
+   communicate save state, so the redundant "Saved" chip is dropped. */
+@media (max-width: 768px) {
+  .saved-chip {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-header-row {
+    gap: 10px;
+  }
+  .app-main {
+    padding: 14px 12px 28px;
+  }
+  .header-actions {
+    gap: 8px;
+  }
+  .segmented {
+    padding: 2px;
+  }
+  .segmented button {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+}

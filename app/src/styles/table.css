@@ -1,0 +1,417 @@
+/* Topics table: toolbar, scrollable table, progress, sorting, pagination */
+
+.topics-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+.toolbar-top {
+  display: flex;
+  gap: 10px;
+}
+.toolbar-top .search {
+  flex: 1 1 auto;
+}
+.filter-toggle {
+  display: none;
+  flex: 0 0 auto;
+}
+.filter-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.filter-controls .select {
+  width: auto;
+  min-width: 148px;
+  flex: 0 1 auto;
+}
+
+@media (min-width: 860px) {
+  .topics-toolbar {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .toolbar-top {
+    flex: 1 1 260px;
+  }
+  .filter-controls {
+    flex: 2 1 auto;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 859px) {
+  .filter-toggle {
+    display: inline-flex;
+  }
+  .filter-controls {
+    display: none;
+  }
+  .filter-controls.open {
+    display: flex;
+    flex-direction: column;
+  }
+  .filter-controls .select {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* Scroll container keeps horizontal scroll inside the table only */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+.topics-table {
+  width: 100%;
+  min-width: 960px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 13.5px;
+}
+.topics-table th,
+.topics-table td {
+  padding: 10px 12px;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+.topics-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--color-th-bg);
+  color: var(--color-text-muted);
+  font-weight: 660;
+  font-size: 12.5px;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+.topics-table tbody tr {
+  transition: background 0.12s ease;
+}
+.topics-table tbody tr:hover {
+  background: var(--color-row-hover);
+}
+.topics-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.col-num {
+  width: 46px;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.col-topic {
+  min-width: 220px;
+  font-weight: 620;
+}
+.col-section {
+  min-width: 150px;
+  color: var(--color-text-muted);
+}
+.col-progress {
+  min-width: 168px;
+}
+.col-done {
+  width: 104px;
+}
+.col-notes {
+  min-width: 110px;
+}
+.col-actions {
+  width: 90px;
+}
+
+/* Reversible Done toggle (Topics table + cards) */
+.done-pill {
+  appearance: none;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  border-radius: var(--radius-pill);
+  padding: 4px 12px;
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 620;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+}
+.done-pill:hover {
+  border-color: var(--color-success);
+  color: var(--color-success);
+}
+.done-pill:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+.done-pill.on {
+  background: var(--color-success-soft);
+  color: var(--color-success);
+  border-color: transparent;
+}
+
+/* Sortable headers */
+.th-sort-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.th-sort-btn:hover {
+  color: var(--color-text);
+}
+.sort-ind {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 6px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  vertical-align: middle;
+}
+.sort-ind.asc {
+  border-bottom: 5px solid currentColor;
+}
+.sort-ind.desc {
+  border-top: 5px solid currentColor;
+}
+
+/* Progress cell */
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.progress-track {
+  flex: 1;
+  min-width: 56px;
+  height: 7px;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-muted);
+  overflow: hidden;
+}
+.progress-fill {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  border-radius: var(--radius-pill);
+}
+.progress-text {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Link-style buttons (Open note / Add note) */
+.link-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-weight: 620;
+  font-size: 13px;
+  color: var(--color-primary-strong);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.link-btn:hover {
+  text-decoration: underline;
+}
+.link-btn.subtle {
+  color: var(--color-text-muted);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 13px 16px;
+  border-top: 1px solid var(--color-border);
+  flex-wrap: wrap;
+}
+.pg-info {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+.pg-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.pg-size {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+.pg-size .select {
+  width: auto;
+  min-height: 34px;
+  padding: 5px 8px;
+}
+.pg-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.pg-current {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  padding: 0 6px;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .pagination {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .pg-right {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Prev/Next + page indicator are enough on phones. */
+  .pg-edge {
+    display: none;
+  }
+  .pg-controls {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .pg-right {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+}
+
+/* ---- Mobile sort bar (replaces clickable column headers) --------------- */
+.topic-sort {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--color-border);
+}
+.topic-sort-field {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.topic-sort-field .field-label {
+  margin: 0;
+}
+.topic-sort-dir {
+  flex: 0 0 auto;
+  gap: 7px;
+}
+
+/* ---- Mobile topic cards (replace the table on small/touch screens) ----- */
+.topic-cards {
+  list-style: none;
+  margin: 0;
+  padding: 12px 14px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+/* Larger phones / small tablets: two cards per row uses the width well. */
+@media (min-width: 540px) and (max-width: 720px) {
+  .topic-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.topic-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-card);
+  box-shadow: var(--shadow-soft);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: box-shadow 0.18s ease, transform 0.12s ease, border-color 0.18s ease;
+}
+.topic-card:active {
+  transform: scale(0.995);
+}
+.tc-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+.tc-head {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.tc-num {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.tc-name {
+  font-size: 15px;
+  font-weight: 680;
+  line-height: 1.25;
+}
+.tc-section {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}
+.tc-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+.tc-chip {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+.tc-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tc-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--color-border);
+}
+.tc-priority {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
